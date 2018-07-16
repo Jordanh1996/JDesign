@@ -8,6 +8,8 @@ Github repository: https://github.com/Jordanh1996/JDesign
 
 Components examples: https://jdesign.herokuapp.com/
 
+NOTE: heroku apps after 30 minutes without traffic are idling, so loading may take up to 30 seconds.
+
 Installation
 ------
 
