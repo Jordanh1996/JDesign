@@ -64,6 +64,11 @@ Available Components
 * TextInput
 * FloatingTextInput
 
+## Text Areas
+
+* TextArea
+* FloatingTextArea
+
 Props
 =====
 
@@ -179,6 +184,22 @@ inputStyle | Object
 underlineClassName | String
 underlineStyle | Object
 underlineColor | String
+
+## Text Areas
+
+### TextArea
+
+Prop Name | Prop Type
+----------|----------
+all html textarea props | *
+
+### FloatingTextArea
+
+Prop Name | Prop Type
+----------|----------
+all html textare props | *
+all FloatingTextInput props | *
+
 
 ## Suggestions, Help & Contact
 

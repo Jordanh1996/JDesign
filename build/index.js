@@ -1117,6 +1117,7 @@ var FloatingTextInput = function (_React$Component) {
                     this.props.placeholder
                 ),
                 _react2.default.createElement('input', {
+                    rows: this.props.rows,
                     type: this.props.type,
                     className: 'floatingTextInput ' + this.props.inputClassName + ' ' + (this.props.error && 'floatingTextInput_error'),
                     style: this.props.inputStyle,
@@ -1189,11 +1190,13 @@ exports.default = TextInput;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.FloatingTextInput = exports.TextInput = exports.GooglePushedButton = exports.GoogleButton = exports.PushedIconButton = exports.PushedButton = exports.IconButton = exports.EditButton = exports.AddButton = exports.TrashButton = exports.Button = undefined;
+exports.FloatingTextArea = exports.TextArea = exports.FloatingTextInput = exports.TextInput = exports.GooglePushedButton = exports.GoogleButton = exports.PushedIconButton = exports.PushedButton = exports.IconButton = exports.EditButton = exports.AddButton = exports.TrashButton = exports.Button = undefined;
 
 var _buttons = __webpack_require__(6);
 
 var _textInputs = __webpack_require__(7);
+
+var _textAreas = __webpack_require__(33);
 
 exports.Button = _buttons.Button;
 exports.TrashButton = _buttons.TrashButton;
@@ -1206,6 +1209,8 @@ exports.GoogleButton = _buttons.GoogleButton;
 exports.GooglePushedButton = _buttons.GooglePushedButton;
 exports.TextInput = _textInputs.TextInput;
 exports.FloatingTextInput = _textInputs.FloatingTextInput;
+exports.TextArea = _textAreas.TextArea;
+exports.FloatingTextArea = _textAreas.FloatingTextArea;
 
 /***/ }),
 /* 18 */
@@ -1286,7 +1291,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".floatingTextInput {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n}\n\n.floatingTextInput:focus {\n    outline: 0;\n}\n\n.floatingTextInput-container {\n    align-self: flex-start;\n    padding: 24px 0 0px 0;\n}\n\n.floatingTextInput-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextInput-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n}\n/* \n.floatingTextInput-border {\n    transform: scaleX(0);\n    transition: 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    border-bottom: 2px solid #00b0ff;\n    transform: scaleX(1);\n} */\n\n.floatingTextInput-border {\n    transform: scaleX(0) translateY(-2px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    transform: scaleX(1) translateY(-2px);\n}\n\n.floatingTextInput-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextInput-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextInput_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
+exports.push([module.i, ".floatingTextInput {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n}\n\n.floatingTextInput:focus {\n    outline: 0;\n}\n\n.floatingTextInput-container {\n    align-self: flex-start;\n    padding: 24px 0 0 0;\n}\n\n.floatingTextInput-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextInput-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n    pointer-events: none;\n}\n\n.floatingTextInput-border {\n    transform: scaleX(0) translateY(-2px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    transform: scaleX(1) translateY(-2px);\n}\n\n.floatingTextInput-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextInput-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextInput_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
 
 // exports
 
@@ -1300,7 +1305,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".textInput {\n    align-self: flex-start;\n    font-size: 14px;\n    letter-spacing: 0.6px;\n    border-radius: 4px;\n    border: none;\n    padding: 6px;\n    box-shadow: 0 0 4px 0px #202020;\n    transition: box-shadow 0.1s linear;\n}\n\n.textInput:focus {\n    outline: 0;\n    box-shadow: 0 0 6px 1.5px #00b0ff;\n}\n", ""]);
+exports.push([module.i, ".textInput {\n    align-self: flex-start;\n    font-size: 14px;\n    letter-spacing: 0.6px;\n    border-radius: 4px;\n    border: none;\n    padding: 6px;\n    box-shadow: 0 0 4px 0 #202020;\n    transition: box-shadow 0.1s linear;\n}\n\n.textInput:focus {\n    outline: 0;\n    box-shadow: 0 0 6px 1.5px #00b0ff;\n}\n", ""]);
 
 // exports
 
@@ -1749,6 +1754,283 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 33 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.FloatingTextArea = exports.TextArea = undefined;
+
+var _TextArea = __webpack_require__(34);
+
+var _TextArea2 = _interopRequireDefault(_TextArea);
+
+var _FloatingTextArea = __webpack_require__(37);
+
+var _FloatingTextArea2 = _interopRequireDefault(_FloatingTextArea);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.TextArea = _TextArea2.default;
+exports.FloatingTextArea = _FloatingTextArea2.default;
+
+/***/ }),
+/* 34 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(36);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var TextArea = function TextArea(props) {
+    return _react2.default.createElement('textarea', _extends({}, props, {
+        className: 'textArea ' + props.className
+    }));
+};
+
+exports.default = TextArea;
+
+/***/ }),
+/* 35 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".textArea {\n    align-self: flex-start;\n    resize: none;\n    border: none;\n    box-shadow: 0 0 4px 0 #202020;\n    font-size: 14px;\n    padding: 6px;\n    border-radius: 8px;\n    transition: box-shadow 0.1s linear;\n}\n\n.textArea:focus {\n    outline: 0;\n    box-shadow: 0 0 6px 1.5px #00b0ff;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 36 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(35);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 37 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(39);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FloatingTextArea = function (_React$Component) {
+    _inherits(FloatingTextArea, _React$Component);
+
+    function FloatingTextArea(props) {
+        _classCallCheck(this, FloatingTextArea);
+
+        var _this = _possibleConstructorReturn(this, (FloatingTextArea.__proto__ || Object.getPrototypeOf(FloatingTextArea)).call(this, props));
+
+        _this.state = {
+            focused: _this.props.autoFocus || false,
+            content: _this.props.value
+        };
+        return _this;
+    }
+
+    _createClass(FloatingTextArea, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                _extends({}, this.props, { className: 'floatingTextArea-container ' + this.props.className }),
+                _react2.default.createElement(
+                    'div',
+                    {
+                        className: 'floatingTextArea-label \n                    ' + (this.props.error && 'floatingTextArea-label_error') + ' \n                    ' + (this.state.focused || this.state.content ? this.props.floatingLabelClassName + ' floatingTextArea-label_focused' : this.props.placeholderClassName),
+                        style: this.state.focused ? this.props.floatingLabelStyle : this.props.placeholderStyle
+                    },
+                    this.props.placeholder
+                ),
+                _react2.default.createElement('textarea', {
+                    type: this.props.type,
+                    className: 'floatingTextArea floatingTextArea ' + this.props.inputClassName + ' ' + (this.props.error && 'floatingTextArea_error'),
+                    style: this.props.inputStyle,
+                    onFocus: function onFocus() {
+                        return _this2.setState({ focused: true });
+                    },
+                    onBlur: function onBlur(input) {
+                        return _this2.setState({ focused: false, content: input.target.value });
+                    },
+                    autoFocus: this.state.focused,
+                    value: this.props.value,
+                    onChange: this.props.onChange,
+                    rows: this.props.rows
+                }),
+                _react2.default.createElement('div', {
+                    className: 'floatingTextArea-border ' + this.props.underlineClassName,
+                    style: Object.assign({}, this.props.underlineStyle, { borderBottomColor: this.props.underlineColor })
+                }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'floatingTextArea-error' },
+                    this.props.error && this.props.errorMessage
+                )
+            );
+        }
+    }]);
+
+    return FloatingTextArea;
+}(_react2.default.Component);
+
+;
+
+exports.default = FloatingTextArea;
+
+/***/ }),
+/* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".floatingTextArea {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n    resize: none;\n}\n\n.floatingTextArea:focus {\n    outline: 0;\n}\n\n.floatingTextArea-container {\n    align-self: flex-start;\n    padding: 24px 0 0 0;\n}\n\n.floatingTextArea-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextArea-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n    pointer-events: none;\n}\n\n.floatingTextArea-border {\n    transform: scaleX(0) translateY(-6px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextArea:focus + .floatingTextArea-border {\n    transform: scaleX(1) translateY(-6px);\n}\n\n.floatingTextArea-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextArea-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextArea_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 39 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(38);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

@@ -1,26 +1,27 @@
-.floatingTextInput {
+.floatingTextArea {
     position: relative;
     border: 0;
     border-bottom: 2px solid #DBD7C9;
     font-size: 16px;
+    resize: none;
 }
 
-.floatingTextInput:focus {
+.floatingTextArea:focus {
     outline: 0;
 }
 
-.floatingTextInput-container {
+.floatingTextArea-container {
     align-self: flex-start;
     padding: 24px 0 0 0;
 }
 
-.floatingTextInput-label_focused {
+.floatingTextArea-label_focused {
     color: #00b0ff !important;
     transform: translateY(-100%);
     font-size: 12px;
 }
 
-.floatingTextInput-label {
+.floatingTextArea-label {
     position: absolute;
     user-select: none;
     padding-left: 1.5px;
@@ -30,27 +31,27 @@
     pointer-events: none;
 }
 
-.floatingTextInput-border {
-    transform: scaleX(0) translateY(-2px);
+.floatingTextArea-border {
+    transform: scaleX(0) translateY(-6px);
     border-bottom: 2px solid #00b0ff;
     transition: transform 0.3s ease-in-out;
 }
 
-.floatingTextInput:focus + .floatingTextInput-border {
-    transform: scaleX(1) translateY(-2px);
+.floatingTextArea:focus + .floatingTextArea-border {
+    transform: scaleX(1) translateY(-6px);
 }
 
-.floatingTextInput-error {
+.floatingTextArea-error {
     position: absolute;
     font-size: 12px;
     color: #FF443E;
 }
 
-.floatingTextInput-label_error {
+.floatingTextArea-label_error {
     color: #FF443E !important;
 }
 
-.floatingTextInput_error {
+.floatingTextArea_error {
     border-bottom-color: #FF443E !important;
     z-index: 1;
 }

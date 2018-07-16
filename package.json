@@ -1,6 +1,6 @@
 {
   "name": "jdesign",
-  "version": "1.0.81",
+  "version": "1.0.9",
   "description": "React Styled Components",
   "main": "build/index.js",
   "peerDependencies": {
@@ -44,5 +44,10 @@
     "material-ui",
     "component",
     "components"
-  ]
+  ],
+  "repository" : { 
+    "type" : "git", 
+    "url" : "https://github.com/Jordanh1996/JDesign"
+  }
+
 }

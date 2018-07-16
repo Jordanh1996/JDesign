@@ -1,7 +1,7 @@
 import React from 'react';
-import './index.css'
+import './index.css';
 
-class FloatingTextInput extends React.Component {
+class FloatingTextArea extends React.Component {
 
     constructor(props) {
         super(props);
@@ -13,34 +13,34 @@ class FloatingTextInput extends React.Component {
 
     render() {
         return (
-            <div {...this.props} className={`floatingTextInput-container ${this.props.className}`}>
+            <div {...this.props} className={`floatingTextArea-container ${this.props.className}`}>
                 <div 
-                    className={`floatingTextInput-label 
-                    ${this.props.error && 'floatingTextInput-label_error'} 
-                    ${this.state.focused || this.state.content ? `${this.props.floatingLabelClassName} floatingTextInput-label_focused` : this.props.placeholderClassName}`} 
+                    className={`floatingTextArea-label 
+                    ${this.props.error && 'floatingTextArea-label_error'} 
+                    ${this.state.focused || this.state.content ? `${this.props.floatingLabelClassName} floatingTextArea-label_focused` : this.props.placeholderClassName}`} 
                     style={this.state.focused ? this.props.floatingLabelStyle : this.props.placeholderStyle}
                 >
                     {this.props.placeholder}
                 </div>
-                <input
-                    rows={this.props.rows}
+                <textarea
                     type={this.props.type}
-                    className={`floatingTextInput ${this.props.inputClassName} ${this.props.error && 'floatingTextInput_error'}`}
+                    className={`floatingTextArea floatingTextArea ${this.props.inputClassName} ${this.props.error && 'floatingTextArea_error'}`}
                     style={this.props.inputStyle}
                     onFocus={() => this.setState({ focused: true })}
                     onBlur={(input) => this.setState({ focused: false, content: input.target.value })}
                     autoFocus={this.state.focused}
                     value={this.props.value}
                     onChange={this.props.onChange}
+                    rows={this.props.rows}
                 />
                 <div 
-                    className={`floatingTextInput-border ${this.props.underlineClassName}`} 
+                    className={`floatingTextArea-border ${this.props.underlineClassName}`} 
                     style={Object.assign({}, this.props.underlineStyle, { borderBottomColor: this.props.underlineColor })} 
                 />
-                <div className='floatingTextInput-error'>{this.props.error && this.props.errorMessage}</div>
+                <div className='floatingTextArea-error'>{this.props.error && this.props.errorMessage}</div>
             </div>
         );
     };
 };
 
-export default FloatingTextInput;
+export default FloatingTextArea;

@@ -7,13 +7,18 @@ import {
     PushedButton,
     PushedIconButton,
     GoogleButton,
-    GooglePushedButton
+    GooglePushedButton,
 } from './components/buttons';
 
 import {
     TextInput,
     FloatingTextInput
 } from './components/textInputs';
+
+import {
+    TextArea,
+    FloatingTextArea
+} from './components/textAreas';
 
 export {
     // Buttons
@@ -28,5 +33,8 @@ export {
     GooglePushedButton,
     // Text Inputs
     TextInput,
-    FloatingTextInput
+    FloatingTextInput,
+    // Text Areas
+    TextArea,
+    FloatingTextArea
 };
