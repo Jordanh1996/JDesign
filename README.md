@@ -5,6 +5,7 @@ Jordan Design - React components styled with css
 JDesign is a set of React components styled with CSS3.
 
 Github repository: https://github.com/Jordanh1996/JDesign
+
 Components examples: https://jdesign.herokuapp.com/
 
 Installation
