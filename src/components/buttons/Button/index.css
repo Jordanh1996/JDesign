@@ -1,0 +1,35 @@
+.button {
+    position: relative;
+    display: flex;
+    align-self: flex-start;
+    font-family: 'roboto, sans-serif';
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 200;
+    padding: 7px 11px;
+    border: none;
+    border-radius: 4px;
+    background: #0076CE;
+    color: white;
+    box-shadow: 0 0 4px 0 #404040;
+    letter-spacing: 0.8px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.button:hover {
+    opacity: 0.86;
+    cursor: pointer;
+}
+
+.button:focus {
+    outline: 0;
+}
+
+.button:active {
+    animation: buttonClick 0.05s linear;
+}
+
+.rounded-button {
+    border-radius: 100px !important;
+}
