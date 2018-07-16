@@ -28,5 +28,21 @@
     "babel-preset-env": "^1.5.1",
     "css-loader": "^1.0.0",
     "style-loader": "^0.21.0"
-  }
+  },
+  "keywords": [
+    "design",
+    "jdesign",
+    "react",
+    "bootstrap",
+    "css",
+    "style",
+    "styling",
+    "material",
+    "buttons",
+    "css3",
+    "pretty",
+    "material-ui",
+    "component",
+    "components"
+  ]
 }

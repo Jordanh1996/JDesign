@@ -64,7 +64,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 17);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -75,52 +75,6 @@ module.exports = require("react");
 
 /***/ }),
 /* 1 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(21);
-
-var _reactInk = __webpack_require__(4);
-
-var _reactInk2 = _interopRequireDefault(_reactInk);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var IconButton = function IconButton(props) {
-    return _react2.default.createElement(
-        'button',
-        _extends({}, props, {
-            className: 'icon-button ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.className
-        }),
-        props.children,
-        _react2.default.createElement(
-            'p',
-            {
-                className: 'icon-button-text ' + props.labelClassName,
-                style: props.labelStyle
-            },
-            props.label
-        ),
-        props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, null)
-    );
-};
-
-exports.default = IconButton;
-
-/***/ }),
-/* 2 */
 /***/ (function(module, exports) {
 
 /*
@@ -202,7 +156,7 @@ function toComment(sourceMap) {
 
 
 /***/ }),
-/* 3 */
+/* 2 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -268,7 +222,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(25);
+var	fixUrls = __webpack_require__(32);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -588,6 +542,52 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
+/* 3 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(26);
+
+var _reactInk = __webpack_require__(4);
+
+var _reactInk2 = _interopRequireDefault(_reactInk);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var IconButton = function IconButton(props) {
+    return _react2.default.createElement(
+        'button',
+        _extends({}, props, {
+            className: 'icon-button ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.className
+        }),
+        props.children,
+        _react2.default.createElement(
+            'p',
+            {
+                className: 'icon-button-text ' + props.labelClassName,
+                style: props.labelStyle
+            },
+            props.label
+        ),
+        props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, null)
+    );
+};
+
+exports.default = IconButton;
+
+/***/ }),
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -611,7 +611,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(23);
+__webpack_require__(28);
 
 var _reactInk = __webpack_require__(4);
 
@@ -623,12 +623,11 @@ var PushedIconButton = function PushedIconButton(props) {
     return _react2.default.createElement(
         'button',
         _extends({}, props, {
-            className: 'pushedIconButton-outer ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.className,
-            rounded: ''
+            className: 'pushedIconButton-outer ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.className
         }),
         _react2.default.createElement(
             'div',
-            { className: 'pushedIconButton-inner ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.innterClassName, style: props.innerStyle },
+            { className: 'pushedIconButton-inner ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.innerButtonClassName, style: props.innerButtonStyle },
             props.children,
             props.label ? _react2.default.createElement(
                 'p',
@@ -657,27 +656,27 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.GooglePushedButton = exports.GoogleButton = exports.PushedIconButton = exports.PushedButton = exports.IconButton = exports.EditButton = exports.AddButton = exports.TrashButton = exports.Button = undefined;
 
-var _Button = __webpack_require__(8);
+var _Button = __webpack_require__(9);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _TrashButton = __webpack_require__(13);
+var _TrashButton = __webpack_require__(14);
 
 var _TrashButton2 = _interopRequireDefault(_TrashButton);
 
-var _AddButton = __webpack_require__(7);
+var _AddButton = __webpack_require__(8);
 
 var _AddButton2 = _interopRequireDefault(_AddButton);
 
-var _EditButton = __webpack_require__(9);
+var _EditButton = __webpack_require__(10);
 
 var _EditButton2 = _interopRequireDefault(_EditButton);
 
-var _IconButton = __webpack_require__(1);
+var _IconButton = __webpack_require__(3);
 
 var _IconButton2 = _interopRequireDefault(_IconButton);
 
-var _PushedButton = __webpack_require__(12);
+var _PushedButton = __webpack_require__(13);
 
 var _PushedButton2 = _interopRequireDefault(_PushedButton);
 
@@ -685,15 +684,15 @@ var _PushedIconButton = __webpack_require__(5);
 
 var _PushedIconButton2 = _interopRequireDefault(_PushedIconButton);
 
-var _GoogleButton = __webpack_require__(10);
+var _GoogleButton = __webpack_require__(11);
 
 var _GoogleButton2 = _interopRequireDefault(_GoogleButton);
 
-var _GooglePushedButton = __webpack_require__(11);
+var _GooglePushedButton = __webpack_require__(12);
 
 var _GooglePushedButton2 = _interopRequireDefault(_GooglePushedButton);
 
-__webpack_require__(24);
+__webpack_require__(29);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -717,6 +716,31 @@ exports.GooglePushedButton = _GooglePushedButton2.default;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.FloatingTextInput = exports.TextInput = undefined;
+
+var _TextInput = __webpack_require__(16);
+
+var _TextInput2 = _interopRequireDefault(_TextInput);
+
+var _FloatingTextInput = __webpack_require__(15);
+
+var _FloatingTextInput2 = _interopRequireDefault(_FloatingTextInput);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.TextInput = _TextInput2.default;
+exports.FloatingTextInput = _FloatingTextInput2.default;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
 
@@ -724,7 +748,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _IconButton = __webpack_require__(1);
+var _IconButton = __webpack_require__(3);
 
 var _IconButton2 = _interopRequireDefault(_IconButton);
 
@@ -748,7 +772,7 @@ var AddButton = function AddButton(props) {
 exports.default = AddButton;
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -764,7 +788,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(20);
+__webpack_require__(25);
 
 var _reactInk = __webpack_require__(4);
 
@@ -787,45 +811,6 @@ var Button = function Button(props) {
 exports.default = Button;
 
 /***/ }),
-/* 9 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-var _IconButton = __webpack_require__(1);
-
-var _IconButton2 = _interopRequireDefault(_IconButton);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var EditButton = function EditButton(props) {
-    return _react2.default.createElement(
-        _IconButton2.default,
-        _extends({ style: { boxShadow: '0 0 3px 0px #303030', background: 'radial-gradient(#4CAF50, #A5D6A7)' } }, props, { rounded: true }),
-        _react2.default.createElement(
-            'svg',
-            { xmlns: 'http://www.w3.org/2000/svg', width: '24', height: '24', viewBox: '0 0 24 24',
-                style: Object.assign({ width: '1.4rem', height: '1.4rem', fill: 'white' }, props.svgStyle || {})
-            },
-            _react2.default.createElement('path', { d: 'M18.363 8.464l1.433 1.431-12.67 12.669-7.125 1.436 1.439-7.127 12.665-12.668 1.431 1.431-12.255 12.224-.726 3.584 3.584-.723 12.224-12.257zm-.056-8.464l-2.815 2.817 5.691 5.692 2.817-2.821-5.693-5.688zm-12.318 18.718l11.313-11.316-.705-.707-11.313 11.314.705.709z' })
-        )
-    );
-};
-
-exports.default = EditButton;
-
-/***/ }),
 /* 10 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -842,7 +827,47 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _IconButton = __webpack_require__(1);
+var _IconButton = __webpack_require__(3);
+
+var _IconButton2 = _interopRequireDefault(_IconButton);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var EditButton = function EditButton(props) {
+    return _react2.default.createElement(
+        _IconButton2.default,
+        _extends({ style: { boxShadow: '0 0 3px 0px #303030', background: 'radial-gradient(#4CAF50, #A5D6A7)' } }, props, { rounded: true }),
+        _react2.default.createElement(
+            'svg',
+            { xmlns: 'http://www.w3.org/2000/svg', width: '24', height: '24', viewBox: '0 0 24 24',
+                style: Object.assign({ width: '1.4rem', height: '1.4rem', fill: 'white' }, props.svgStyle || {}),
+                className: props.svgClassName
+            },
+            _react2.default.createElement('path', { d: 'M18.363 8.464l1.433 1.431-12.67 12.669-7.125 1.436 1.439-7.127 12.665-12.668 1.431 1.431-12.255 12.224-.726 3.584 3.584-.723 12.224-12.257zm-.056-8.464l-2.815 2.817 5.691 5.692 2.817-2.821-5.693-5.688zm-12.318 18.718l11.313-11.316-.705-.707-11.313 11.314.705.709z' })
+        )
+    );
+};
+
+exports.default = EditButton;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _IconButton = __webpack_require__(3);
 
 var _IconButton2 = _interopRequireDefault(_IconButton);
 
@@ -864,7 +889,7 @@ var GoogleButton = function GoogleButton(props) {
         }),
         _react2.default.createElement(
             'svg',
-            { viewBox: '0 0 400 400', style: Object.assign({ width: '1.8rem', height: '1.8rem', margin: '0 12px' }, props.svgStyle) },
+            { viewBox: '0 0 400 400', style: Object.assign({ width: '1.8rem', height: '1.8rem', margin: '0 12px' }, props.svgStyle), className: props.svgClassName },
             _react2.default.createElement(
                 'g',
                 { id: 'svgg' },
@@ -887,7 +912,7 @@ var GoogleButton = function GoogleButton(props) {
 exports.default = GoogleButton;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -926,7 +951,7 @@ var GooglePushedButton = function GooglePushedButton(props) {
         }),
         _react2.default.createElement(
             'svg',
-            { viewBox: '0 0 400 400', style: Object.assign({ width: '1.8rem', height: '1.8rem', marginLeft: '12px' }, props.svgStyle) },
+            { viewBox: '0 0 400 400', style: Object.assign({ width: '1.8rem', height: '1.8rem', marginLeft: '12px' }, props.svgStyle), className: props.svgClassName },
             _react2.default.createElement(
                 'g',
                 { id: 'svgg' },
@@ -949,48 +974,6 @@ var GooglePushedButton = function GooglePushedButton(props) {
 exports.default = GooglePushedButton;
 
 /***/ }),
-/* 12 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(22);
-
-var _reactInk = __webpack_require__(4);
-
-var _reactInk2 = _interopRequireDefault(_reactInk);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var PushedButton = function PushedButton(props) {
-    return _react2.default.createElement(
-        'button',
-        _extends({}, props, {
-            className: 'pushed-button-container ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.className
-        }),
-        _react2.default.createElement(
-            'div',
-            { className: 'pushed-button ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.buttonClassName },
-            props.label,
-            props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, null)
-        )
-    );
-};
-
-exports.default = PushedButton;
-
-/***/ }),
 /* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1007,7 +990,50 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _IconButton = __webpack_require__(1);
+__webpack_require__(27);
+
+var _reactInk = __webpack_require__(4);
+
+var _reactInk2 = _interopRequireDefault(_reactInk);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var PushedButton = function PushedButton(props) {
+    return _react2.default.createElement(
+        'button',
+        _extends({}, props, {
+            className: 'pushed-button-container ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.className
+        }),
+        _react2.default.createElement(
+            'div',
+            { className: 'pushed-button ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.innerButtonClassName },
+            props.children,
+            props.label,
+            props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, null)
+        )
+    );
+};
+
+exports.default = PushedButton;
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+var _IconButton = __webpack_require__(3);
 
 var _IconButton2 = _interopRequireDefault(_IconButton);
 
@@ -1031,7 +1057,130 @@ var TrashButton = function TrashButton(props) {
 exports.default = TrashButton;
 
 /***/ }),
-/* 14 */
+/* 15 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(30);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var FloatingTextInput = function (_React$Component) {
+    _inherits(FloatingTextInput, _React$Component);
+
+    function FloatingTextInput(props) {
+        _classCallCheck(this, FloatingTextInput);
+
+        var _this = _possibleConstructorReturn(this, (FloatingTextInput.__proto__ || Object.getPrototypeOf(FloatingTextInput)).call(this, props));
+
+        _this.state = {
+            focused: _this.props.autoFocus || false,
+            content: _this.props.value
+        };
+        return _this;
+    }
+
+    _createClass(FloatingTextInput, [{
+        key: 'render',
+        value: function render() {
+            var _this2 = this;
+
+            return _react2.default.createElement(
+                'div',
+                _extends({}, this.props, { className: 'floatingTextInput-container ' + this.props.className }),
+                _react2.default.createElement(
+                    'div',
+                    {
+                        className: 'floatingTextInput-label \n                    ' + (this.props.error && 'floatingTextInput-label_error') + ' \n                    ' + (this.state.focused || this.state.content ? this.props.floatingLabelClassName + ' floatingTextInput-label_focused' : this.props.placeholderClassName),
+                        style: this.state.focused ? this.props.floatingLabelStyle : this.props.placeholderStyle
+                    },
+                    this.props.placeholder
+                ),
+                _react2.default.createElement('input', {
+                    type: this.props.type,
+                    className: 'floatingTextInput ' + this.props.inputClassName + ' ' + (this.props.error && 'floatingTextInput_error'),
+                    style: this.props.inputStyle,
+                    onFocus: function onFocus() {
+                        return _this2.setState({ focused: true });
+                    },
+                    onBlur: function onBlur(input) {
+                        return _this2.setState({ focused: false, content: input.target.value });
+                    },
+                    autoFocus: this.state.focused,
+                    value: this.props.value,
+                    onChange: this.props.onChange
+                }),
+                _react2.default.createElement('div', {
+                    className: 'floatingTextInput-border ' + this.props.underlineClassName,
+                    style: Object.assign({}, this.props.underlineStyle, { borderBottomColor: this.props.underlineColor })
+                }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'floatingTextInput-error' },
+                    this.props.error && this.props.errorMessage
+                )
+            );
+        }
+    }]);
+
+    return FloatingTextInput;
+}(_react2.default.Component);
+
+;
+
+exports.default = FloatingTextInput;
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(31);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var TextInput = function TextInput(props) {
+    return _react2.default.createElement('input', _extends({}, props, {
+        className: 'textInput ' + props.className
+    }));
+};
+
+exports.default = TextInput;
+
+/***/ }),
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1044,7 +1193,7 @@ exports.FloatingTextInput = exports.TextInput = exports.GooglePushedButton = exp
 
 var _buttons = __webpack_require__(6);
 
-var _textInputs = __webpack_require__(26);
+var _textInputs = __webpack_require__(7);
 
 exports.Button = _buttons.Button;
 exports.TrashButton = _buttons.TrashButton;
@@ -1059,10 +1208,10 @@ exports.TextInput = _textInputs.TextInput;
 exports.FloatingTextInput = _textInputs.FloatingTextInput;
 
 /***/ }),
-/* 15 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
@@ -1073,10 +1222,10 @@ exports.push([module.i, ".button {\n    position: relative;\n    display: flex;\
 
 
 /***/ }),
-/* 16 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
@@ -1087,10 +1236,10 @@ exports.push([module.i, ".icon-button {\n    position: relative;\n    display: f
 
 
 /***/ }),
-/* 17 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
@@ -1101,10 +1250,10 @@ exports.push([module.i, ".pushed-button-container {\n    position: relative;\n  
 
 
 /***/ }),
-/* 18 */
+/* 21 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
@@ -1115,10 +1264,10 @@ exports.push([module.i, ".pushedIconButton-inner {\n    display: flex;\n    padd
 
 
 /***/ }),
-/* 19 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
-exports = module.exports = __webpack_require__(2)(false);
+exports = module.exports = __webpack_require__(1)(false);
 // imports
 
 
@@ -1129,157 +1278,35 @@ exports.push([module.i, "@keyframes buttonClick {\n    from {\n        box-shado
 
 
 /***/ }),
-/* 20 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(15);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(3)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 21 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(16);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(3)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 22 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(17);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(3)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
 /* 23 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".floatingTextInput {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n}\n\n.floatingTextInput:focus {\n    outline: 0;\n}\n\n.floatingTextInput-container {\n    align-self: flex-start;\n    padding: 24px 0 0px 0;\n}\n\n.floatingTextInput-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextInput-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n}\n/* \n.floatingTextInput-border {\n    transform: scaleX(0);\n    transition: 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    border-bottom: 2px solid #00b0ff;\n    transform: scaleX(1);\n} */\n\n.floatingTextInput-border {\n    transform: scaleX(0) translateY(-2px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    transform: scaleX(1) translateY(-2px);\n}\n\n.floatingTextInput-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextInput-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextInput_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 24 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".textInput {\n    align-self: flex-start;\n    font-size: 14px;\n    letter-spacing: 0.6px;\n    border-radius: 4px;\n    border: none;\n    padding: 6px;\n    box-shadow: 0 0 4px 0px #202020;\n    transition: box-shadow 0.1s linear;\n}\n\n.textInput:focus {\n    outline: 0;\n    box-shadow: 0 0 6px 1.5px #00b0ff;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1297,7 +1324,7 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(3)(content, options);
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -1329,7 +1356,7 @@ if(false) {
 }
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1347,7 +1374,157 @@ var options = {"hmr":true}
 options.transform = transform
 options.insertInto = undefined;
 
-var update = __webpack_require__(3)(content, options);
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 27 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(20);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 28 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(21);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 29 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(22);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
 
 if(content.locals) module.exports = content.locals;
 
@@ -1379,7 +1556,107 @@ if(false) {
 }
 
 /***/ }),
-/* 25 */
+/* 30 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(23);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 31 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(24);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 32 */
 /***/ (function(module, exports) {
 
 
@@ -1472,255 +1749,6 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
-
-/***/ }),
-/* 26 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-exports.FloatingTextInput = exports.TextInput = undefined;
-
-var _TextInput = __webpack_require__(27);
-
-var _TextInput2 = _interopRequireDefault(_TextInput);
-
-var _FloatingTextInput = __webpack_require__(30);
-
-var _FloatingTextInput2 = _interopRequireDefault(_FloatingTextInput);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.TextInput = _TextInput2.default;
-exports.FloatingTextInput = _FloatingTextInput2.default;
-
-/***/ }),
-/* 27 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(29);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-var TextInput = function TextInput(props) {
-    return _react2.default.createElement('input', _extends({}, props, {
-        className: 'textInput ' + props.className
-    }));
-};
-
-exports.default = TextInput;
-
-/***/ }),
-/* 28 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".textInput {\n    align-self: flex-start;\n    font-size: 14px;\n    letter-spacing: 0.6px;\n    border-radius: 4px;\n    border: none;\n    padding: 6px;\n    box-shadow: 0 0 4px 0px #202020;\n    transition: box-shadow 0.1s linear;\n}\n\n.textInput:focus {\n    outline: 0;\n    box-shadow: 0 0 6px 1.5px #00b0ff;\n}\n", ""]);
-
-// exports
-
-
-/***/ }),
-/* 29 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(28);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(3)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(32);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var FloatingTextInput = function (_React$Component) {
-    _inherits(FloatingTextInput, _React$Component);
-
-    function FloatingTextInput() {
-        _classCallCheck(this, FloatingTextInput);
-
-        return _possibleConstructorReturn(this, (FloatingTextInput.__proto__ || Object.getPrototypeOf(FloatingTextInput)).apply(this, arguments));
-    }
-
-    _createClass(FloatingTextInput, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'div',
-                _extends({}, this.props, { className: 'floatingTextInput-container ' + this.props.className }),
-                _react2.default.createElement(
-                    'p',
-                    { className: 'floatingTextInput-label ' + this.props.labelClassName },
-                    this.props.placeholder
-                ),
-                _react2.default.createElement('input', {
-                    type: this.props.type,
-                    placeholder: this.props.placeholder,
-                    className: 'floatingTextInput ' + this.props.inputClassName,
-                    style: this.props.inputStyle
-                }),
-                _react2.default.createElement('div', { className: 'floatingTextInput-border' })
-            );
-        }
-    }]);
-
-    return FloatingTextInput;
-}(_react2.default.Component);
-
-;
-
-exports.default = FloatingTextInput;
-
-/***/ }),
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(2)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".floatingTextInput {\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n}\n\n.floatingTextInput:focus {\n    border-bottom: 0;\n    outline: 0;\n}\n\n.floatingTextInput-container {\n    align-self: flex-start;\n    \n    transition: border-bottom 0.5s ease\n}\n\n.floatingTextInput-label {\n\n}\n/* \n.floatingTextInput-border {\n    transform: scaleX(0);\n    transition: 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    border-bottom: 2px solid #00b0ff;\n    transform: scaleX(1);\n} */\n\n.floatingTextInput-border {\n    transform: scaleX(0);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    transform: scaleX(1);\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 32 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(31);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(3)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ })
 /******/ ]);

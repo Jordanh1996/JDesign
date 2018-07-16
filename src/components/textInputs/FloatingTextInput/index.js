@@ -3,19 +3,40 @@ import './index.css'
 
 class FloatingTextInput extends React.Component {
 
+    constructor(props) {
+        super(props);
+        this.state = {
+            focused: this.props.autoFocus || false,
+            content: this.props.value
+        };
+    };
+
     render() {
         return (
             <div {...this.props} className={`floatingTextInput-container ${this.props.className}`}>
-                <p className={`floatingTextInput-label ${this.props.labelClassName}`}>
+                <div 
+                    className={`floatingTextInput-label 
+                    ${this.props.error && 'floatingTextInput-label_error'} 
+                    ${this.state.focused || this.state.content ? `${this.props.floatingLabelClassName} floatingTextInput-label_focused` : this.props.placeholderClassName}`} 
+                    style={this.state.focused ? this.props.floatingLabelStyle : this.props.placeholderStyle}
+                >
                     {this.props.placeholder}
-                </p>
+                </div>
                 <input
                     type={this.props.type}
-                    placeholder={this.props.placeholder}
-                    className={`floatingTextInput ${this.props.inputClassName}`}
+                    className={`floatingTextInput ${this.props.inputClassName} ${this.props.error && 'floatingTextInput_error'}`}
                     style={this.props.inputStyle}
+                    onFocus={() => this.setState({ focused: true })}
+                    onBlur={(input) => this.setState({ focused: false, content: input.target.value })}
+                    autoFocus={this.state.focused}
+                    value={this.props.value}
+                    onChange={this.props.onChange}
                 />
-                <div className='floatingTextInput-border' />
+                <div 
+                    className={`floatingTextInput-border ${this.props.underlineClassName}`} 
+                    style={Object.assign({}, this.props.underlineStyle, { borderBottomColor: this.props.underlineColor })} 
+                />
+                <div className='floatingTextInput-error'>{this.props.error && this.props.errorMessage}</div>
             </div>
         );
     };

@@ -4,6 +4,9 @@ Jordan Design - React components styled with css
 
 JDesign is a set of React components styled with CSS3.
 
+Github repository: https://github.com/Jordanh1996/JDesign
+Components examples: 
+
 Installation
 ------
 
@@ -54,3 +57,130 @@ Available Components
 * TrashButton
 * GoogleButton
 * GooglePushedButton
+
+## Text Inputs
+
+* TextInput
+* FloatingTextInput
+
+Props
+=====
+
+## Buttons
+
+### Button
+
+Prop Name | Prop Type
+----------|----------
+All html button Props | *
+label | String
+children | JSX
+rounded | Boolean
+ripple | Boolean
+className | String
+
+### PushedButton
+
+Prop Name | Prop Type
+----------|----------
+All html button Props | *
+label | String
+children | JSX
+rounded | Boolean
+ripple | Boolean
+className | String
+innerButtonClassName | String
+
+### IconButton
+
+To insert the icon/image you need to pass it as the children prop in JSX.
+In the Usage example you can see example of passing an html svg as the children.
+You can also insert a <img> or anything you'd like.
+
+Prop Name | Prop Type
+----------|----------
+All html button Props | *
+label | String
+labelStyle | Object
+labelClassName | String
+children | JSX
+rounded | Boolean
+ripple | Boolean
+className | String
+
+### PushedIconButton
+
+To insert the icon/image you need to pass it as the children prop in JSX.
+In the Usage example you can see example of passing an html svg as the children.
+You can also insert a <img> or anything you'd like.
+
+Prop Name | Prop Type
+----------|----------
+All html button Props | *
+label | String
+labelStyle | Object
+labelClassName | String
+children | JSX
+rounded | Boolean
+ripple | Boolean
+className | String
+innerButtonStyle | Object
+innerButtonClassName | String
+
+### AddButton, TrashButton, EditButton, GoogleButton
+
+Prop Name | Prop Type
+----------|----------
+All IconButton Props | *
+All html button Props | *
+svgStyle | Object
+svgClassName | String
+
+### PushedGoogleButton
+
+Prop Name | Prop Type
+----------|----------
+All PushedIconButton Props | *
+All html button Props | *
+svgStyle | Object
+svgClassName | String
+
+
+## Text Inputs
+
+### TextInput
+
+Prop Name | Prop Type
+----------|----------
+all html input props | *
+
+### FloatingTextInput
+
+if you want to change the floating label color with a className you may have to add !important.
+eg: 
+```css
+.floatingLabelClassExample {
+    color: red !important;
+}
+```
+
+Prop Name | Prop Type
+----------|----------
+all html input props | *
+error | Boolean
+errorMessage | String
+floatingLabelClassName | String
+floatingLabelStyle | Object
+placeholderClassName | String
+placeholderStyle | Object
+inputClassName | String
+inputStyle | Object
+underlineClassName | String
+underlineStyle | Object
+underlineColor | String
+
+## Suggestions, Help & Contact
+
+email: jordanhuri96@gmail.com
+
+I reply as quicky as I can, mostly less than a day.

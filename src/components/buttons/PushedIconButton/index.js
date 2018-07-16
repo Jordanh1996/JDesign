@@ -6,9 +6,8 @@ const PushedIconButton = (props) => (
     <button
         {...props}
         className={`pushedIconButton-outer ${props.rounded ? 'rounded-button' : ''} ${props.className}`}
-        rounded=''
     >
-    <div className={`pushedIconButton-inner ${props.rounded ? 'rounded-button' : ''} ${props.innterClassName}`} style={props.innerStyle}>
+    <div className={`pushedIconButton-inner ${props.rounded ? 'rounded-button' : ''} ${props.innerButtonClassName}`} style={props.innerButtonStyle}>
         {props.children}
         {
             props.label ?

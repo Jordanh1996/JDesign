@@ -14,7 +14,7 @@ const GoogleButton = (props) => (
             fontWeight: 600
         }}
     >
-        <svg viewBox="0 0 400 400" style={Object.assign({ width: '1.8rem', height: '1.8rem', margin: '0 12px' }, props.svgStyle)}>
+        <svg viewBox="0 0 400 400" style={Object.assign({ width: '1.8rem', height: '1.8rem', margin: '0 12px' }, props.svgStyle)} className={props.svgClassName}>
             <g id="svgg">
                 <path id="path0" d="" stroke="none" fill="#005555" fillRule="evenodd"></path>
                 <path id="path1" d="" stroke="none" fill="#246db6" fillRule="evenodd"></path>
