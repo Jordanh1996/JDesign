@@ -28,6 +28,10 @@ import {
     Checkbox
 } from './components/checkBoxes';
 
+import {
+    Switch
+} from './components/switches';
+
 export {
     // Buttons
     Button,
@@ -48,5 +52,7 @@ export {
     // Radio
     Radio,
     // Checkbox
-    Checkbox
+    Checkbox,
+    // Switch
+    Switch
 };

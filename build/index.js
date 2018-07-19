@@ -64,7 +64,7 @@ module.exports =
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 24);
+/******/ 	return __webpack_require__(__webpack_require__.s = 26);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -222,7 +222,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(47);
+var	fixUrls = __webpack_require__(51);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -558,7 +558,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(37);
+__webpack_require__(40);
 
 var _reactInk = __webpack_require__(4);
 
@@ -611,7 +611,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(39);
+__webpack_require__(42);
 
 var _reactInk = __webpack_require__(4);
 
@@ -656,19 +656,19 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.GooglePushedButton = exports.GoogleButton = exports.PushedIconButton = exports.PushedButton = exports.IconButton = exports.EditButton = exports.AddButton = exports.TrashButton = exports.Button = undefined;
 
-var _Button = __webpack_require__(12);
+var _Button = __webpack_require__(13);
 
 var _Button2 = _interopRequireDefault(_Button);
 
-var _TrashButton = __webpack_require__(17);
+var _TrashButton = __webpack_require__(18);
 
 var _TrashButton2 = _interopRequireDefault(_TrashButton);
 
-var _AddButton = __webpack_require__(11);
+var _AddButton = __webpack_require__(12);
 
 var _AddButton2 = _interopRequireDefault(_AddButton);
 
-var _EditButton = __webpack_require__(13);
+var _EditButton = __webpack_require__(14);
 
 var _EditButton2 = _interopRequireDefault(_EditButton);
 
@@ -676,7 +676,7 @@ var _IconButton = __webpack_require__(3);
 
 var _IconButton2 = _interopRequireDefault(_IconButton);
 
-var _PushedButton = __webpack_require__(16);
+var _PushedButton = __webpack_require__(17);
 
 var _PushedButton2 = _interopRequireDefault(_PushedButton);
 
@@ -684,15 +684,15 @@ var _PushedIconButton = __webpack_require__(5);
 
 var _PushedIconButton2 = _interopRequireDefault(_PushedIconButton);
 
-var _GoogleButton = __webpack_require__(14);
+var _GoogleButton = __webpack_require__(15);
 
 var _GoogleButton2 = _interopRequireDefault(_GoogleButton);
 
-var _GooglePushedButton = __webpack_require__(15);
+var _GooglePushedButton = __webpack_require__(16);
 
 var _GooglePushedButton2 = _interopRequireDefault(_GooglePushedButton);
 
-__webpack_require__(40);
+__webpack_require__(43);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -718,7 +718,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Checkbox = undefined;
 
-var _Checkbox = __webpack_require__(48);
+var _Checkbox = __webpack_require__(19);
 
 var _Checkbox2 = _interopRequireDefault(_Checkbox);
 
@@ -738,7 +738,7 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Radio = undefined;
 
-var _Radio = __webpack_require__(19);
+var _Radio = __webpack_require__(20);
 
 var _Radio2 = _interopRequireDefault(_Radio);
 
@@ -756,20 +756,15 @@ exports.Radio = _Radio2.default;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.FloatingTextArea = exports.TextArea = undefined;
+exports.Switch = undefined;
 
-var _TextArea = __webpack_require__(21);
+var _Switch = __webpack_require__(21);
 
-var _TextArea2 = _interopRequireDefault(_TextArea);
-
-var _FloatingTextArea = __webpack_require__(20);
-
-var _FloatingTextArea2 = _interopRequireDefault(_FloatingTextArea);
+var _Switch2 = _interopRequireDefault(_Switch);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.TextArea = _TextArea2.default;
-exports.FloatingTextArea = _FloatingTextArea2.default;
+exports.Switch = _Switch2.default;
 
 /***/ }),
 /* 10 */
@@ -781,13 +776,38 @@ exports.FloatingTextArea = _FloatingTextArea2.default;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
+exports.FloatingTextArea = exports.TextArea = undefined;
+
+var _TextArea = __webpack_require__(23);
+
+var _TextArea2 = _interopRequireDefault(_TextArea);
+
+var _FloatingTextArea = __webpack_require__(22);
+
+var _FloatingTextArea2 = _interopRequireDefault(_FloatingTextArea);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.TextArea = _TextArea2.default;
+exports.FloatingTextArea = _FloatingTextArea2.default;
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
 exports.FloatingTextInput = exports.TextInput = undefined;
 
-var _TextInput = __webpack_require__(23);
+var _TextInput = __webpack_require__(25);
 
 var _TextInput2 = _interopRequireDefault(_TextInput);
 
-var _FloatingTextInput = __webpack_require__(22);
+var _FloatingTextInput = __webpack_require__(24);
 
 var _FloatingTextInput2 = _interopRequireDefault(_FloatingTextInput);
 
@@ -797,7 +817,7 @@ exports.TextInput = _TextInput2.default;
 exports.FloatingTextInput = _FloatingTextInput2.default;
 
 /***/ }),
-/* 11 */
+/* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -837,7 +857,7 @@ var AddButton = function AddButton(props) {
 exports.default = AddButton;
 
 /***/ }),
-/* 12 */
+/* 13 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -853,7 +873,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(36);
+__webpack_require__(39);
 
 var _reactInk = __webpack_require__(4);
 
@@ -876,7 +896,7 @@ var Button = function Button(props) {
 exports.default = Button;
 
 /***/ }),
-/* 13 */
+/* 14 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -916,7 +936,7 @@ var EditButton = function EditButton(props) {
 exports.default = EditButton;
 
 /***/ }),
-/* 14 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -977,7 +997,7 @@ var GoogleButton = function GoogleButton(props) {
 exports.default = GoogleButton;
 
 /***/ }),
-/* 15 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1039,7 +1059,7 @@ var GooglePushedButton = function GooglePushedButton(props) {
 exports.default = GooglePushedButton;
 
 /***/ }),
-/* 16 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1055,7 +1075,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(38);
+__webpack_require__(41);
 
 var _reactInk = __webpack_require__(4);
 
@@ -1082,7 +1102,7 @@ var PushedButton = function PushedButton(props) {
 exports.default = PushedButton;
 
 /***/ }),
-/* 17 */
+/* 18 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1122,7 +1142,6 @@ var TrashButton = function TrashButton(props) {
 exports.default = TrashButton;
 
 /***/ }),
-/* 18 */,
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1139,7 +1158,119 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(42);
+__webpack_require__(44);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Checkbox = function (_React$Component) {
+    _inherits(Checkbox, _React$Component);
+
+    function Checkbox() {
+        _classCallCheck(this, Checkbox);
+
+        return _possibleConstructorReturn(this, (Checkbox.__proto__ || Object.getPrototypeOf(Checkbox)).apply(this, arguments));
+    }
+
+    _createClass(Checkbox, [{
+        key: 'onCheck',
+        value: function onCheck() {
+            if (this.props.ripple) {
+                this.ripple();
+            }
+        }
+    }, {
+        key: 'ripple',
+        value: function ripple() {
+            var _this2 = this;
+
+            var rippler = document.createElement('div');
+            rippler.className = 'ripple';
+            this.props.color ? rippler.setAttribute('style', 'background-color: ' + this.props.color) : null;
+            this.container.insertBefore(rippler, this.checkbox);
+            setTimeout(function () {
+                _this2.container.removeChild(_this2.container.firstChild);
+            }, 350);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            return _react2.default.createElement(
+                'div',
+                {
+                    key: this.props.key,
+                    className: 'checkbox-container',
+                    onClick: this.onCheck.bind(this),
+                    ref: function ref(container) {
+                        return _this3.container = container;
+                    }
+                },
+                _react2.default.createElement('input', {
+                    type: 'checkbox',
+                    ref: function ref(checkbox) {
+                        return _this3.checkbox = checkbox;
+                    },
+                    className: 'checkbox',
+                    autoFocus: this.props.autoFocus,
+                    defaultChecked: this.props.defaultChecked,
+                    defaultValue: this.props.defaultValue,
+                    disabled: this.props.disabled,
+                    form: this.props.form,
+                    name: this.props.name,
+                    required: this.props.required,
+                    value: this.props.value,
+                    onClick: this.props.onClick
+                }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'checkbox-outer', style: { color: this.props.color } },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'checkbox-inner', style: { background: this.props.color } },
+                        _react2.default.createElement('div', { className: 'checkbox-hide', style: { background: this.props.color } }),
+                        _react2.default.createElement(
+                            'svg',
+                            { viewBox: '0 0 500 500', className: 'checkbox-svg', style: { fill: this.props.vColor } },
+                            _react2.default.createElement('path', { d: 'M 207.375,425.00c-10.875,0.00-21.175-5.075-27.775-13.825L 90.25,293.225c-11.625-15.35-8.60-37.20, 6.75-48.825 c 15.375-11.65, 37.20-8.60, 48.825,6.75l 58.775,77.60l 147.80-237.275c 10.175-16.325, 31.675-21.325, 48.025-11.15 c 16.325,10.15, 21.325,31.675, 11.125,48.00L 236.975,408.575c-6.075,9.775-16.55,15.90-28.025,16.40C 208.425,425.00, 207.90,425.00, 207.375,425.00z' })
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Checkbox;
+}(_react2.default.Component);
+
+;
+
+exports.default = Checkbox;
+
+/***/ }),
+/* 20 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(45);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1170,7 +1301,6 @@ var Radio = function (_React$Component) {
             setTimeout(function () {
                 _this2.container.removeChild(_this2.container.firstChild);
             }, 350);
-            this.input.click();
         }
     }, {
         key: 'render',
@@ -1202,7 +1332,8 @@ var Radio = function (_React$Component) {
                     form: this.props.form,
                     name: this.props.name,
                     required: this.props.required,
-                    value: this.props.value
+                    value: this.props.value,
+                    onClick: this.props.onClick
                 }),
                 _react2.default.createElement(
                     'div',
@@ -1221,7 +1352,54 @@ var Radio = function (_React$Component) {
 exports.default = Radio;
 
 /***/ }),
-/* 20 */
+/* 21 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(46);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+var Switch = function Switch(props) {
+    return _react2.default.createElement(
+        'div',
+        { className: 'switch-container' },
+        _react2.default.createElement('input', {
+            type: 'checkbox',
+            className: 'switch',
+            autoFocus: props.autoFocus,
+            defaultChecked: props.defaultChecked,
+            defaultValue: props.defaultValue,
+            disabled: props.disabled,
+            form: props.form,
+            name: props.name,
+            required: props.required,
+            value: props.value,
+            onClick: props.onClick,
+            onChange: props.onChange
+        }),
+        _react2.default.createElement(
+            'div',
+            { className: 'switch-rail', style: { background: props.railColor } },
+            _react2.default.createElement('div', { className: 'switch-circle', style: { background: props.circleColor } })
+        )
+    );
+};
+
+exports.default = Switch;
+
+/***/ }),
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1239,7 +1417,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(43);
+__webpack_require__(47);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1316,7 +1494,7 @@ var FloatingTextArea = function (_React$Component) {
 exports.default = FloatingTextArea;
 
 /***/ }),
-/* 21 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1332,7 +1510,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(44);
+__webpack_require__(48);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1345,7 +1523,7 @@ var TextArea = function TextArea(props) {
 exports.default = TextArea;
 
 /***/ }),
-/* 22 */
+/* 24 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1363,7 +1541,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(45);
+__webpack_require__(49);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1440,7 +1618,7 @@ var FloatingTextInput = function (_React$Component) {
 exports.default = FloatingTextInput;
 
 /***/ }),
-/* 23 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1456,7 +1634,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-__webpack_require__(46);
+__webpack_require__(50);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -1469,7 +1647,7 @@ var TextInput = function TextInput(props) {
 exports.default = TextInput;
 
 /***/ }),
-/* 24 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -1478,17 +1656,19 @@ exports.default = TextInput;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Checkbox = exports.Radio = exports.FloatingTextArea = exports.TextArea = exports.FloatingTextInput = exports.TextInput = exports.GooglePushedButton = exports.GoogleButton = exports.PushedIconButton = exports.PushedButton = exports.IconButton = exports.EditButton = exports.AddButton = exports.TrashButton = exports.Button = undefined;
+exports.Switch = exports.Checkbox = exports.Radio = exports.FloatingTextArea = exports.TextArea = exports.FloatingTextInput = exports.TextInput = exports.GooglePushedButton = exports.GoogleButton = exports.PushedIconButton = exports.PushedButton = exports.IconButton = exports.EditButton = exports.AddButton = exports.TrashButton = exports.Button = undefined;
 
 var _buttons = __webpack_require__(6);
 
-var _textInputs = __webpack_require__(10);
+var _textInputs = __webpack_require__(11);
 
-var _textAreas = __webpack_require__(9);
+var _textAreas = __webpack_require__(10);
 
 var _radio = __webpack_require__(8);
 
 var _checkBoxes = __webpack_require__(7);
+
+var _switches = __webpack_require__(9);
 
 exports.Button = _buttons.Button;
 exports.TrashButton = _buttons.TrashButton;
@@ -1505,9 +1685,10 @@ exports.TextArea = _textAreas.TextArea;
 exports.FloatingTextArea = _textAreas.FloatingTextArea;
 exports.Radio = _radio.Radio;
 exports.Checkbox = _checkBoxes.Checkbox;
+exports.Switch = _switches.Switch;
 
 /***/ }),
-/* 25 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -1521,7 +1702,7 @@ exports.push([module.i, ".button {\n    position: relative;\n    display: flex;\
 
 
 /***/ }),
-/* 26 */
+/* 28 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -1535,7 +1716,7 @@ exports.push([module.i, ".icon-button {\n    position: relative;\n    display: f
 
 
 /***/ }),
-/* 27 */
+/* 29 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -1549,7 +1730,7 @@ exports.push([module.i, ".pushed-button-container {\n    position: relative;\n  
 
 
 /***/ }),
-/* 28 */
+/* 30 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -1563,7 +1744,7 @@ exports.push([module.i, ".pushedIconButton-inner {\n    display: flex;\n    padd
 
 
 /***/ }),
-/* 29 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(1)(false);
@@ -1577,21 +1758,6 @@ exports.push([module.i, "@keyframes buttonClick {\n    from {\n        box-shado
 
 
 /***/ }),
-/* 30 */,
-/* 31 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".radio-container {\n    position: relative;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    display: flex;\n    color: #0096EF;\n}\n\n.radio {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    margin: 0;\n    opacity: 0;\n    cursor: pointer;\n}\n\n.radio:checked + .radio-outer {\n    box-shadow: 0 0 2px 2px;\n}\n\n.radio:checked + .radio-outer > .radio-inner {\n    transform: scale(1);\n}\n\n.radio:disabled {\n    cursor: not-allowed;\n}\n\n.radio:disabled + .radio-outer {\n    opacity: 0.5;\n}\n\n.radio-inner {\n    position: absolute;\n    height: 12px;\n    width: 12px;\n    margin: 3px;\n    border-radius: 50%;\n    background: #0096EF;\n    transform: scale(0);\n    pointer-events: none;\n    transition: 0.25s ease-out;\n}\n\n.radio-outer {\n    position: relative;\n    height: 60%;\n    width: 60%;\n    margin: 20%;\n    border-radius: 50%;\n    background: transparent;\n    box-shadow: 0 0 2px 2px gray;\n    pointer-events: none;\n}\n\n.ripple {\n    position: absolute;\n    overflow: hidden;\n    height: 30px;\n    width: 30px;\n    transform: scale(0);\n    border-radius: inherit;\n    opacity: 0.75;\n    background-color: #0096EF;\n    animation: ripple 0.35s cubic-bezier(0.5, 0.7, 0.85, 1);\n}\n\n@keyframes ripple {\n    from {\n        opacity: 0.6;\n    }\n    to {\n        opacity  : 0;\n        transform: scale(1.3);\n    }\n}", ""]);
-
-// exports
-
-
-/***/ }),
 /* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1600,7 +1766,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".floatingTextArea {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n    resize: none;\n}\n\n.floatingTextArea:focus {\n    outline: 0;\n}\n\n.floatingTextArea-container {\n    align-self: flex-start;\n    padding: 24px 0 0 0;\n}\n\n.floatingTextArea-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextArea-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n    pointer-events: none;\n}\n\n.floatingTextArea-border {\n    transform: scaleX(0) translateY(-6px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextArea:focus + .floatingTextArea-border {\n    transform: scaleX(1) translateY(-6px);\n}\n\n.floatingTextArea-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextArea-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextArea_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
+exports.push([module.i, ".checkbox-container {\n    position: relative;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n}\n\n.checkbox-outer {\n    position: absolute;\n    background: transparent;\n    height: 50%;\n    width: 50%;\n    margin: 25%;\n    border-radius: 2px;\n    box-shadow: 0 0 2px 2px gray;\n    color: #0096EF;\n    pointer-events: none;\n}\n\n.checkbox-inner {\n    border-radius: 2px;\n    width: 15px;\n    height: 15px;\n    background: #0096EF;\n    transform: scale(0);\n    box-shadow: 0 0 0 0;\n    transition: 0.2s ease-in-out;\n}\n\n.checkbox-svg {\n    position: relative;\n    width: 100%;\n    height: 100%;\n    fill: white;\n    pointer-events: none;\n    transform: scale(1.2);\n}\n\n.checkbox {\n    position: absolute;\n    height: 30px;\n    width: 30px;\n    opacity: 0;\n    margin: 0;\n    cursor: pointer;\n}\n\n.checkbox:checked + .checkbox-outer > .checkbox-inner {\n    transform: scale(1);\n    box-shadow: 0 0 2px 2px;\n}\n\n.checkbox-hide {\n    position: absolute;\n    width: 15px;\n    height: 15px;\n    clip: rect(0, 15px, 15px, 0);\n    background: #0096EF;\n    z-index: 1;\n    transition: 0s;\n}\n\n.checkbox:checked + .checkbox-outer > .checkbox-inner > .checkbox-hide {\n    clip: rect(0, 15px, 15px, 15px);\n    transition: 0.3s linear;\n    transition-delay: 0.2s;\n}\n\n.checkbox:disabled {\n    cursor: not-allowed;\n}\n\n.checkbox:disabled + .checkbox-outer {\n    opacity: 0.5;\n}", ""]);
 
 // exports
 
@@ -1614,7 +1780,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".textArea {\n    align-self: flex-start;\n    resize: none;\n    border: none;\n    box-shadow: 0 0 4px 0 #202020;\n    font-size: 14px;\n    padding: 6px;\n    border-radius: 8px;\n    transition: box-shadow 0.1s linear;\n}\n\n.textArea:focus {\n    outline: 0;\n    box-shadow: 0 0 6px 1.5px #00b0ff;\n}", ""]);
+exports.push([module.i, ".radio-container {\n    position: relative;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    display: flex;\n    color: #0096EF;\n}\n\n.radio {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    margin: 0;\n    opacity: 0;\n    cursor: pointer;\n}\n\n.radio:checked + .radio-outer {\n    box-shadow: 0 0 2px 2px;\n}\n\n.radio:checked + .radio-outer > .radio-inner {\n    transform: scale(1);\n}\n\n.radio:disabled {\n    cursor: not-allowed;\n}\n\n.radio:disabled + .radio-outer {\n    opacity: 0.5;\n}\n\n.radio-inner {\n    position: absolute;\n    height: 12px;\n    width: 12px;\n    margin: 3px;\n    border-radius: 50%;\n    background: #0096EF;\n    transform: scale(0);\n    pointer-events: none;\n    transition: 0.25s ease-out;\n}\n\n.radio-outer {\n    position: relative;\n    height: 60%;\n    width: 60%;\n    margin: 20%;\n    border-radius: 50%;\n    background: transparent;\n    box-shadow: 0 0 2px 2px gray;\n    pointer-events: none;\n}\n\n.ripple {\n    position: absolute;\n    overflow: hidden;\n    height: 30px;\n    width: 30px;\n    transform: scale(0);\n    border-radius: inherit;\n    opacity: 0.75;\n    background-color: #0096EF;\n    animation: ripple 0.35s cubic-bezier(0.5, 0.7, 0.85, 1);\n}\n\n@keyframes ripple {\n    from {\n        opacity: 0.6;\n    }\n    to {\n        opacity  : 0;\n        transform: scale(1.3);\n    }\n}", ""]);
 
 // exports
 
@@ -1628,7 +1794,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".floatingTextInput {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n}\n\n.floatingTextInput:focus {\n    outline: 0;\n}\n\n.floatingTextInput-container {\n    align-self: flex-start;\n    padding: 24px 0 0 0;\n}\n\n.floatingTextInput-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextInput-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n    pointer-events: none;\n}\n\n.floatingTextInput-border {\n    transform: scaleX(0) translateY(-2px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    transform: scaleX(1) translateY(-2px);\n}\n\n.floatingTextInput-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextInput-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextInput_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
+exports.push([module.i, ".switch-container {\n    position: relative;\n    height: 30px;\n    width: 35px;\n}\n\n.switch-inherit {\n    position: absolute;\n    height: 0;\n    width: 0;\n    background-color: rgba(0, 150, 239, 0.4);\n}\n\n.switch {\n    position: absolute;\n    height: 30px;\n    width: 35px;\n    opacity: 0;\n    margin: 0;\n    cursor: pointer;\n}\n\n.switch-rail {\n    position: absolute;\n    background: rgba(0, 150, 239, 0.4);\n    height: 15px;\n    width: 35px;\n    margin-top: 7.5px;\n    border-radius: 40px;\n    pointer-events: none;\n    transition: 0.15s ease-in-out;\n}\n\n.switch:not(:checked) + .switch-rail {\n    background: #949494 !important;\n}\n\n.switch-circle {\n    position: absolute;\n    height: 20px;\n    width: 20px;\n    background: #0096EF;\n    box-shadow: 0 0 2px 0 #303030;\n    border-radius: 50%;\n    transform: translateY(-2.5px);\n    pointer-events: none;\n    transition: 0.15s ease-in-out;\n}\n\n.switch:not(:checked) + .switch-rail > .switch-circle {\n    background: #FAFAFA !important;\n}\n\n.switch:checked + .switch-rail > .switch-circle {\n    margin-left: 15px;\n}\n\n.switch:disabled {\n    cursor: not-allowed;\n}\n\n.switch:disabled + .switch-rail {\n    opacity: 0.5;\n}", ""]);
 
 // exports
 
@@ -1642,7 +1808,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".textInput {\n    align-self: flex-start;\n    font-size: 14px;\n    letter-spacing: 0.6px;\n    border-radius: 4px;\n    border: none;\n    padding: 6px;\n    box-shadow: 0 0 4px 0 #202020;\n    transition: box-shadow 0.1s linear;\n}\n\n.textInput:focus {\n    outline: 0;\n    box-shadow: 0 0 6px 1.5px #00b0ff;\n}\n", ""]);
+exports.push([module.i, ".floatingTextArea {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n    resize: none;\n}\n\n.floatingTextArea:focus {\n    outline: 0;\n}\n\n.floatingTextArea-container {\n    align-self: flex-start;\n    padding: 24px 0 0 0;\n}\n\n.floatingTextArea-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextArea-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n    pointer-events: none;\n}\n\n.floatingTextArea-border {\n    transform: scaleX(0) translateY(-6px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextArea:focus + .floatingTextArea-border {\n    transform: scaleX(1) translateY(-6px);\n}\n\n.floatingTextArea-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextArea-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextArea_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
 
 // exports
 
@@ -1651,104 +1817,46 @@ exports.push([module.i, ".textInput {\n    align-self: flex-start;\n    font-siz
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-var content = __webpack_require__(25);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
+exports = module.exports = __webpack_require__(1)(false);
+// imports
 
 
+// module
+exports.push([module.i, ".textArea {\n    align-self: flex-start;\n    resize: none;\n    border: none;\n    box-shadow: 0 0 4px 0 #202020;\n    font-size: 14px;\n    padding: 6px;\n    border-radius: 8px;\n    transition: box-shadow 0.1s linear;\n}\n\n.textArea:focus {\n    outline: 0;\n    box-shadow: 0 0 6px 1.5px #00b0ff;\n}", ""]);
 
-var options = {"hmr":true}
+// exports
 
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(2)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ }),
 /* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
-
-var content = __webpack_require__(26);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
+exports = module.exports = __webpack_require__(1)(false);
+// imports
 
 
+// module
+exports.push([module.i, ".floatingTextInput {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n}\n\n.floatingTextInput:focus {\n    outline: 0;\n}\n\n.floatingTextInput-container {\n    align-self: flex-start;\n    padding: 24px 0 0 0;\n}\n\n.floatingTextInput-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextInput-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n    pointer-events: none;\n}\n\n.floatingTextInput-border {\n    transform: scaleX(0) translateY(-2px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    transform: scaleX(1) translateY(-2px);\n}\n\n.floatingTextInput-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextInput-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextInput_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
 
-var options = {"hmr":true}
+// exports
 
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(2)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ }),
 /* 38 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".textInput {\n    align-self: flex-start;\n    font-size: 14px;\n    letter-spacing: 0.6px;\n    border-radius: 4px;\n    border: none;\n    padding: 6px;\n    box-shadow: 0 0 4px 0 #202020;\n    transition: box-shadow 0.1s linear;\n}\n\n.textInput:focus {\n    outline: 0;\n    box-shadow: 0 0 6px 1.5px #00b0ff;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+/* 39 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1798,7 +1906,7 @@ if(false) {
 }
 
 /***/ }),
-/* 39 */
+/* 40 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1848,7 +1956,7 @@ if(false) {
 }
 
 /***/ }),
-/* 40 */
+/* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
@@ -1871,8 +1979,8 @@ var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -1898,12 +2006,11 @@ if(false) {
 }
 
 /***/ }),
-/* 41 */,
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(31);
+var content = __webpack_require__(30);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1953,7 +2060,7 @@ if(false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(32);
+var content = __webpack_require__(31);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -1972,8 +2079,8 @@ var update = __webpack_require__(2)(content, options);
 if(content.locals) module.exports = content.locals;
 
 if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+	module.hot.accept("!!../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../node_modules/css-loader/index.js!./index.css");
 
 		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
 
@@ -2003,7 +2110,7 @@ if(false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(33);
+var content = __webpack_require__(32);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -2053,7 +2160,7 @@ if(false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(34);
+var content = __webpack_require__(33);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -2103,7 +2210,7 @@ if(false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 
-var content = __webpack_require__(35);
+var content = __webpack_require__(34);
 
 if(typeof content === 'string') content = [[module.i, content, '']];
 
@@ -2150,6 +2257,206 @@ if(false) {
 
 /***/ }),
 /* 47 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(35);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(36);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(37);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(38);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 51 */
 /***/ (function(module, exports) {
 
 
@@ -2242,181 +2549,6 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
-
-/***/ }),
-/* 48 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(50);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Checkbox = function (_React$Component) {
-    _inherits(Checkbox, _React$Component);
-
-    function Checkbox() {
-        _classCallCheck(this, Checkbox);
-
-        return _possibleConstructorReturn(this, (Checkbox.__proto__ || Object.getPrototypeOf(Checkbox)).apply(this, arguments));
-    }
-
-    _createClass(Checkbox, [{
-        key: 'onCheck',
-        value: function onCheck() {
-            if (this.props.ripple) {
-                this.ripple();
-            }
-        }
-    }, {
-        key: 'ripple',
-        value: function ripple() {
-            var _this2 = this;
-
-            var rippler = document.createElement('div');
-            rippler.className = 'ripple';
-            this.props.color ? rippler.setAttribute('style', 'background-color: ' + this.props.color) : null;
-            this.container.insertBefore(rippler, this.checkbox);
-            setTimeout(function () {
-                _this2.container.removeChild(_this2.container.firstChild);
-            }, 350);
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var _this3 = this;
-
-            return _react2.default.createElement(
-                'div',
-                {
-                    key: this.props.key,
-                    className: 'checkbox-container',
-                    onClick: this.onCheck.bind(this),
-                    ref: function ref(container) {
-                        return _this3.container = container;
-                    }
-                },
-                _react2.default.createElement('input', {
-                    type: 'checkbox',
-                    ref: function ref(checkbox) {
-                        return _this3.checkbox = checkbox;
-                    },
-                    className: 'checkbox',
-                    autoFocus: this.props.autoFocus,
-                    defaultChecked: this.props.defaultChecked,
-                    defaultValue: this.props.defaultValue,
-                    disabled: this.props.disabled,
-                    form: this.props.form,
-                    name: this.props.name,
-                    required: this.props.required,
-                    value: this.props.value
-                }),
-                _react2.default.createElement(
-                    'div',
-                    { className: 'checkbox-outer', style: { color: this.props.color } },
-                    _react2.default.createElement(
-                        'div',
-                        { className: 'checkbox-inner', style: { background: this.props.color } },
-                        _react2.default.createElement('div', { className: 'checkbox-hide', style: { background: this.props.color } }),
-                        _react2.default.createElement(
-                            'svg',
-                            { viewBox: '0 0 500 500', className: 'checkbox-svg', style: { fill: this.props.vColor } },
-                            _react2.default.createElement('path', { d: 'M 207.375,425.00c-10.875,0.00-21.175-5.075-27.775-13.825L 90.25,293.225c-11.625-15.35-8.60-37.20, 6.75-48.825 c 15.375-11.65, 37.20-8.60, 48.825,6.75l 58.775,77.60l 147.80-237.275c 10.175-16.325, 31.675-21.325, 48.025-11.15 c 16.325,10.15, 21.325,31.675, 11.125,48.00L 236.975,408.575c-6.075,9.775-16.55,15.90-28.025,16.40C 208.425,425.00, 207.90,425.00, 207.375,425.00z' })
-                        )
-                    )
-                )
-            );
-        }
-    }]);
-
-    return Checkbox;
-}(_react2.default.Component);
-
-;
-
-exports.default = Checkbox;
-
-/***/ }),
-/* 49 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(false);
-// imports
-
-
-// module
-exports.push([module.i, ".checkbox-container {\n    position: relative;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n}\n\n.checkbox-outer {\n    position: absolute;\n    background: transparent;\n    height: 50%;\n    width: 50%;\n    margin: 25%;\n    border-radius: 2px;\n    box-shadow: 0 0 2px 2px gray;\n    color: #0096EF;\n    pointer-events: none;\n}\n\n.checkbox-inner {\n    border-radius: 2px;\n    width: 15px;\n    height: 15px;\n    background: #0096EF;\n    transform: scale(0);\n    box-shadow: 0 0 0 0;\n    transition: 0.2s ease-in-out;\n}\n\n.checkbox-svg {\n    position: relative;\n    width: 100%;\n    height: 100%;\n    fill: white;\n    pointer-events: none;\n    transform: scale(1.2);\n}\n\n.checkbox {\n    position: absolute;\n    height: 30px;\n    width: 30px;\n    opacity: 0;\n    margin: 0;\n    cursor: pointer;\n}\n\n.checkbox:checked + .checkbox-outer > .checkbox-inner {\n    transform: scale(1);\n    box-shadow: 0 0 2px 2px;\n}\n\n.checkbox-hide {\n    position: absolute;\n    width: 15px;\n    height: 15px;\n    clip: rect(0, 15px, 15px, 0);\n    background: #0096EF;\n    z-index: 1;\n    transition: 0s;\n}\n\n.checkbox:checked + .checkbox-outer > .checkbox-inner > .checkbox-hide {\n    clip: rect(0, 15px, 15px, 15px);\n    transition: 0.3s linear;\n    transition-delay: 0.2s;\n}\n\n.checkbox:disabled {\n    cursor: not-allowed;\n}\n\n.checkbox:disabled + .checkbox-outer {\n    opacity: 0.5;\n}", ""]);
-
-// exports
-
-
-/***/ }),
-/* 50 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(49);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(2)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
 
 /***/ })
 /******/ ]);

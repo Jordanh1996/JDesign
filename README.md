@@ -87,6 +87,10 @@ Available Components
 
 * Checkbox
 
+## Switches
+
+* Switch
+
 Props
 =====
 
@@ -242,6 +246,17 @@ all html input checkbox props | *
 color | String
 ripple | Boolean(default is false)
 vColor | String
+
+## Switch
+
+note: switch is technically an input type checkbox
+
+Prop Name | Prop Type
+----------|----------
+all html input checkbox props | *
+color | String
+railColor | String
+circleColor | String
 
 
 ## Suggestions, Help & Contact

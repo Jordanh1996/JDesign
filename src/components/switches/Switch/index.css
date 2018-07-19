@@ -1,0 +1,64 @@
+.switch-container {
+    position: relative;
+    height: 30px;
+    width: 35px;
+}
+
+.switch-inherit {
+    position: absolute;
+    height: 0;
+    width: 0;
+    background-color: rgba(0, 150, 239, 0.4);
+}
+
+.switch {
+    position: absolute;
+    height: 30px;
+    width: 35px;
+    opacity: 0;
+    margin: 0;
+    cursor: pointer;
+}
+
+.switch-rail {
+    position: absolute;
+    background: rgba(0, 150, 239, 0.4);
+    height: 15px;
+    width: 35px;
+    margin-top: 7.5px;
+    border-radius: 40px;
+    pointer-events: none;
+    transition: 0.15s ease-in-out;
+}
+
+.switch:not(:checked) + .switch-rail {
+    background: #949494 !important;
+}
+
+.switch-circle {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background: #0096EF;
+    box-shadow: 0 0 2px 0 #303030;
+    border-radius: 50%;
+    transform: translateY(-2.5px);
+    pointer-events: none;
+    transition: 0.15s ease-in-out;
+}
+
+.switch:not(:checked) + .switch-rail > .switch-circle {
+    background: #FAFAFA !important;
+}
+
+.switch:checked + .switch-rail > .switch-circle {
+    margin-left: 15px;
+}
+
+.switch:disabled {
+    cursor: not-allowed;
+}
+
+.switch:disabled + .switch-rail {
+    opacity: 0.5;
+}

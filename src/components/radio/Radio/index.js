@@ -11,7 +11,6 @@ class Radio extends React.Component {
         setTimeout(() => {
             this.container.removeChild(this.container.firstChild);
         }, 350);
-        this.input.click();
     };
 
     render() {
@@ -36,6 +35,7 @@ class Radio extends React.Component {
                     name={this.props.name}
                     required={this.props.required}
                     value={this.props.value}
+                    onClick={this.props.onClick}
                 />
                 <div className='radio-outer'>
                     <div className='radio-inner' style={{ background: this.props.color }} />
