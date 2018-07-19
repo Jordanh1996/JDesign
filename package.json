@@ -1,6 +1,6 @@
 {
   "name": "jdesign",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "React Styled Components",
   "main": "build/index.js",
   "peerDependencies": {
@@ -45,9 +45,8 @@
     "component",
     "components"
   ],
-  "repository" : { 
-    "type" : "git", 
-    "url" : "https://github.com/Jordanh1996/JDesign"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Jordanh1996/JDesign"
   }
-
 }

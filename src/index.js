@@ -24,6 +24,10 @@ import {
     Radio
 } from './components/radio';
 
+import {
+    Checkbox
+} from './components/checkBoxes';
+
 export {
     // Buttons
     Button,
@@ -43,4 +47,6 @@ export {
     FloatingTextArea,
     // Radio
     Radio,
+    // Checkbox
+    Checkbox
 };
