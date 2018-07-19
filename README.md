@@ -97,6 +97,7 @@ label | String
 children | JSX
 rounded | Boolean
 ripple | Boolean
+rippleColor | String
 className | String
 
 ### PushedButton
@@ -108,6 +109,7 @@ label | String
 children | JSX
 rounded | Boolean
 ripple | Boolean
+rippleColor | String
 className | String
 innerButtonClassName | String
 
@@ -126,6 +128,7 @@ labelClassName | String
 children | JSX
 rounded | Boolean
 ripple | Boolean
+rippleColor | String
 className | String
 
 ### PushedIconButton
@@ -143,6 +146,7 @@ labelClassName | String
 children | JSX
 rounded | Boolean
 ripple | Boolean
+rippleColor | String
 className | String
 innerButtonStyle | Object
 innerButtonClassName | String

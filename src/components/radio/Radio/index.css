@@ -23,6 +23,14 @@
     transform: scale(1);
 }
 
+.radio:disabled {
+    cursor: not-allowed;
+}
+
+.radio:disabled + .radio-outer {
+    opacity: 0.5;
+}
+
 .radio-inner {
     position: relative;
     height: 70%;

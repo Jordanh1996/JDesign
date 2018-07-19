@@ -581,7 +581,7 @@ var IconButton = function IconButton(props) {
             },
             props.label
         ),
-        props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, null)
+        props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, { style: { color: props.rippleColor } })
     );
 };
 
@@ -637,7 +637,7 @@ var PushedIconButton = function PushedIconButton(props) {
                 },
                 props.label
             ) : null,
-            props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, null)
+            props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, { style: { color: props.rippleColor } })
         )
     );
 };
@@ -849,7 +849,7 @@ var Button = function Button(props) {
         }),
         props.children,
         props.label,
-        props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, null)
+        props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, { style: { color: props.rippleColor } })
     );
 };
 
@@ -1054,7 +1054,7 @@ var PushedButton = function PushedButton(props) {
             { className: 'pushed-button ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.innerButtonClassName },
             props.children,
             props.label,
-            props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, null)
+            props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, { style: { color: props.rippleColor } })
         )
     );
 };
@@ -1560,7 +1560,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".radio-container {\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    display: flex;\n    color: #0096EF;\n}\n\n.radio {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    margin: 0;\n    opacity: 0;\n    cursor: pointer;\n}\n\n.radio:checked + .radio-outer {\n    box-shadow: 0 0 2px 2px;\n}\n\n.radio:checked + .radio-outer > .radio-inner {\n    transform: scale(1);\n}\n\n.radio-inner {\n    position: relative;\n    height: 70%;\n    width: 70%;\n    margin: 15%;\n    border-radius: 50%;\n    background: #0096EF;\n    transform: scale(0);\n    pointer-events: none;\n    transition: 0.25s ease-out;\n}\n\n.radio-outer {\n    position: relative;\n    height: 60%;\n    width: 60%;\n    margin: 20%;\n    border-radius: 50%;\n    background: transparent;\n    box-shadow: 0 0 2px 2px gray;\n    pointer-events: none;\n}\n\n.ripple {\n    position: absolute;\n    overflow: hidden;\n    height: 30px;\n    width: 30px;\n    transform: scale(0);\n    border-radius: inherit;\n    opacity: 0.75;\n    background-color: #0096EF;\n    animation: ripple 0.5s cubic-bezier(0.5, 0.7, 0.85, 1);\n}\n\n@keyframes ripple {\n    from {\n        opacity: 0.6;\n    }\n    to {\n        opacity  : 0;\n        transform: scale(1.3);\n    }\n}", ""]);
+exports.push([module.i, ".radio-container {\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    display: flex;\n    color: #0096EF;\n}\n\n.radio {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    margin: 0;\n    opacity: 0;\n    cursor: pointer;\n}\n\n.radio:checked + .radio-outer {\n    box-shadow: 0 0 2px 2px;\n}\n\n.radio:checked + .radio-outer > .radio-inner {\n    transform: scale(1);\n}\n\n.radio:disabled {\n    cursor: not-allowed;\n}\n\n.radio:disabled + .radio-outer {\n    opacity: 0.5;\n}\n\n.radio-inner {\n    position: relative;\n    height: 70%;\n    width: 70%;\n    margin: 15%;\n    border-radius: 50%;\n    background: #0096EF;\n    transform: scale(0);\n    pointer-events: none;\n    transition: 0.25s ease-out;\n}\n\n.radio-outer {\n    position: relative;\n    height: 60%;\n    width: 60%;\n    margin: 20%;\n    border-radius: 50%;\n    background: transparent;\n    box-shadow: 0 0 2px 2px gray;\n    pointer-events: none;\n}\n\n.ripple {\n    position: absolute;\n    overflow: hidden;\n    height: 30px;\n    width: 30px;\n    transform: scale(0);\n    border-radius: inherit;\n    opacity: 0.75;\n    background-color: #0096EF;\n    animation: ripple 0.5s cubic-bezier(0.5, 0.7, 0.85, 1);\n}\n\n@keyframes ripple {\n    from {\n        opacity: 0.6;\n    }\n    to {\n        opacity  : 0;\n        transform: scale(1.3);\n    }\n}", ""]);
 
 // exports
 

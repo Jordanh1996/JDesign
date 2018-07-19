@@ -13,7 +13,7 @@ const PushedButton = (props) => (
             {
                 props.ripple === false ?
                 null :
-                <Ink />
+                <Ink style={{ color: props.rippleColor }} />
             }
         </div>
     </button>
