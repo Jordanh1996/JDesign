@@ -83,6 +83,10 @@ Available Components
 
 * Radio
 
+## Check Boxes
+
+* Checkbox
+
 Props
 =====
 
@@ -220,12 +224,24 @@ all FloatingTextInput props | *
 
 ## Radio
 
-The color prop changes the color of the ripple, border(when clicked) and the checked mark.
+The color prop changes the color of the ripple, border(when clicked), and the checked mark.
 
 Prop Name | Prop Type
 ----------|----------
-all html radio button props | *
+all html input radio props | *
 color | String
+
+## Checkbox
+
+The color prop changes the color of the ripple(if enabled), and background(when clicked).
+vColor prop changes the background of the v sign when clicked.
+
+Prop Name | Prop Type
+----------|----------
+all html input checkbox props | *
+color | String
+ripple | Boolean(default is false)
+vColor | String
 
 
 ## Suggestions, Help & Contact

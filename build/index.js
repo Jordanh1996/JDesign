@@ -718,13 +718,13 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.Checkbox = undefined;
 
-var _CheckBox = __webpack_require__(18);
+var _Checkbox = __webpack_require__(48);
 
-var _CheckBox2 = _interopRequireDefault(_CheckBox);
+var _Checkbox2 = _interopRequireDefault(_Checkbox);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-exports.Checkbox = _CheckBox2.default;
+exports.Checkbox = _Checkbox2.default;
 
 /***/ }),
 /* 8 */
@@ -1122,56 +1122,7 @@ var TrashButton = function TrashButton(props) {
 exports.default = TrashButton;
 
 /***/ }),
-/* 18 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-    value: true
-});
-
-var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
-
-var _react = __webpack_require__(0);
-
-var _react2 = _interopRequireDefault(_react);
-
-__webpack_require__(41);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
-
-function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
-
-function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
-
-var Checkbox = function (_React$Component) {
-    _inherits(Checkbox, _React$Component);
-
-    function Checkbox() {
-        _classCallCheck(this, Checkbox);
-
-        return _possibleConstructorReturn(this, (Checkbox.__proto__ || Object.getPrototypeOf(Checkbox)).apply(this, arguments));
-    }
-
-    _createClass(Checkbox, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement('div', null);
-        }
-    }]);
-
-    return Checkbox;
-}(_react2.default.Component);
-
-;
-
-exports.default = Checkbox;
-
-/***/ }),
+/* 18 */,
 /* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1218,7 +1169,7 @@ var Radio = function (_React$Component) {
             this.container.insertBefore(rippler, this.input);
             setTimeout(function () {
                 _this2.container.removeChild(_this2.container.firstChild);
-            }, 500);
+            }, 350);
             this.input.click();
         }
     }, {
@@ -1230,6 +1181,7 @@ var Radio = function (_React$Component) {
                 'div',
                 {
                     className: 'radio-container',
+                    key: this.props.key,
                     ref: function ref(container) {
                         return _this3.container = container;
                     },
@@ -1625,20 +1577,7 @@ exports.push([module.i, "@keyframes buttonClick {\n    from {\n        box-shado
 
 
 /***/ }),
-/* 30 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(1)(false);
-// imports
-
-
-// module
-exports.push([module.i, "", ""]);
-
-// exports
-
-
-/***/ }),
+/* 30 */,
 /* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -1647,7 +1586,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".radio-container {\n    position: relative;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    display: flex;\n    color: #0096EF;\n}\n\n.radio {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    margin: 0;\n    opacity: 0;\n    cursor: pointer;\n}\n\n.radio:checked + .radio-outer {\n    box-shadow: 0 0 2px 2px;\n}\n\n.radio:checked + .radio-outer > .radio-inner {\n    transform: scale(1);\n}\n\n.radio:disabled {\n    cursor: not-allowed;\n}\n\n.radio:disabled + .radio-outer {\n    opacity: 0.5;\n}\n\n.radio-inner {\n    position: absolute;\n    height: 12px;\n    width: 12px;\n    margin: 3px;\n    border-radius: 50%;\n    background: #0096EF;\n    transform: scale(0);\n    pointer-events: none;\n    transition: 0.25s ease-out;\n}\n\n.radio-outer {\n    position: relative;\n    height: 60%;\n    width: 60%;\n    margin: 20%;\n    border-radius: 50%;\n    background: transparent;\n    box-shadow: 0 0 2px 2px gray;\n    pointer-events: none;\n}\n\n.ripple {\n    position: absolute;\n    overflow: hidden;\n    height: 30px;\n    width: 30px;\n    transform: scale(0);\n    border-radius: inherit;\n    opacity: 0.75;\n    background-color: #0096EF;\n    animation: ripple 0.5s cubic-bezier(0.5, 0.7, 0.85, 1);\n}\n\n@keyframes ripple {\n    from {\n        opacity: 0.6;\n    }\n    to {\n        opacity  : 0;\n        transform: scale(1.3);\n    }\n}", ""]);
+exports.push([module.i, ".radio-container {\n    position: relative;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n    display: flex;\n    color: #0096EF;\n}\n\n.radio {\n    position: absolute;\n    width: 30px;\n    height: 30px;\n    margin: 0;\n    opacity: 0;\n    cursor: pointer;\n}\n\n.radio:checked + .radio-outer {\n    box-shadow: 0 0 2px 2px;\n}\n\n.radio:checked + .radio-outer > .radio-inner {\n    transform: scale(1);\n}\n\n.radio:disabled {\n    cursor: not-allowed;\n}\n\n.radio:disabled + .radio-outer {\n    opacity: 0.5;\n}\n\n.radio-inner {\n    position: absolute;\n    height: 12px;\n    width: 12px;\n    margin: 3px;\n    border-radius: 50%;\n    background: #0096EF;\n    transform: scale(0);\n    pointer-events: none;\n    transition: 0.25s ease-out;\n}\n\n.radio-outer {\n    position: relative;\n    height: 60%;\n    width: 60%;\n    margin: 20%;\n    border-radius: 50%;\n    background: transparent;\n    box-shadow: 0 0 2px 2px gray;\n    pointer-events: none;\n}\n\n.ripple {\n    position: absolute;\n    overflow: hidden;\n    height: 30px;\n    width: 30px;\n    transform: scale(0);\n    border-radius: inherit;\n    opacity: 0.75;\n    background-color: #0096EF;\n    animation: ripple 0.35s cubic-bezier(0.5, 0.7, 0.85, 1);\n}\n\n@keyframes ripple {\n    from {\n        opacity: 0.6;\n    }\n    to {\n        opacity  : 0;\n        transform: scale(1.3);\n    }\n}", ""]);
 
 // exports
 
@@ -1959,56 +1898,7 @@ if(false) {
 }
 
 /***/ }),
-/* 41 */
-/***/ (function(module, exports, __webpack_require__) {
-
-
-var content = __webpack_require__(30);
-
-if(typeof content === 'string') content = [[module.i, content, '']];
-
-var transform;
-var insertInto;
-
-
-
-var options = {"hmr":true}
-
-options.transform = transform
-options.insertInto = undefined;
-
-var update = __webpack_require__(2)(content, options);
-
-if(content.locals) module.exports = content.locals;
-
-if(false) {
-	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
-		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
-
-		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-
-		var locals = (function(a, b) {
-			var key, idx = 0;
-
-			for(key in a) {
-				if(!b || a[key] !== b[key]) return false;
-				idx++;
-			}
-
-			for(key in b) idx--;
-
-			return idx === 0;
-		}(content.locals, newContent.locals));
-
-		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
-
-		update(newContent);
-	});
-
-	module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
+/* 41 */,
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -2352,6 +2242,181 @@ module.exports = function (css) {
 	return fixedCss;
 };
 
+
+/***/ }),
+/* 48 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(50);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Checkbox = function (_React$Component) {
+    _inherits(Checkbox, _React$Component);
+
+    function Checkbox() {
+        _classCallCheck(this, Checkbox);
+
+        return _possibleConstructorReturn(this, (Checkbox.__proto__ || Object.getPrototypeOf(Checkbox)).apply(this, arguments));
+    }
+
+    _createClass(Checkbox, [{
+        key: 'onCheck',
+        value: function onCheck() {
+            if (this.props.ripple) {
+                this.ripple();
+            }
+        }
+    }, {
+        key: 'ripple',
+        value: function ripple() {
+            var _this2 = this;
+
+            var rippler = document.createElement('div');
+            rippler.className = 'ripple';
+            this.props.color ? rippler.setAttribute('style', 'background-color: ' + this.props.color) : null;
+            this.container.insertBefore(rippler, this.checkbox);
+            setTimeout(function () {
+                _this2.container.removeChild(_this2.container.firstChild);
+            }, 350);
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            return _react2.default.createElement(
+                'div',
+                {
+                    key: this.props.key,
+                    className: 'checkbox-container',
+                    onClick: this.onCheck.bind(this),
+                    ref: function ref(container) {
+                        return _this3.container = container;
+                    }
+                },
+                _react2.default.createElement('input', {
+                    type: 'checkbox',
+                    ref: function ref(checkbox) {
+                        return _this3.checkbox = checkbox;
+                    },
+                    className: 'checkbox',
+                    autoFocus: this.props.autoFocus,
+                    defaultChecked: this.props.defaultChecked,
+                    defaultValue: this.props.defaultValue,
+                    disabled: this.props.disabled,
+                    form: this.props.form,
+                    name: this.props.name,
+                    required: this.props.required,
+                    value: this.props.value
+                }),
+                _react2.default.createElement(
+                    'div',
+                    { className: 'checkbox-outer', style: { color: this.props.color } },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'checkbox-inner', style: { background: this.props.color } },
+                        _react2.default.createElement('div', { className: 'checkbox-hide', style: { background: this.props.color } }),
+                        _react2.default.createElement(
+                            'svg',
+                            { viewBox: '0 0 500 500', className: 'checkbox-svg', style: { fill: this.props.vColor } },
+                            _react2.default.createElement('path', { d: 'M 207.375,425.00c-10.875,0.00-21.175-5.075-27.775-13.825L 90.25,293.225c-11.625-15.35-8.60-37.20, 6.75-48.825 c 15.375-11.65, 37.20-8.60, 48.825,6.75l 58.775,77.60l 147.80-237.275c 10.175-16.325, 31.675-21.325, 48.025-11.15 c 16.325,10.15, 21.325,31.675, 11.125,48.00L 236.975,408.575c-6.075,9.775-16.55,15.90-28.025,16.40C 208.425,425.00, 207.90,425.00, 207.375,425.00z' })
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Checkbox;
+}(_react2.default.Component);
+
+;
+
+exports.default = Checkbox;
+
+/***/ }),
+/* 49 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".checkbox-container {\n    position: relative;\n    width: 30px;\n    height: 30px;\n    border-radius: 50%;\n}\n\n.checkbox-outer {\n    position: absolute;\n    background: transparent;\n    height: 50%;\n    width: 50%;\n    margin: 25%;\n    border-radius: 2px;\n    box-shadow: 0 0 2px 2px gray;\n    color: #0096EF;\n    pointer-events: none;\n}\n\n.checkbox-inner {\n    border-radius: 2px;\n    width: 15px;\n    height: 15px;\n    background: #0096EF;\n    transform: scale(0);\n    box-shadow: 0 0 0 0;\n    transition: 0.2s ease-in-out;\n}\n\n.checkbox-svg {\n    position: relative;\n    width: 100%;\n    height: 100%;\n    fill: white;\n    pointer-events: none;\n    transform: scale(1.2);\n}\n\n.checkbox {\n    position: absolute;\n    height: 30px;\n    width: 30px;\n    opacity: 0;\n    margin: 0;\n    cursor: pointer;\n}\n\n.checkbox:checked + .checkbox-outer > .checkbox-inner {\n    transform: scale(1);\n    box-shadow: 0 0 2px 2px;\n}\n\n.checkbox-hide {\n    position: absolute;\n    width: 15px;\n    height: 15px;\n    clip: rect(0, 15px, 15px, 0);\n    background: #0096EF;\n    z-index: 1;\n    transition: 0s;\n}\n\n.checkbox:checked + .checkbox-outer > .checkbox-inner > .checkbox-hide {\n    clip: rect(0, 15px, 15px, 15px);\n    transition: 0.3s linear;\n    transition-delay: 0.2s;\n}\n\n.checkbox:disabled {\n    cursor: not-allowed;\n}\n\n.checkbox:disabled + .checkbox-outer {\n    opacity: 0.5;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 50 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(49);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

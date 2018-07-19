@@ -10,7 +10,7 @@ class Radio extends React.Component {
         this.container.insertBefore(rippler, this.input);
         setTimeout(() => {
             this.container.removeChild(this.container.firstChild);
-        }, 500);
+        }, 350);
         this.input.click();
     };
 
@@ -18,6 +18,7 @@ class Radio extends React.Component {
         return (
             <div 
                 className='radio-container'
+                key={this.props.key}
                 ref={(container) => this.container = container}
                 onClick={this.onCheck.bind(this)}
                 style={Object.assign({ color: this.props.color }, this.props.style)}
