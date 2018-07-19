@@ -20,6 +20,10 @@ import {
     FloatingTextArea
 } from './components/textAreas';
 
+import {
+    Radio
+} from './components/radio';
+
 export {
     // Buttons
     Button,
@@ -36,5 +40,7 @@ export {
     FloatingTextInput,
     // Text Areas
     TextArea,
-    FloatingTextArea
+    FloatingTextArea,
+    // Radio
+    Radio,
 };

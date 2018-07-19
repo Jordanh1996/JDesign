@@ -13,8 +13,16 @@ NOTE: heroku apps after 30 minutes without traffic are idling, so loading may ta
 Installation
 ------
 
+You can install with npm :
+
 ```
 $ npm install --save jdesign
+```
+
+and also with yarn :
+
+```
+$ yarn add jdesign
 ```
 
 Usage
@@ -70,6 +78,10 @@ Available Components
 
 * TextArea
 * FloatingTextArea
+
+## Radio Buttons
+
+* Radio
 
 Props
 =====
@@ -201,6 +213,15 @@ Prop Name | Prop Type
 ----------|----------
 all html textare props | *
 all FloatingTextInput props | *
+
+## Radio
+
+The color prop changes the color of the ripple, border(when clicked) and the checked mark.
+
+Prop Name | Prop Type
+----------|----------
+all html radio button props | *
+color | String
 
 
 ## Suggestions, Help & Contact

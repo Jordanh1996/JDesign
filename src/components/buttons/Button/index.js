@@ -12,7 +12,7 @@ const Button = (props) => (
         {
             props.ripple === false ?
             null :
-            <Ink />
+            <Ink  />
         }
     </button>
 );
