@@ -1,0 +1,50 @@
+.floatingSelect-container {
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.floatingSelect-icon {
+    width: 12px;
+    height: 16px;
+    align-self: center;
+    margin-left: auto;
+}
+
+.floatingSelect-picked {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    user-select: none;
+    border-bottom: 2px solid #DBD7C9;
+    padding: 4px;
+    padding-top: 16px;
+    min-width: 80px;
+}
+
+.floatingSelect-label {
+    user-select: none;
+    position: absolute;
+    color: #757582;
+    margin-top: 16px;
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+.floatingSelect-label_focused {
+    transform: translateY(-110%);
+    color: #00b0ff;
+    font-size: 12px;
+}
+
+.floatingSelect-container:focus {
+    outline: 0;
+}
+
+.floatingSelect-container[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.floatingSelect-picked[disabled] {
+    pointer-events: none;
+}

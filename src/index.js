@@ -34,6 +34,7 @@ import {
 
 import {
     Select,
+    FloatingSelect,
     Option
 } from './components/selects';
 
@@ -62,5 +63,6 @@ export {
     Switch,
     // Select
     Select,
+    FloatingSelect,
     Option
 };

@@ -3830,11 +3830,15 @@ exports.Radio = _Radio2.default;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Option = exports.Select = undefined;
+exports.Option = exports.FloatingSelect = exports.Select = undefined;
 
 var _Select = __webpack_require__(104);
 
 var _Select2 = _interopRequireDefault(_Select);
+
+var _FloatingSelect = __webpack_require__(277);
+
+var _FloatingSelect2 = _interopRequireDefault(_FloatingSelect);
 
 var _Option = __webpack_require__(102);
 
@@ -3843,6 +3847,7 @@ var _Option2 = _interopRequireDefault(_Option);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 exports.Select = _Select2.default;
+exports.FloatingSelect = _FloatingSelect2.default;
 exports.Option = _Option2.default;
 
 /***/ }),
@@ -5035,7 +5040,7 @@ exports.default = TextInput;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Option = exports.Select = exports.Switch = exports.Checkbox = exports.Radio = exports.FloatingTextArea = exports.TextArea = exports.FloatingTextInput = exports.TextInput = exports.GooglePushedButton = exports.GoogleButton = exports.PushedIconButton = exports.PushedButton = exports.IconButton = exports.EditButton = exports.AddButton = exports.TrashButton = exports.Button = undefined;
+exports.Option = exports.FloatingSelect = exports.Select = exports.Switch = exports.Checkbox = exports.Radio = exports.FloatingTextArea = exports.TextArea = exports.FloatingTextInput = exports.TextInput = exports.GooglePushedButton = exports.GoogleButton = exports.PushedIconButton = exports.PushedButton = exports.IconButton = exports.EditButton = exports.AddButton = exports.TrashButton = exports.Button = undefined;
 
 var _buttons = __webpack_require__(86);
 
@@ -5068,6 +5073,7 @@ exports.Radio = _radio.Radio;
 exports.Checkbox = _checkBoxes.Checkbox;
 exports.Switch = _switches.Switch;
 exports.Select = _selects.Select;
+exports.FloatingSelect = _selects.FloatingSelect;
 exports.Option = _selects.Option;
 
 /***/ }),
@@ -35191,6 +35197,259 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+/* 277 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(279);
+
+var _Options = __webpack_require__(103);
+
+var _Options2 = _interopRequireDefault(_Options);
+
+var _velocityReact = __webpack_require__(272);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Select = function (_React$Component) {
+    _inherits(Select, _React$Component);
+
+    function Select(props) {
+        _classCallCheck(this, Select);
+
+        var _this = _possibleConstructorReturn(this, (Select.__proto__ || Object.getPrototypeOf(Select)).call(this, props));
+
+        _this.closeOptions = _this.closeOptions.bind(_this);
+        _this.openOptions = _this.openOptions.bind(_this);
+        _this.onChange = _this.onChange.bind(_this);
+        _this.renderChildren = _this.renderChildren.bind(_this);
+        _this.getPickedOptionDimensions = _this.getPickedOptionDimensions.bind(_this);
+        _this.state = {
+            value: '',
+            text: '',
+            opened: false
+        };
+        for (var i = 0; i < props.children.length; i++) {
+            if (props.children[i].props.selected) {
+                var text = props.children[i].props.children;
+                _this.state.text = text;
+                _this.state.value = props.children[i].props.value || text;
+                break;
+            }
+        }
+        if (props.defaultValue || props.value) {
+            _this.state.value = props.defaultValue || props.value;
+            _this.state.text = props.children.find(function (el) {
+                return el.props.value === (props.defaultValue || props.value);
+            }).props.children;
+        }
+        if (props.value && typeof props.onChange !== 'function') {
+            console.warn('You have hardcoded a value for Select but did not set an onChange handler to change it.' + '\n Please set an onChange handler with a function to change value or if you intended to make a default value ' + 'use defaultValue prop instead.');
+        }
+        return _this;
+    }
+
+    _createClass(Select, [{
+        key: 'onChange',
+        value: function onChange(e) {
+            this.closeOptions();
+            var text = e.currentTarget.textContent;
+            var value = e.currentTarget.getAttribute('value') || text;
+            this.setState({ text: text, value: value });
+            if (this.props.onChange) {
+                this.props.onChange({ text: e.currentTarget.textContent, value: value }, e);
+            }
+        }
+    }, {
+        key: 'renderChildren',
+        value: function renderChildren(children) {
+            var _this2 = this;
+
+            return _react2.default.Children.map(children, function (child) {
+                var style = {};
+                var className = 'option ' + _this2.props.optionClassName;
+                if ((_this2.props.value || _this2.state.value) === (child.props.value || child.props.children)) {
+                    style.background = _this2.props.selectedBackground || '#EEEEEE';
+                    style = _extends({}, style, _this2.props.selectedStyle);
+                    className += ' ' + _this2.props.selectedClassName;
+                }
+                var childWithProps = _react2.default.cloneElement(child, { onClick: _this2.onChange, style: style, className: className });
+                return childWithProps;
+            });
+        }
+    }, {
+        key: 'openOptions',
+        value: function openOptions() {
+            this.setState({ opened: true });
+        }
+    }, {
+        key: 'closeOptions',
+        value: function closeOptions() {
+            this.setState({ opened: false });
+        }
+    }, {
+        key: 'getPickedOptionDimensions',
+        value: function getPickedOptionDimensions() {
+            return this.pickedOption.getBoundingClientRect();
+        }
+    }, {
+        key: 'render',
+        value: function render() {
+            var _this3 = this;
+
+            var children = this.props.children;
+
+            var text = '';
+            for (var i = 0; i < this.props.children.length; i++) {
+                if ((this.props.children[i].props.value || this.props.children[i].props.children) === (this.props.value || this.state.value)) {
+                    text = this.props.children[i].props.children;
+                    break;
+                }
+            }
+
+            return _react2.default.createElement(
+                'div',
+                { className: 'floatingSelect-container', tabIndex: '0', onBlur: this.closeOptions, disabled: this.props.disabled },
+                _react2.default.createElement('input', { type: 'hidden', value: this.props.value || this.state.value, form: this.props.form, disabled: this.props.disabled }),
+                _react2.default.createElement(
+                    _velocityReact.VelocityTransitionGroup,
+                    { enter: { animation: "slideDown" }, leave: { animation: "slideUp" }, duration: 300 },
+                    this.state.opened && _react2.default.createElement(
+                        _Options2.default,
+                        {
+                            getPickedOptionDimensions: this.getPickedOptionDimensions,
+                            className: this.props.optionsClassName,
+                            style: this.props.optionsStyle
+                        },
+                        this.renderChildren(children)
+                    )
+                ),
+                _react2.default.createElement(
+                    'div',
+                    {
+                        className: 'floatingSelect-label ' + ((this.state.opened || this.state.value !== '') && 'floatingSelect-label_focused ' + this.props.floatingFocusedLabelClassName) + ' ' + this.props.floatingLabelClassName,
+                        style: Object.assign({}, this.props.floatingLabelStyle, this.state.opened || this.state.value !== '' ? this.props.floatingFocusedLabelStyle : {})
+                    },
+                    this.props.floatingLabel
+                ),
+                _react2.default.createElement(
+                    'div',
+                    {
+                        className: 'floatingSelect-picked ' + this.props.className,
+                        style: Object.assign({}, this.props.style),
+                        onClick: this.openOptions,
+                        ref: function ref(pickedOption) {
+                            return _this3.pickedOption = pickedOption;
+                        },
+                        disabled: this.props.disabled
+                    },
+                    text,
+                    _react2.default.createElement(
+                        'svg',
+                        { viewBox: '0 0 255 255', className: 'floatingSelect-icon' },
+                        _react2.default.createElement(
+                            'g',
+                            { id: 'arrow-drop-down' },
+                            _react2.default.createElement('polygon', { points: '0,63.75 127.5,191.25 255,63.75' })
+                        )
+                    )
+                )
+            );
+        }
+    }]);
+
+    return Select;
+}(_react2.default.Component);
+
+;
+
+exports.default = Select;
+
+/***/ }),
+/* 278 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".floatingSelect-container {\n    cursor: pointer;\n    align-self: flex-start;\n}\n\n.floatingSelect-icon {\n    width: 12px;\n    height: 16px;\n    align-self: center;\n    margin-left: auto;\n}\n\n.floatingSelect-picked {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    user-select: none;\n    border-bottom: 2px solid #DBD7C9;\n    padding: 4px;\n    padding-top: 16px;\n    min-width: 80px;\n}\n\n.floatingSelect-label {\n    user-select: none;\n    position: absolute;\n    color: #757582;\n    margin-top: 16px;\n    font-size: 14px;\n    transition: 0.3s ease-in-out;\n}\n\n.floatingSelect-label_focused {\n    transform: translateY(-110%);\n    color: #00b0ff;\n    font-size: 12px;\n}\n\n.floatingSelect-container:focus {\n    outline: 0;\n}\n\n.floatingSelect-container[disabled] {\n    opacity: 0.5;\n    cursor: not-allowed;\n}\n\n.floatingSelect-picked[disabled] {\n    pointer-events: none;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 279 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(278);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

@@ -552,6 +552,8 @@ Prop Name | Prop Type
 defaultValue | String
 form | String
 disabled | Boolean
+className | String
+style | Object
 selectedClassName | String
 selectedStyle | Object
 selectedBackground | String
