@@ -70,6 +70,7 @@ Available Components
 ## Select
 
 * Select
+* FloatingSelect
 * Option
 
 Props
@@ -559,6 +560,16 @@ selectedStyle | Object
 selectedBackground | String
 optionsClassName | String
 optionsStyle | Object
+
+### FloatingSelect
+
+Prop Name | Prop Type
+----------|----------
+all Select props | *
+floatingLabelClassName | String
+floatingLabelStyle | Object
+floatingFocusedLabelClassName | String
+floatingFocusedLabelStyle | Object
 
 ### Option
 
