@@ -4672,7 +4672,7 @@ var Select = function (_React$Component) {
 
             var text = '';
             for (var i = 0; i < this.props.children.length; i++) {
-                if (this.props.children[i].props.value === (this.props.value || this.state.value)) {
+                if ((this.props.children[i].props.value || this.props.children[i].props.children) === (this.props.value || this.state.value)) {
                     text = this.props.children[i].props.children;
                     break;
                 }

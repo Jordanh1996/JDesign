@@ -77,7 +77,7 @@ class Select extends React.Component {
         const { children } = this.props;
         let text = '';
         for (let i = 0; i < this.props.children.length; i++) {
-            if ((this.props.children[i].props.value || this.props.children[i].props.text) === (this.props.value || this.state.value)) {
+            if ((this.props.children[i].props.value || this.props.children[i].props.children) === (this.props.value || this.state.value)) {
                 text = this.props.children[i].props.children;
                 break;
             }
