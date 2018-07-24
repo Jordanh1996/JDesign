@@ -36,6 +36,7 @@ class Radio extends React.Component {
                     required={this.props.required}
                     value={this.props.value}
                     onClick={this.props.onClick}
+                    onChange={this.props.onChange}
                 />
                 <div className='radio-outer'>
                     <div className='radio-inner' style={{ background: this.props.color }} />

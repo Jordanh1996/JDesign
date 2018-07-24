@@ -1,0 +1,35 @@
+.select-container {
+    cursor: pointer;
+    align-self: flex-start;
+}
+
+.select-icon {
+    width: 12px;
+    height: 16px;
+    align-self: center;
+    margin-left: auto;
+}
+
+.select-picked {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    user-select: none;
+    border-radius: 6px;
+    box-shadow: 0 0 6px 0 #303030;
+    padding: 8px 12px;
+    min-width: 80px;
+}
+
+.select-container:focus {
+    outline: 0;
+}
+
+.select-container[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.select-picked[disabled] {
+    pointer-events: none;
+}

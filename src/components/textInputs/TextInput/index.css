@@ -9,6 +9,11 @@
     transition: box-shadow 0.1s linear;
 }
 
+.textInput[disabled] {
+    cursor: not-allowed;
+    opacity: 0.5;
+}
+
 .textInput:focus {
     outline: 0;
     box-shadow: 0 0 6px 1.5px #00b0ff;

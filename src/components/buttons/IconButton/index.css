@@ -17,6 +17,11 @@
     user-select: none;
 }
 
+.icon-button[disabled] {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
 .icon-button:hover {
     opacity: 0.86;
     cursor: pointer;

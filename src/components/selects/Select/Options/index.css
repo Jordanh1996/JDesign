@@ -1,0 +1,39 @@
+.options {
+    transition: transform 0.5s ease-in-out;
+}
+
+.options-closed {
+    display: none;
+}
+
+.options-open {
+    z-index: 2;
+    display: block;
+    opacity: 1;
+    position: absolute;
+    background: #FFF;
+    border-radius: 6px;
+    box-shadow: 0 0 6px 0 #303030;
+    overflow: auto;
+    max-height: 300px;
+}
+
+
+.options-open::-webkit-scrollbar-thumb {
+    background: #707070 !important;
+    /* border-radius: 6px; */
+    border-radius: 0;
+    border-top-right-radius: 6px;
+    border-bottom-right-radius: 6px;
+    /* position: absolute; */
+    /* width: 5px; */
+}
+
+/* .options-open::-webkit-scrollbar-track {
+  display: none;
+} */
+
+.options-open::-webkit-scrollbar {
+    width: 5px;
+    background: transparent;
+}

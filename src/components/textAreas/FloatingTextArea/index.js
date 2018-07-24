@@ -26,12 +26,13 @@ class FloatingTextArea extends React.Component {
                     type={this.props.type}
                     className={`floatingTextArea floatingTextArea ${this.props.inputClassName} ${this.props.error && 'floatingTextArea_error'}`}
                     style={this.props.inputStyle}
-                    onFocus={() => this.setState({ focused: true })}
+                    onFocus={!this.props.disabled ? () => this.setState({ focused: true }) : undefined}
                     onBlur={(input) => this.setState({ focused: false, content: input.target.value })}
                     autoFocus={this.state.focused}
                     value={this.props.value}
                     onChange={this.props.onChange}
                     rows={this.props.rows}
+                    disabled={this.props.disabled}
                 />
                 <div 
                     className={`floatingTextArea-border ${this.props.underlineClassName}`} 

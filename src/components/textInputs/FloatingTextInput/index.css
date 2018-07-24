@@ -14,6 +14,15 @@
     padding: 24px 0 0 0;
 }
 
+.floatingTextInput-container[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.floatingTextInput[disabled] {
+    pointer-events: none;
+}
+
 .floatingTextInput-label_focused {
     color: #00b0ff !important;
     transform: translateY(-100%);

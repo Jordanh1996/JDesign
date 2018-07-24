@@ -9,6 +9,10 @@
     transition: box-shadow 0.1s linear;
 }
 
+.textArea[disabled] {
+    opacity: 0.5;
+}
+
 .textArea:focus {
     outline: 0;
     box-shadow: 0 0 6px 1.5px #00b0ff;

@@ -32,6 +32,11 @@ import {
     Switch
 } from './components/switches';
 
+import {
+    Select,
+    Option
+} from './components/selects';
+
 export {
     // Buttons
     Button,
@@ -54,5 +59,8 @@ export {
     // Checkbox
     Checkbox,
     // Switch
-    Switch
+    Switch,
+    // Select
+    Select,
+    Option
 };

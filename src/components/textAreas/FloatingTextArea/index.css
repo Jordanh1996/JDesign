@@ -6,6 +6,11 @@
     resize: none;
 }
 
+.floatingTextArea[disabled] {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
 .floatingTextArea:focus {
     outline: 0;
 }

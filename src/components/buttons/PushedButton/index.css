@@ -17,6 +17,11 @@
     user-select: none;
 }
 
+.pushed-button-container[disabled] {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
 .pushed-button {
     border-radius: 4px;
     padding: 9px;

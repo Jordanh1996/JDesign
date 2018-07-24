@@ -1,0 +1,31 @@
+.option {
+    padding: 8px 16px;
+    transition: background 0.15s ease-in-out;
+    min-width: 80px;
+    /* text-align: center; */
+    min-height: 14px;
+    user-select: none;
+}
+
+.option[disabled] {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+/* .option:first-child {
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+
+.option:last-child {
+    border-bottom-right-radius: 6px;
+    border-bottom-left-radius: 6px;
+} */
+
+/* .option:hover {
+    background: #EEEEEE;
+} */
+
+.option:not([disabled]):hover {
+    background: #EEEEEE;
+}
