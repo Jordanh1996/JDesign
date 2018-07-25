@@ -38,7 +38,6 @@ class Options extends React.Component {
             } catch(e) {
                 this.child = this.options.lastChild;
             }
-            // this.child = this.child.previousSibling || this.options.lastChild;
             this.child.focus();
         }
         if ((e.keyCode || e.which) == 40) {

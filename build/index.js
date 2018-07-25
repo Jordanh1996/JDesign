@@ -2477,7 +2477,6 @@ var Options = function (_React$Component) {
                 } catch (e) {
                     this.child = this.options.lastChild;
                 }
-                // this.child = this.child.previousSibling || this.options.lastChild;
                 this.child.focus();
             }
             if ((e.keyCode || e.which) == 40) {
@@ -5341,7 +5340,7 @@ exports.default = TextInput;
 Object.defineProperty(exports, "__esModule", {
     value: true
 });
-exports.Option = exports.FloatingSelect = exports.Select = exports.Switch = exports.Checkbox = exports.Radio = exports.FloatingTextArea = exports.TextArea = exports.FloatingTextInput = exports.TextInput = exports.GooglePushedButton = exports.GoogleButton = exports.PushedIconButton = exports.PushedButton = exports.IconButton = exports.EditButton = exports.AddButton = exports.TrashButton = exports.Button = undefined;
+exports.Modal = exports.Option = exports.FloatingSelect = exports.Select = exports.Switch = exports.Checkbox = exports.Radio = exports.FloatingTextArea = exports.TextArea = exports.FloatingTextInput = exports.TextInput = exports.GooglePushedButton = exports.GoogleButton = exports.PushedIconButton = exports.PushedButton = exports.IconButton = exports.EditButton = exports.AddButton = exports.TrashButton = exports.Button = undefined;
 
 var _buttons = __webpack_require__(88);
 
@@ -5356,6 +5355,8 @@ var _checkBoxes = __webpack_require__(89);
 var _switches = __webpack_require__(92);
 
 var _selects = __webpack_require__(91);
+
+var _modal = __webpack_require__(280);
 
 exports.Button = _buttons.Button;
 exports.TrashButton = _buttons.TrashButton;
@@ -5376,6 +5377,7 @@ exports.Switch = _switches.Switch;
 exports.Select = _selects.Select;
 exports.FloatingSelect = _selects.FloatingSelect;
 exports.Option = _selects.Option;
+exports.Modal = _modal.Modal;
 
 /***/ }),
 /* 113 */
@@ -5554,7 +5556,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".floatingTextArea {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n    resize: none;\n}\n\n.floatingTextArea[disabled] {\n    pointer-events: none;\n    opacity: 0.5;\n}\n\n.floatingTextArea:focus {\n    outline: 0;\n}\n\n.floatingTextArea-container {\n    align-self: flex-start;\n    padding: 24px 0 0 0;\n}\n\n.floatingTextArea-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextArea-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n    pointer-events: none;\n}\n\n.floatingTextArea-border {\n    transform: scaleX(0) translateY(-6px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextArea:focus + .floatingTextArea-border {\n    transform: scaleX(1) translateY(-6px);\n}\n\n.floatingTextArea-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextArea-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextArea_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
+exports.push([module.i, ".floatingTextArea {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n    resize: none;\n    background: transparent;\n}\n\n.floatingTextArea[disabled] {\n    pointer-events: none;\n    opacity: 0.5;\n}\n\n.floatingTextArea:focus {\n    outline: 0;\n}\n\n.floatingTextArea-container {\n    align-self: flex-start;\n    padding: 24px 0 0 0;\n}\n\n.floatingTextArea-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextArea-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n    pointer-events: none;\n}\n\n.floatingTextArea-border {\n    transform: scaleX(0) translateY(-6px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextArea:focus + .floatingTextArea-border {\n    transform: scaleX(1) translateY(-6px);\n}\n\n.floatingTextArea-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextArea-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextArea_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
 
 // exports
 
@@ -5582,7 +5584,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".floatingTextInput {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n}\n\n.floatingTextInput:focus {\n    outline: 0;\n}\n\n.floatingTextInput-container {\n    align-self: flex-start;\n    padding: 24px 0 0 0;\n}\n\n.floatingTextInput-container[disabled] {\n    pointer-events: none;\n    opacity: 0.5;\n}\n\n.floatingTextInput[disabled] {\n    pointer-events: none;\n}\n\n.floatingTextInput-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextInput-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n    pointer-events: none;\n}\n\n.floatingTextInput-border {\n    transform: scaleX(0) translateY(-2px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    transform: scaleX(1) translateY(-2px);\n}\n\n.floatingTextInput-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextInput-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextInput_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
+exports.push([module.i, ".floatingTextInput {\n    position: relative;\n    border: 0;\n    border-bottom: 2px solid #DBD7C9;\n    font-size: 16px;\n    background: transparent;\n}\n\n.floatingTextInput:focus {\n    outline: 0;\n}\n\n.floatingTextInput-container {\n    align-self: flex-start;\n    padding: 24px 0 0 0;\n}\n\n.floatingTextInput-container[disabled] {\n    pointer-events: none;\n    opacity: 0.5;\n}\n\n.floatingTextInput[disabled] {\n    pointer-events: none;\n}\n\n.floatingTextInput-label_focused {\n    color: #00b0ff !important;\n    transform: translateY(-100%);\n    font-size: 12px;\n}\n\n.floatingTextInput-label {\n    position: absolute;\n    user-select: none;\n    padding-left: 1.5px;\n    color: #757575;\n    transition: 0.3s ease-in-out;\n    z-index: 2;\n    pointer-events: none;\n}\n\n.floatingTextInput-border {\n    transform: scaleX(0) translateY(-2px);\n    border-bottom: 2px solid #00b0ff;\n    transition: transform 0.3s ease-in-out;\n}\n\n.floatingTextInput:focus + .floatingTextInput-border {\n    transform: scaleX(1) translateY(-2px);\n}\n\n.floatingTextInput-error {\n    position: absolute;\n    font-size: 12px;\n    color: #FF443E;\n}\n\n.floatingTextInput-label_error {\n    color: #FF443E !important;\n}\n\n.floatingTextInput_error {\n    border-bottom-color: #FF443E !important;\n    z-index: 1;\n}", ""]);
 
 // exports
 
@@ -35535,6 +35537,154 @@ try {
 
 module.exports = g;
 
+
+/***/ }),
+/* 280 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+exports.Modal = undefined;
+
+var _Modal = __webpack_require__(281);
+
+var _Modal2 = _interopRequireDefault(_Modal);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+exports.Modal = _Modal2.default;
+
+/***/ }),
+/* 281 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+    value: true
+});
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _react = __webpack_require__(0);
+
+var _react2 = _interopRequireDefault(_react);
+
+__webpack_require__(283);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var Modal = function (_React$Component) {
+    _inherits(Modal, _React$Component);
+
+    function Modal() {
+        _classCallCheck(this, Modal);
+
+        return _possibleConstructorReturn(this, (Modal.__proto__ || Object.getPrototypeOf(Modal)).apply(this, arguments));
+    }
+
+    _createClass(Modal, [{
+        key: 'componentWillReceiveProps',
+        value: function componentWillReceiveProps(prevProp, newProps) {}
+    }, {
+        key: 'render',
+        value: function render() {
+            if (this.props.open) {
+                return _react2.default.createElement(
+                    'div',
+                    { className: 'modal-overlay' },
+                    _react2.default.createElement(
+                        'div',
+                        { className: 'modal' },
+                        this.props.children
+                    )
+                );
+            }
+            return null;
+        }
+    }]);
+
+    return Modal;
+}(_react2.default.Component);
+
+;
+
+exports.default = Modal;
+
+/***/ }),
+/* 282 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(1)(false);
+// imports
+
+
+// module
+exports.push([module.i, ".modal-overlay {\n    position: fixed;\n    display: flex;\n    justify-content: center;\n    align-items: center;\n    height: 100vh;\n    width: 100vw;\n    background: rgba(0, 0, 0, 0.4);\n    top: 0;\n    left: 0;\n}\n\n.modal {\n    position: fixed;\n    display: flex;\n    justify-content: center;\n    background: white;\n    min-height: 25%;\n    min-width: 25%;\n    border-radius: 8px;\n    box-shadow: 0 0 4px 0px #303030;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+/* 283 */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(282);
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(2)(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(false) {
+	module.hot.accept("!!../../../../node_modules/css-loader/index.js!./index.css", function() {
+		var newContent = require("!!../../../../node_modules/css-loader/index.js!./index.css");
+
+		if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
 
 /***/ })
 /******/ ]);

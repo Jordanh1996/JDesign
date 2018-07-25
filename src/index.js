@@ -38,6 +38,10 @@ import {
     Option
 } from './components/selects';
 
+import {
+    Modal
+} from './components/modal';
+
 export {
     // Buttons
     Button,
@@ -64,5 +68,7 @@ export {
     // Select
     Select,
     FloatingSelect,
-    Option
+    Option,
+    // Modal
+    Modal
 };
