@@ -7,7 +7,6 @@
 .pushedIconButton-outer {
     position: relative;
     display: flex;
-    align-self: flex-start;
     font-family: 'roboto, sans-serif';
     font-size: 14px;
     text-transform: uppercase;

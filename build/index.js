@@ -577,7 +577,7 @@ module.exports = isArray;
 /* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var freeGlobal = __webpack_require__(71);
+var freeGlobal = __webpack_require__(70);
 
 /** Detect free variable `self`. */
 var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
@@ -877,7 +877,7 @@ module.exports = getNative;
 /* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(64),
+var arrayLikeKeys = __webpack_require__(63),
     baseKeys = __webpack_require__(164),
     isArrayLike = __webpack_require__(15);
 
@@ -966,8 +966,8 @@ module.exports = baseGetTag;
 /* 12 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var assignValue = __webpack_require__(65),
-    baseAssignValue = __webpack_require__(66);
+var assignValue = __webpack_require__(64),
+    baseAssignValue = __webpack_require__(65);
 
 /**
  * Copies properties of `source` to `object`.
@@ -1036,7 +1036,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var IconButton = function IconButton(props) {
     return _react2.default.createElement(
         'div',
-        null,
+        { className: props.containerClassName, style: props.containerStyle },
         _react2.default.createElement(
             'button',
             _extends({}, props, {
@@ -1089,7 +1089,7 @@ module.exports = toKey;
 /* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(82),
+var isFunction = __webpack_require__(81),
     isLength = __webpack_require__(45);
 
 /**
@@ -1285,7 +1285,7 @@ var DataView = __webpack_require__(139),
     Set = __webpack_require__(142),
     WeakMap = __webpack_require__(144),
     baseGetTag = __webpack_require__(11),
-    toSource = __webpack_require__(80);
+    toSource = __webpack_require__(79);
 
 /** `Object#toString` result references. */
 var mapTag = '[object Map]',
@@ -1695,7 +1695,7 @@ module.exports = baseUnary;
 /* 35 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var Uint8Array = __webpack_require__(62);
+var Uint8Array = __webpack_require__(61);
 
 /**
  * Creates a clone of `arrayBuffer`.
@@ -1717,7 +1717,7 @@ module.exports = cloneArrayBuffer;
 /* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(77);
+var overArg = __webpack_require__(76);
 
 /** Built-in value references. */
 var getPrototype = overArg(Object.getPrototypeOf, Object);
@@ -1730,7 +1730,7 @@ module.exports = getPrototype;
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayFilter = __webpack_require__(146),
-    stubArray = __webpack_require__(85);
+    stubArray = __webpack_require__(84);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -1855,7 +1855,7 @@ module.exports = isPrototype;
 /* 41 */
 /***/ (function(module, exports, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(71);
+/* WEBPACK VAR INJECTION */(function(module) {var freeGlobal = __webpack_require__(70);
 
 /** Detect free variable `exports`. */
 var freeExports = typeof exports == 'object' && exports && !exports.nodeType && exports;
@@ -1886,14 +1886,14 @@ var nodeUtil = (function() {
 
 module.exports = nodeUtil;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module)))
 
 /***/ }),
 /* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayEach = __webpack_require__(63),
-    baseEach = __webpack_require__(67),
+var arrayEach = __webpack_require__(62),
+    baseEach = __webpack_require__(66),
     castFunction = __webpack_require__(178),
     isArray = __webpack_require__(3);
 
@@ -2020,7 +2020,7 @@ var isBuffer = nativeIsBuffer || stubFalse;
 
 module.exports = isBuffer;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module)))
 
 /***/ }),
 /* 45 */
@@ -2102,7 +2102,7 @@ module.exports = isSymbol;
 /* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var arrayLikeKeys = __webpack_require__(64),
+var arrayLikeKeys = __webpack_require__(63),
     baseKeysIn = __webpack_require__(165),
     isArrayLike = __webpack_require__(15);
 
@@ -2305,33 +2305,6 @@ if (process.env.NODE_ENV === 'production') {
 "use strict";
 
 
-// Convenience main entrypoint if you are running with destructuring support:
-//
-//   import {VelocityComponent, VelocityTransitionGroup} from 'velocity-react';
-//
-// You can also require just the component(s) you're using:
-//
-//   var VelocityComponent = require('velocity-react/velocity-component');
-//
-// Note that if you want to use UI Pack you will need to require 'velocity' and
-// 'velocity.ui' at a top level in your app:
-//
-//   require('velocity');
-//   require('velocity-animate/velocity.ui');
-
-module.exports = {
-  VelocityComponent: __webpack_require__(280),
-  VelocityTransitionGroup: __webpack_require__(282),
-  velocityHelpers: __webpack_require__(281)
-};
-
-/***/ }),
-/* 52 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
 // Shim to avoid requiring Velocity in Node environments, since it
 // requires window. Note that this just no-ops the components so
 // that they'll render, rather than doing something clever like
@@ -2357,7 +2330,7 @@ if (typeof window === 'undefined' || typeof navigator === 'undefined' || navigat
 }
 
 /***/ }),
-/* 53 */
+/* 52 */
 /***/ (function(module, exports) {
 
 module.exports = function(module) {
@@ -2385,7 +2358,7 @@ module.exports = function(module) {
 
 
 /***/ }),
-/* 54 */
+/* 53 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2411,23 +2384,27 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 
 var PushedIconButton = function PushedIconButton(props) {
     return _react2.default.createElement(
-        'button',
-        _extends({}, props, {
-            className: 'pushedIconButton-outer ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.className
-        }),
+        'div',
+        { className: props.containerClassName, style: props.containerStyle },
         _react2.default.createElement(
-            'div',
-            { className: 'pushedIconButton-inner ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.innerButtonClassName, style: props.innerButtonStyle },
-            props.children,
-            props.label ? _react2.default.createElement(
-                'p',
-                {
-                    className: 'pushedIconButton-text ' + props.labelClassName,
-                    style: props.labelStyle
-                },
-                props.label
-            ) : null,
-            props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, { style: { color: props.rippleColor } })
+            'button',
+            _extends({}, props, {
+                className: 'pushedIconButton-outer ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.className
+            }),
+            _react2.default.createElement(
+                'div',
+                { className: 'pushedIconButton-inner ' + (props.rounded ? 'rounded-button' : '') + ' ' + props.innerButtonClassName, style: props.innerButtonStyle },
+                props.children,
+                props.label ? _react2.default.createElement(
+                    'p',
+                    {
+                        className: 'pushedIconButton-text ' + props.labelClassName,
+                        style: props.labelStyle
+                    },
+                    props.label
+                ) : null,
+                props.ripple === false ? null : _react2.default.createElement(_reactInk2.default, { style: { color: props.rippleColor } })
+            )
         )
     );
 };
@@ -2435,7 +2412,7 @@ var PushedIconButton = function PushedIconButton(props) {
 exports.default = PushedIconButton;
 
 /***/ }),
-/* 55 */
+/* 54 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2571,7 +2548,7 @@ var Options = function (_React$Component) {
 exports.default = Options;
 
 /***/ }),
-/* 56 */
+/* 55 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2610,7 +2587,7 @@ var ExecutionEnvironment = {
 module.exports = ExecutionEnvironment;
 
 /***/ }),
-/* 57 */
+/* 56 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2653,7 +2630,7 @@ function containsNode(outerNode, innerNode) {
 module.exports = containsNode;
 
 /***/ }),
-/* 58 */
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2677,7 +2654,7 @@ module.exports = emptyObject;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
-/* 59 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2719,7 +2696,7 @@ function getActiveElement(doc) /*?DOMElement*/{
 module.exports = getActiveElement;
 
 /***/ }),
-/* 60 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2779,7 +2756,7 @@ module.exports = invariant;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
-/* 61 */
+/* 60 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -2850,7 +2827,7 @@ function shallowEqual(objA, objB) {
 module.exports = shallowEqual;
 
 /***/ }),
-/* 62 */
+/* 61 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var root = __webpack_require__(4);
@@ -2862,7 +2839,7 @@ module.exports = Uint8Array;
 
 
 /***/ }),
-/* 63 */
+/* 62 */
 /***/ (function(module, exports) {
 
 /**
@@ -2890,7 +2867,7 @@ module.exports = arrayEach;
 
 
 /***/ }),
-/* 64 */
+/* 63 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseTimes = __webpack_require__(174),
@@ -2898,7 +2875,7 @@ var baseTimes = __webpack_require__(174),
     isArray = __webpack_require__(3),
     isBuffer = __webpack_require__(44),
     isIndex = __webpack_require__(38),
-    isTypedArray = __webpack_require__(83);
+    isTypedArray = __webpack_require__(82);
 
 /** Used for built-in method references. */
 var objectProto = Object.prototype;
@@ -2945,10 +2922,10 @@ module.exports = arrayLikeKeys;
 
 
 /***/ }),
-/* 65 */
+/* 64 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseAssignValue = __webpack_require__(66),
+var baseAssignValue = __webpack_require__(65),
     eq = __webpack_require__(23);
 
 /** Used for built-in method references. */
@@ -2979,10 +2956,10 @@ module.exports = assignValue;
 
 
 /***/ }),
-/* 66 */
+/* 65 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var defineProperty = __webpack_require__(69);
+var defineProperty = __webpack_require__(68);
 
 /**
  * The base implementation of `assignValue` and `assignMergeValue` without
@@ -3010,7 +2987,7 @@ module.exports = baseAssignValue;
 
 
 /***/ }),
-/* 67 */
+/* 66 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseForOwn = __webpack_require__(154),
@@ -3030,7 +3007,7 @@ module.exports = baseEach;
 
 
 /***/ }),
-/* 68 */
+/* 67 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(31),
@@ -3056,7 +3033,7 @@ module.exports = baseGetAllKeys;
 
 
 /***/ }),
-/* 69 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var getNative = __webpack_require__(8);
@@ -3073,7 +3050,7 @@ module.exports = defineProperty;
 
 
 /***/ }),
-/* 70 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var SetCache = __webpack_require__(143),
@@ -3162,7 +3139,7 @@ module.exports = equalArrays;
 
 
 /***/ }),
-/* 71 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global) {/** Detect free variable `global` from Node.js. */
@@ -3173,10 +3150,10 @@ module.exports = freeGlobal;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(283)))
 
 /***/ }),
-/* 72 */
+/* 71 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(68),
+var baseGetAllKeys = __webpack_require__(67),
     getSymbols = __webpack_require__(37),
     keys = __webpack_require__(9);
 
@@ -3195,11 +3172,11 @@ module.exports = getAllKeys;
 
 
 /***/ }),
-/* 73 */
+/* 72 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseGetAllKeys = __webpack_require__(68),
-    getSymbolsIn = __webpack_require__(74),
+var baseGetAllKeys = __webpack_require__(67),
+    getSymbolsIn = __webpack_require__(73),
     keysIn = __webpack_require__(47);
 
 /**
@@ -3218,13 +3195,13 @@ module.exports = getAllKeysIn;
 
 
 /***/ }),
-/* 74 */
+/* 73 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayPush = __webpack_require__(31),
     getPrototype = __webpack_require__(36),
     getSymbols = __webpack_require__(37),
-    stubArray = __webpack_require__(85);
+    stubArray = __webpack_require__(84);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeGetSymbols = Object.getOwnPropertySymbols;
@@ -3249,7 +3226,7 @@ module.exports = getSymbolsIn;
 
 
 /***/ }),
-/* 75 */
+/* 74 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var isObject = __webpack_require__(6);
@@ -3270,7 +3247,7 @@ module.exports = isStrictComparable;
 
 
 /***/ }),
-/* 76 */
+/* 75 */
 /***/ (function(module, exports) {
 
 /**
@@ -3296,7 +3273,7 @@ module.exports = matchesStrictComparable;
 
 
 /***/ }),
-/* 77 */
+/* 76 */
 /***/ (function(module, exports) {
 
 /**
@@ -3317,7 +3294,7 @@ module.exports = overArg;
 
 
 /***/ }),
-/* 78 */
+/* 77 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = __webpack_require__(145);
@@ -3359,7 +3336,7 @@ module.exports = overRest;
 
 
 /***/ }),
-/* 79 */
+/* 78 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseSetToString = __webpack_require__(172),
@@ -3379,7 +3356,7 @@ module.exports = setToString;
 
 
 /***/ }),
-/* 80 */
+/* 79 */
 /***/ (function(module, exports) {
 
 /** Used for built-in method references. */
@@ -3411,7 +3388,7 @@ module.exports = toSource;
 
 
 /***/ }),
-/* 81 */
+/* 80 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsEqual = __webpack_require__(33);
@@ -3452,7 +3429,7 @@ module.exports = isEqual;
 
 
 /***/ }),
-/* 82 */
+/* 81 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseGetTag = __webpack_require__(11),
@@ -3495,7 +3472,7 @@ module.exports = isFunction;
 
 
 /***/ }),
-/* 83 */
+/* 82 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var baseIsTypedArray = __webpack_require__(162),
@@ -3528,7 +3505,7 @@ module.exports = isTypedArray;
 
 
 /***/ }),
-/* 84 */
+/* 83 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var arrayMap = __webpack_require__(30),
@@ -3538,7 +3515,7 @@ var arrayMap = __webpack_require__(30),
     copyObject = __webpack_require__(12),
     customOmitClone = __webpack_require__(191),
     flatRest = __webpack_require__(194),
-    getAllKeysIn = __webpack_require__(73);
+    getAllKeysIn = __webpack_require__(72);
 
 /** Used to compose bitmasks for cloning. */
 var CLONE_DEEP_FLAG = 1,
@@ -3591,7 +3568,7 @@ module.exports = omit;
 
 
 /***/ }),
-/* 85 */
+/* 84 */
 /***/ (function(module, exports) {
 
 /**
@@ -3620,7 +3597,7 @@ module.exports = stubArray;
 
 
 /***/ }),
-/* 86 */
+/* 85 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -3719,7 +3696,7 @@ module.exports = checkPropTypes;
 /* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(5)))
 
 /***/ }),
-/* 87 */
+/* 86 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -3886,6 +3863,33 @@ function polyfill(Component) {
 
 
 /***/ }),
+/* 87 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+// Convenience main entrypoint if you are running with destructuring support:
+//
+//   import {VelocityComponent, VelocityTransitionGroup} from 'velocity-react';
+//
+// You can also require just the component(s) you're using:
+//
+//   var VelocityComponent = require('velocity-react/velocity-component');
+//
+// Note that if you want to use UI Pack you will need to require 'velocity' and
+// 'velocity.ui' at a top level in your app:
+//
+//   require('velocity');
+//   require('velocity-animate/velocity.ui');
+
+module.exports = {
+  VelocityComponent: __webpack_require__(280),
+  VelocityTransitionGroup: __webpack_require__(282),
+  velocityHelpers: __webpack_require__(281)
+};
+
+/***/ }),
 /* 88 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -3921,7 +3925,7 @@ var _PushedButton = __webpack_require__(101);
 
 var _PushedButton2 = _interopRequireDefault(_PushedButton);
 
-var _PushedIconButton = __webpack_require__(54);
+var _PushedIconButton = __webpack_require__(53);
 
 var _PushedIconButton2 = _interopRequireDefault(_PushedIconButton);
 
@@ -4175,7 +4179,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Button = function Button(props) {
     return _react2.default.createElement(
         'div',
-        null,
+        { style: props.containerStyle, className: props.containerClassName },
         _react2.default.createElement(
             'button',
             _extends({}, props, {
@@ -4308,7 +4312,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _PushedIconButton = __webpack_require__(54);
+var _PushedIconButton = __webpack_require__(53);
 
 var _PushedIconButton2 = _interopRequireDefault(_PushedIconButton);
 
@@ -4381,7 +4385,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var PushedButton = function PushedButton(props) {
     return _react2.default.createElement(
         'div',
-        null,
+        { className: props.containerClassName, style: props.containerStyle },
         _react2.default.createElement(
             'button',
             _extends({}, props, {
@@ -4591,13 +4595,23 @@ var Modal = function (_React$Component) {
         _this.state = {
             unmountAnimation: false
         };
+        _this.closeOnClickOutside = _this.closeOnClickOutside.bind(_this);
         return _this;
     }
 
     _createClass(Modal, [{
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(nextProps) {
-            if (nextProps.open) this.setState({ unmountAnimation: true });
+        key: 'componentDidUpdate',
+        value: function componentDidUpdate(prevProps) {
+            if (this.props.open && !prevProps.open) {
+                this.setState({ unmountAnimation: true });
+            };
+        }
+    }, {
+        key: 'closeOnClickOutside',
+        value: function closeOnClickOutside(e) {
+            if (e.target.getAttribute('name') === 'overlay') {
+                this.props.closeOnClickOutside();
+            }
         }
     }, {
         key: 'render',
@@ -4608,7 +4622,7 @@ var Modal = function (_React$Component) {
 
                 return _react2.default.createElement(
                     'div',
-                    { className: 'modal-overlay ' + this.props.overlayClassName, style: this.props.overlayStyle },
+                    { className: 'modal-overlay ' + this.props.overlayClassName, style: this.props.overlayStyle, onClick: this.props.closeOnClickOutside && this.closeOnClickOutside, name: 'overlay' },
                     _react2.default.createElement(
                         'div',
                         { className: 'modal ' + this.props.className, style: this.props.style },
@@ -4761,11 +4775,11 @@ var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(269);
 
-var _Options = __webpack_require__(55);
+var _Options = __webpack_require__(54);
 
 var _Options2 = _interopRequireDefault(_Options);
 
-var _velocityReact = __webpack_require__(51);
+var _velocityReact = __webpack_require__(87);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -4986,11 +5000,11 @@ var _react2 = _interopRequireDefault(_react);
 
 __webpack_require__(272);
 
-var _Options = __webpack_require__(55);
+var _Options = __webpack_require__(54);
 
 var _Options2 = _interopRequireDefault(_Options);
 
-var _velocityReact = __webpack_require__(51);
+var _velocityReact = __webpack_require__(87);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -5550,7 +5564,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".pushedIconButton-inner {\n    display: flex;\n    padding: 6px;\n    box-shadow: 0 0 6px 0 #303030;\n}\n\n.pushedIconButton-outer {\n    position: relative;\n    display: flex;\n    align-self: flex-start;\n    font-family: 'roboto, sans-serif';\n    font-size: 14px;\n    text-transform: uppercase;\n    font-weight: 200;\n    padding: 5px;\n    border: none;\n    border-radius: 4px;\n    background: #0076CE;\n    color: white;\n    box-shadow: 0 0 4px 0 #404040;\n    letter-spacing: 0.8px;\n    transition: 0.3s;\n    user-select: none;\n}\n\n.pushedIconButton-outer[disabled] {\n    pointer-events: none;\n    opacity: 0.65;\n}\n\n.pushedIconButton-outer:hover {\n    opacity: 0.86;\n    cursor: pointer;\n}\n\n.pushedIconButton-outer:focus {\n    outline: 0;\n}\n\n.pushedIconButton-outer:active > .pushedIconButton-inner {\n    animation: buttonClick 0.05s linear;\n}\n\n.pushedIconButton-text {\n    margin: 0;\n    text-transform: none;\n    font-size: 16px;\n    align-self: center;\n    margin: 0 12px;\n}\n", ""]);
+exports.push([module.i, ".pushedIconButton-inner {\n    display: flex;\n    padding: 6px;\n    box-shadow: 0 0 6px 0 #303030;\n}\n\n.pushedIconButton-outer {\n    position: relative;\n    display: flex;\n    font-family: 'roboto, sans-serif';\n    font-size: 14px;\n    text-transform: uppercase;\n    font-weight: 200;\n    padding: 5px;\n    border: none;\n    border-radius: 4px;\n    background: #0076CE;\n    color: white;\n    box-shadow: 0 0 4px 0 #404040;\n    letter-spacing: 0.8px;\n    transition: 0.3s;\n    user-select: none;\n}\n\n.pushedIconButton-outer[disabled] {\n    pointer-events: none;\n    opacity: 0.65;\n}\n\n.pushedIconButton-outer:hover {\n    opacity: 0.86;\n    cursor: pointer;\n}\n\n.pushedIconButton-outer:focus {\n    outline: 0;\n}\n\n.pushedIconButton-outer:active > .pushedIconButton-inner {\n    animation: buttonClick 0.05s linear;\n}\n\n.pushedIconButton-text {\n    margin: 0;\n    text-transform: none;\n    font-size: 16px;\n    align-self: center;\n    margin: 0 12px;\n}\n", ""]);
 
 // exports
 
@@ -6279,16 +6293,16 @@ module.exports = baseAssignIn;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Stack = __webpack_require__(29),
-    arrayEach = __webpack_require__(63),
-    assignValue = __webpack_require__(65),
+    arrayEach = __webpack_require__(62),
+    assignValue = __webpack_require__(64),
     baseAssign = __webpack_require__(148),
     baseAssignIn = __webpack_require__(149),
     cloneBuffer = __webpack_require__(179),
     copyArray = __webpack_require__(184),
     copySymbols = __webpack_require__(185),
     copySymbolsIn = __webpack_require__(186),
-    getAllKeys = __webpack_require__(72),
-    getAllKeysIn = __webpack_require__(73),
+    getAllKeys = __webpack_require__(71),
+    getAllKeysIn = __webpack_require__(72),
     getTag = __webpack_require__(21),
     initCloneArray = __webpack_require__(204),
     initCloneByTag = __webpack_require__(205),
@@ -6623,13 +6637,13 @@ module.exports = baseIsArguments;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Stack = __webpack_require__(29),
-    equalArrays = __webpack_require__(70),
+    equalArrays = __webpack_require__(69),
     equalByTag = __webpack_require__(192),
     equalObjects = __webpack_require__(193),
     getTag = __webpack_require__(21),
     isArray = __webpack_require__(3),
     isBuffer = __webpack_require__(44),
-    isTypedArray = __webpack_require__(83);
+    isTypedArray = __webpack_require__(82);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -6803,10 +6817,10 @@ module.exports = baseIsMatch;
 /* 160 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isFunction = __webpack_require__(82),
+var isFunction = __webpack_require__(81),
     isMasked = __webpack_require__(210),
     isObject = __webpack_require__(6),
-    toSource = __webpack_require__(80);
+    toSource = __webpack_require__(79);
 
 /**
  * Used to match `RegExp`
@@ -7058,7 +7072,7 @@ module.exports = baseKeysIn;
 /* 166 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var baseEach = __webpack_require__(67),
+var baseEach = __webpack_require__(66),
     isArrayLike = __webpack_require__(15);
 
 /**
@@ -7088,7 +7102,7 @@ module.exports = baseMap;
 
 var baseIsMatch = __webpack_require__(159),
     getMatchData = __webpack_require__(195),
-    matchesStrictComparable = __webpack_require__(76);
+    matchesStrictComparable = __webpack_require__(75);
 
 /**
  * The base implementation of `_.matches` which doesn't clone `source`.
@@ -7118,8 +7132,8 @@ var baseIsEqual = __webpack_require__(33),
     get = __webpack_require__(242),
     hasIn = __webpack_require__(243),
     isKey = __webpack_require__(39),
-    isStrictComparable = __webpack_require__(75),
-    matchesStrictComparable = __webpack_require__(76),
+    isStrictComparable = __webpack_require__(74),
+    matchesStrictComparable = __webpack_require__(75),
     toKey = __webpack_require__(14);
 
 /** Used to compose bitmasks for value comparisons. */
@@ -7196,8 +7210,8 @@ module.exports = basePropertyDeep;
 /***/ (function(module, exports, __webpack_require__) {
 
 var identity = __webpack_require__(24),
-    overRest = __webpack_require__(78),
-    setToString = __webpack_require__(79);
+    overRest = __webpack_require__(77),
+    setToString = __webpack_require__(78);
 
 /**
  * The base implementation of `_.rest` which doesn't validate or coerce arguments.
@@ -7219,7 +7233,7 @@ module.exports = baseRest;
 /***/ (function(module, exports, __webpack_require__) {
 
 var constant = __webpack_require__(238),
-    defineProperty = __webpack_require__(69),
+    defineProperty = __webpack_require__(68),
     identity = __webpack_require__(24);
 
 /**
@@ -7453,7 +7467,7 @@ function cloneBuffer(buffer, isDeep) {
 
 module.exports = cloneBuffer;
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(53)(module)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(52)(module)))
 
 /***/ }),
 /* 180 */
@@ -7599,7 +7613,7 @@ module.exports = copySymbols;
 /***/ (function(module, exports, __webpack_require__) {
 
 var copyObject = __webpack_require__(12),
-    getSymbolsIn = __webpack_require__(74);
+    getSymbolsIn = __webpack_require__(73);
 
 /**
  * Copies own and inherited symbols of `source` to `object`.
@@ -7767,9 +7781,9 @@ module.exports = customOmitClone;
 /***/ (function(module, exports, __webpack_require__) {
 
 var Symbol = __webpack_require__(10),
-    Uint8Array = __webpack_require__(62),
+    Uint8Array = __webpack_require__(61),
     eq = __webpack_require__(23),
-    equalArrays = __webpack_require__(70),
+    equalArrays = __webpack_require__(69),
     mapToArray = __webpack_require__(221),
     setToArray = __webpack_require__(229);
 
@@ -7884,7 +7898,7 @@ module.exports = equalByTag;
 /* 193 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var getAllKeys = __webpack_require__(72);
+var getAllKeys = __webpack_require__(71);
 
 /** Used to compose bitmasks for value comparisons. */
 var COMPARE_PARTIAL_FLAG = 1;
@@ -7980,8 +7994,8 @@ module.exports = equalObjects;
 /***/ (function(module, exports, __webpack_require__) {
 
 var flatten = __webpack_require__(241),
-    overRest = __webpack_require__(78),
-    setToString = __webpack_require__(79);
+    overRest = __webpack_require__(77),
+    setToString = __webpack_require__(78);
 
 /**
  * A specialized version of `baseRest` which flattens the rest array.
@@ -8001,7 +8015,7 @@ module.exports = flatRest;
 /* 195 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var isStrictComparable = __webpack_require__(75),
+var isStrictComparable = __webpack_require__(74),
     keys = __webpack_require__(9);
 
 /**
@@ -8851,7 +8865,7 @@ module.exports = memoizeCapped;
 /* 223 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var overArg = __webpack_require__(77);
+var overArg = __webpack_require__(76);
 
 /* Built-in method references for those with the same name as other `lodash` methods. */
 var nativeKeys = overArg(Object.keys, Object);
@@ -9881,7 +9895,7 @@ module.exports = function() {
 var assign = __webpack_require__(48);
 
 var ReactPropTypesSecret = __webpack_require__(49);
-var checkPropTypes = __webpack_require__(86);
+var checkPropTypes = __webpack_require__(85);
 
 var printWarning = function() {};
 
@@ -10449,17 +10463,17 @@ if (process.env.NODE_ENV !== "production") {
   (function() {
 'use strict';
 
-var invariant = __webpack_require__(60);
+var invariant = __webpack_require__(59);
 var React = __webpack_require__(0);
 var warning = __webpack_require__(138);
-var ExecutionEnvironment = __webpack_require__(56);
+var ExecutionEnvironment = __webpack_require__(55);
 var _assign = __webpack_require__(48);
 var emptyFunction = __webpack_require__(26);
-var checkPropTypes = __webpack_require__(86);
-var getActiveElement = __webpack_require__(59);
-var shallowEqual = __webpack_require__(61);
-var containsNode = __webpack_require__(57);
-var emptyObject = __webpack_require__(58);
+var checkPropTypes = __webpack_require__(85);
+var getActiveElement = __webpack_require__(58);
+var shallowEqual = __webpack_require__(60);
+var containsNode = __webpack_require__(56);
+var emptyObject = __webpack_require__(57);
 var hyphenateStyleName = __webpack_require__(135);
 var camelizeStyleName = __webpack_require__(133);
 
@@ -27882,7 +27896,7 @@ module.exports = reactDom;
 /*
  Modernizr 3.0.0pre (Custom Build) | MIT
 */
-var aa=__webpack_require__(60),ba=__webpack_require__(0),m=__webpack_require__(56),p=__webpack_require__(48),v=__webpack_require__(26),da=__webpack_require__(59),ea=__webpack_require__(61),fa=__webpack_require__(57),ha=__webpack_require__(58);
+var aa=__webpack_require__(59),ba=__webpack_require__(0),m=__webpack_require__(55),p=__webpack_require__(48),v=__webpack_require__(26),da=__webpack_require__(58),ea=__webpack_require__(60),fa=__webpack_require__(56),ha=__webpack_require__(57);
 function A(a){for(var b=arguments.length-1,c="https://reactjs.org/docs/error-decoder.html?invariant="+a,d=0;d<b;d++)c+="&args[]="+encodeURIComponent(arguments[d+1]);aa(!1,"Minified React error #"+a+"; visit %s for the full message or use the non-minified dev environment for full errors and additional helpful warnings. ",c)}ba?void 0:A("227");
 function ia(a,b,c,d,e,f,g,h,k){this._hasCaughtError=!1;this._caughtError=null;var n=Array.prototype.slice.call(arguments,3);try{b.apply(c,n)}catch(r){this._caughtError=r,this._hasCaughtError=!0}}
 var B={_caughtError:null,_hasCaughtError:!1,_rethrowError:null,_hasRethrowError:!1,invokeGuardedCallback:function(a,b,c,d,e,f,g,h,k){ia.apply(B,arguments)},invokeGuardedCallbackAndCatchFirstError:function(a,b,c,d,e,f,g,h,k){B.invokeGuardedCallback.apply(this,arguments);if(B.hasCaughtError()){var n=B.clearCaughtError();B._hasRethrowError||(B._hasRethrowError=!0,B._rethrowError=n)}},rethrowCaughtError:function(){return ka.apply(B,arguments)},hasCaughtError:function(){return B._hasCaughtError},clearCaughtError:function(){if(B._hasCaughtError){var a=
@@ -28134,7 +28148,7 @@ var _reactDom = __webpack_require__(50);
 
 var _reactDom2 = _interopRequireDefault(_reactDom);
 
-var _reactLifecyclesCompat = __webpack_require__(87);
+var _reactLifecyclesCompat = __webpack_require__(86);
 
 var _PropTypes = __webpack_require__(260);
 
@@ -28735,7 +28749,7 @@ var _react = __webpack_require__(0);
 
 var _react2 = _interopRequireDefault(_react);
 
-var _reactLifecyclesCompat = __webpack_require__(87);
+var _reactLifecyclesCompat = __webpack_require__(86);
 
 var _ChildMapping = __webpack_require__(259);
 
@@ -34922,15 +34936,15 @@ Methods:
 
 var _ = {
   forEach: __webpack_require__(42),
-  isEqual: __webpack_require__(81),
+  isEqual: __webpack_require__(80),
   keys: __webpack_require__(9),
-  omit: __webpack_require__(84)
+  omit: __webpack_require__(83)
 };
 
 var React = __webpack_require__(0);
 var ReactDOM = __webpack_require__(50);
 var PropTypes = __webpack_require__(16);
-var Velocity = __webpack_require__(52);
+var Velocity = __webpack_require__(51);
 
 var VelocityComponent = function (_React$Component) {
   _inherits(VelocityComponent, _React$Component);
@@ -35112,7 +35126,7 @@ module.exports = VelocityComponent;
 var _ = {
   isObject: __webpack_require__(6)
 };
-var Velocity = __webpack_require__(52);
+var Velocity = __webpack_require__(51);
 
 var effectCounter = 0;
 
@@ -35252,9 +35266,9 @@ var _ = {
   each: __webpack_require__(239),
   extend: __webpack_require__(240),
   forEach: __webpack_require__(42),
-  isEqual: __webpack_require__(81),
+  isEqual: __webpack_require__(80),
   keys: __webpack_require__(9),
-  omit: __webpack_require__(84),
+  omit: __webpack_require__(83),
   map: __webpack_require__(248)
 };
 var React = __webpack_require__(0);
@@ -35262,7 +35276,7 @@ var ReactDOM = __webpack_require__(50);
 var PropTypes = __webpack_require__(16);
 var TransitionGroup = __webpack_require__(258);
 var Transition = __webpack_require__(257).default;
-var Velocity = __webpack_require__(52);
+var Velocity = __webpack_require__(51);
 
 // Shim requestAnimationFrame for browsers that don't support it, in particular IE 9.
 var shimRequestAnimationFrame = typeof window !== 'undefined' && (window.requestAnimationFrame || window.webkitRequestAnimationFrame || window.mozRequestAnimationFrame || function (callback) {

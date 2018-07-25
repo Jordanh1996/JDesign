@@ -8,17 +8,27 @@ class Modal extends React.Component {
         this.state = {
             unmountAnimation: false
         };
+        this.closeOnClickOutside = this.closeOnClickOutside.bind(this);
     };
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.open) this.setState({ unmountAnimation: true });
-    }
+    componentDidUpdate(prevProps) {
+        if (this.props.open && !prevProps.open) {
+            this.setState({ unmountAnimation: true });
+        };
+    };
+
+    closeOnClickOutside(e) {
+        if (e.target.getAttribute('name') === 'overlay') {
+            this.props.closeOnClickOutside();
+        }
+    };
+
 
     render() {
         if (this.props.open) {
 
             return (
-                <div className={`modal-overlay ${this.props.overlayClassName}`} style={this.props.overlayStyle}>
+                <div className={`modal-overlay ${this.props.overlayClassName}`} style={this.props.overlayStyle} onClick={this.props.closeOnClickOutside && this.closeOnClickOutside} name='overlay'>
                     <div className={`modal ${this.props.className}`} style={this.props.style}>
                         {this.props.children}
                     </div>
@@ -37,7 +47,7 @@ class Modal extends React.Component {
                 </div>
             );
         }
-        return null
+        return null;
     };
 };
 

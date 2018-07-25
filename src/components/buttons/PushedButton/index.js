@@ -3,7 +3,7 @@ import './index.css';
 import Ink from 'react-ink';
 
 const PushedButton = (props) => (
-    <div>
+    <div className={props.containerClassName} style={props.containerStyle}>
         <button
             {...props}
             className={`pushed-button-container ${props.rounded ? 'rounded-button' : ''} ${props.className}`}

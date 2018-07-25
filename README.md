@@ -45,6 +45,10 @@ Available Components
 * GoogleButton
 * GooglePushedButton
 
+## Modal
+
+* Modal
+
 ## Text Inputs
 
 * TextInput
@@ -72,6 +76,7 @@ Available Components
 * Select
 * FloatingSelect
 * Option
+
 
 Props
 =====
@@ -106,6 +111,9 @@ rounded | Boolean
 ripple | Boolean
 rippleColor | String
 className | String
+style | Object
+containerClassName | String
+containerStyle | Object
 
 ### PushedButton
 
@@ -136,6 +144,8 @@ ripple | Boolean
 rippleColor | String
 className | String
 innerButtonClassName | String
+containerClassName | String
+containerStyle | Object
 
 ### IconButton
 
@@ -174,6 +184,9 @@ rounded | Boolean
 ripple | Boolean
 rippleColor | String
 className | String
+style | Object
+containerClassName | String
+containerStyle | Object
 
 ### PushedIconButton
 
@@ -194,6 +207,8 @@ rippleColor | String
 className | String
 innerButtonStyle | Object
 innerButtonClassName | String
+containerClassName | String
+containerStyle | Object
 
 ### AddButton, TrashButton, EditButton, GoogleButton
 
@@ -228,6 +243,68 @@ All PushedIconButton Props | *
 All html button Props | *
 svgStyle | Object
 svgClassName | String
+
+## Modal
+
+### Modal
+
+Usage:
+
+```javascript
+    import React from 'react';
+    import { Modal, Button } from 'jdesign';
+
+    class MyComponent extends React.Component {
+
+        constructor(props) {
+            super(props);
+            this.state = {
+                open: false
+            };
+            this.openModal = this.openModal.bind(this);
+            this.closeModal = this.closeModal.bind(this);
+        };
+
+        openModal() {
+            this.setState({ open: true });
+        };
+
+        closeModal() {
+            this.setState({ open: false });
+        };
+
+        render() {
+            return (
+                <div>
+                    <h1>My Page</h1>
+                    <Button
+                        label='open modal'
+                        onClick={this.openModal}
+                    />
+                    <Modal
+                        open={this.state.open}
+                        closeOnClickOutside={this.closeModal}
+                    >
+                        <h1>My Modal</h1>
+                        <div>content...</div>
+                    </Modal>
+                </div>
+            );
+        };
+    };
+```
+
+Prop Name | Prop Type
+----------|----------
+open | Boolean
+closeOnClickOutside | Function
+overlayClassName | String
+overlayStyle | Object
+className | String
+style | Object
+
+closeOnClickOutside is used if you want to close the modal when clicking outside of its container.
+You need to pass it a function that will change the open prop given to the modal to false, like a state change.
 
 
 ## Text Inputs
