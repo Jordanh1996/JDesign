@@ -8,15 +8,48 @@
     background: rgba(0, 0, 0, 0.4);
     top: 0;
     left: 0;
+    transition: 250ms ease-in-out;
+    animation: darken 250ms ease-in-out;
+}
+
+.modal-overlay_closing {
+    background: rgba(0, 0, 0, 0);
 }
 
 .modal {
     position: fixed;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background: white;
+    overflow: auto;
     min-height: 25%;
     min-width: 25%;
+    max-height: 90%;
     border-radius: 8px;
     box-shadow: 0 0 4px 0px #303030;
+    transition: 250ms ease-in-out;
+    animation: scaleUp 250ms ease-in-out;
+}
+
+.modal_closing {
+    transform: scale(0);
+}
+
+@keyframes scaleUp {
+    from {
+        transform: scale(0);
+    }
+    to {
+        transform: scale(1);
+    }
+}
+
+@keyframes darken {
+    from {
+        background: rgba(0, 0, 0, 0);
+    }
+    to {
+        background: rgba(0, 0, 0, 0.4);
+    }
 }

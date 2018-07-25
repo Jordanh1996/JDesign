@@ -1,6 +1,6 @@
 {
   "name": "jdesign",
-  "version": "1.42.1",
+  "version": "1.42.2",
   "description": "React Styled Components",
   "main": "build/index.js",
   "peerDependencies": {
@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "react": "^16.4.1",
+    "react-addons-css-transition-group": "^15.6.2",
     "react-dom": "^16.4.1",
     "react-ink": "^6.4.0",
     "velocity-react": "^1.4.1",
