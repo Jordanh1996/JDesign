@@ -12,6 +12,11 @@
     pointer-events: none;
 }
 
+.option:focus {
+    outline: 0;
+    background: #898989 !important;
+}
+
 /* .option:first-child {
     border-top-right-radius: 6px;
     border-top-left-radius: 6px;

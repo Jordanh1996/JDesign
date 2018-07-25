@@ -6,6 +6,7 @@
 .select-icon {
     width: 12px;
     height: 16px;
+    padding-left: 6px;
     align-self: center;
     margin-left: auto;
 }

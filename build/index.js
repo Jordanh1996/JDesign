@@ -2433,18 +2433,89 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var Options = function (_React$Component) {
     _inherits(Options, _React$Component);
 
-    function Options() {
+    function Options(props) {
         _classCallCheck(this, Options);
 
-        return _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).apply(this, arguments));
+        var _this = _possibleConstructorReturn(this, (Options.__proto__ || Object.getPrototypeOf(Options)).call(this, props));
+
+        _this.arrowKey = _this.arrowKey.bind(_this);
+        _this.search = _this.search.bind(_this);
+        _this.child = undefined;
+        _this.input = '';
+        return _this;
     }
 
     _createClass(Options, [{
         key: 'componentWillMount',
         value: function componentWillMount() {
+            this.pickedOptionY = this.props.getPickedOptionDimensions().y;
+        }
+    }, {
+        key: 'componentDidMount',
+        value: function componentDidMount() {
             this.bottom = 'auto';
-            if (window.innerHeight - this.props.getPickedOptionDimensions().y < 300) {
+            var height = this.options.getBoundingClientRect().height;
+            if (window.innerHeight - this.pickedOptionY < height) {
                 this.bottom = -window.pageYOffset;
+            }
+            window.addEventListener('keydown', this.arrowKey);
+            window.addEventListener('keydown', this.search);
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            window.removeEventListener('keydown', this.arrowKey);
+            window.removeEventListener('keydown', this.search);
+        }
+    }, {
+        key: 'arrowKey',
+        value: function arrowKey(e) {
+            if ((e.keyCode || e.which) == 38) {
+                e.preventDefault();
+                try {
+                    this.child = this.child.previousSibling || this.options.lastChild;
+                } catch (e) {
+                    this.child = this.options.lastChild;
+                }
+                // this.child = this.child.previousSibling || this.options.lastChild;
+                this.child.focus();
+            }
+            if ((e.keyCode || e.which) == 40) {
+                e.preventDefault();
+                try {
+                    this.child = this.child.nextSibling || this.options.firstChild;
+                } catch (e) {
+                    this.child = this.options.firstChild;
+                }
+                this.child.focus();
+            }
+            if ((e.keyCode || e.which) == 13) {
+                document.activeElement.click();
+            }
+        }
+    }, {
+        key: 'search',
+        value: function search(e) {
+            if ((e.keyCode || e.which) > 47 && (e.keyCode || e.which) < 91 || (e.keyCode || e.which) == 32) {
+                e.preventDefault();
+                if (e.repeat) return;
+                if (this.input.length > 0) {
+                    this.input += e.key;
+                    for (var i = 0; i < this.props.children.length; i++) {
+                        if (this.props.children[i].props.children.toLowerCase().match(this.input)) {
+                            this.child = this.options.children[i];
+                            return this.child.focus();
+                        }
+                    }
+                }
+                this.input = e.key;
+                for (var _i = 0; _i < this.props.children.length; _i++) {
+                    if (this.props.children[_i].props.children.toLowerCase().match(this.input)) {
+                        this.child = this.options.children[_i];
+                        return this.child.focus();
+                    }
+                }
+                this.input = '';
             }
         }
     }, {
@@ -2456,7 +2527,7 @@ var Options = function (_React$Component) {
                 'div',
                 { className: 'options-open ' + this.props.className, style: Object.assign({}, this.props.style, { bottom: this.bottom }), ref: function ref(options) {
                         return _this2.options = options;
-                    } },
+                    }, tabIndex: '0' },
                 this.props.children
             );
         }
@@ -4655,16 +4726,23 @@ var Select = function (_React$Component) {
         key: 'openOptions',
         value: function openOptions() {
             this.setState({ opened: true });
+            document.addEventListener("click", this.closeOptions);
         }
     }, {
         key: 'closeOptions',
         value: function closeOptions() {
             this.setState({ opened: false });
+            document.removeEventListener("click", this.closeOptions);
         }
     }, {
         key: 'getPickedOptionDimensions',
         value: function getPickedOptionDimensions() {
             return this.pickedOption.getBoundingClientRect();
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            document.removeEventListener("click", this.closeOptions);
         }
     }, {
         key: 'render',
@@ -4683,7 +4761,7 @@ var Select = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'floatingSelect-container', tabIndex: '0', onBlur: this.closeOptions, disabled: this.props.disabled },
+                { className: 'floatingSelect-container', disabled: this.props.disabled },
                 _react2.default.createElement('input', { type: 'hidden', value: this.props.value || this.state.value, form: this.props.form, disabled: this.props.disabled }),
                 _react2.default.createElement(
                     _velocityReact.VelocityTransitionGroup,
@@ -4761,7 +4839,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var Option = function Option(props) {
     return _react2.default.createElement(
         'div',
-        { className: props.className, style: Object.assign({}, props.style), onClick: props.onClick, disabled: props.disabled, value: props.value },
+        { className: props.className, style: Object.assign({}, props.style), onClick: props.onClick, disabled: props.disabled, value: props.value, tabIndex: '0' },
         props.children
     );
 };
@@ -4873,16 +4951,23 @@ var Select = function (_React$Component) {
         key: 'openOptions',
         value: function openOptions() {
             this.setState({ opened: true });
+            document.addEventListener("click", this.closeOptions);
         }
     }, {
         key: 'closeOptions',
         value: function closeOptions() {
             this.setState({ opened: false });
+            document.removeEventListener("click", this.closeOptions);
         }
     }, {
         key: 'getPickedOptionDimensions',
         value: function getPickedOptionDimensions() {
             return this.pickedOption.getBoundingClientRect();
+        }
+    }, {
+        key: 'componentWillUnmount',
+        value: function componentWillUnmount() {
+            document.removeEventListener("click", this.closeOptions);
         }
     }, {
         key: 'render',
@@ -4901,7 +4986,7 @@ var Select = function (_React$Component) {
 
             return _react2.default.createElement(
                 'div',
-                { className: 'select-container', tabIndex: '0', onBlur: this.closeOptions, disabled: this.props.disabled },
+                { className: 'select-container', tabIndex: '0', disabled: this.props.disabled },
                 _react2.default.createElement('input', { type: 'hidden', value: this.props.value || this.state.value, form: this.props.form, disabled: this.props.disabled }),
                 _react2.default.createElement(
                     _velocityReact.VelocityTransitionGroup,
@@ -5413,7 +5498,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".option {\n    padding: 8px 16px;\n    transition: background 0.15s ease-in-out;\n    min-width: 80px;\n    /* text-align: center; */\n    min-height: 14px;\n    user-select: none;\n}\n\n.option[disabled] {\n    opacity: 0.5;\n    pointer-events: none;\n}\n\n/* .option:first-child {\n    border-top-right-radius: 6px;\n    border-top-left-radius: 6px;\n}\n\n.option:last-child {\n    border-bottom-right-radius: 6px;\n    border-bottom-left-radius: 6px;\n} */\n\n/* .option:hover {\n    background: #EEEEEE;\n} */\n\n.option:not([disabled]):hover {\n    background: #EEEEEE;\n}", ""]);
+exports.push([module.i, ".option {\n    padding: 8px 16px;\n    transition: background 0.15s ease-in-out;\n    min-width: 80px;\n    /* text-align: center; */\n    min-height: 14px;\n    user-select: none;\n}\n\n.option[disabled] {\n    opacity: 0.5;\n    pointer-events: none;\n}\n\n.option:focus {\n    outline: 0;\n    background: #898989 !important;\n}\n\n/* .option:first-child {\n    border-top-right-radius: 6px;\n    border-top-left-radius: 6px;\n}\n\n.option:last-child {\n    border-bottom-right-radius: 6px;\n    border-bottom-left-radius: 6px;\n} */\n\n/* .option:hover {\n    background: #EEEEEE;\n} */\n\n.option:not([disabled]):hover {\n    background: #EEEEEE;\n}", ""]);
 
 // exports
 
@@ -5441,7 +5526,7 @@ exports = module.exports = __webpack_require__(1)(false);
 
 
 // module
-exports.push([module.i, ".select-container {\n    cursor: pointer;\n    align-self: flex-start;\n}\n\n.select-icon {\n    width: 12px;\n    height: 16px;\n    align-self: center;\n    margin-left: auto;\n}\n\n.select-picked {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    user-select: none;\n    border-radius: 6px;\n    box-shadow: 0 0 6px 0 #303030;\n    padding: 8px 12px;\n    min-width: 80px;\n}\n\n.select-container:focus {\n    outline: 0;\n}\n\n.select-container[disabled] {\n    opacity: 0.5;\n    cursor: not-allowed;\n}\n\n.select-picked[disabled] {\n    pointer-events: none;\n}", ""]);
+exports.push([module.i, ".select-container {\n    cursor: pointer;\n    align-self: flex-start;\n}\n\n.select-icon {\n    width: 12px;\n    height: 16px;\n    padding-left: 6px;\n    align-self: center;\n    margin-left: auto;\n}\n\n.select-picked {\n    display: flex;\n    flex-direction: row;\n    justify-content: space-between;\n    user-select: none;\n    border-radius: 6px;\n    box-shadow: 0 0 6px 0 #303030;\n    padding: 8px 12px;\n    min-width: 80px;\n}\n\n.select-container:focus {\n    outline: 0;\n}\n\n.select-container[disabled] {\n    opacity: 0.5;\n    cursor: not-allowed;\n}\n\n.select-picked[disabled] {\n    pointer-events: none;\n}", ""]);
 
 // exports
 

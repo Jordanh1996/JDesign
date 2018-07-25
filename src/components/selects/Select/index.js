@@ -63,15 +63,21 @@ class Select extends React.Component {
 
     openOptions() {
         this.setState({ opened: true });
+        document.addEventListener("click", this.closeOptions);
     };
 
     closeOptions() {
         this.setState({ opened: false });
+        document.removeEventListener("click", this.closeOptions);
     };
 
     getPickedOptionDimensions() {
         return this.pickedOption.getBoundingClientRect();
     };
+
+    componentWillUnmount() {
+        document.removeEventListener("click", this.closeOptions);
+    }
 
     render() {
         const { children } = this.props;
@@ -84,7 +90,7 @@ class Select extends React.Component {
         }
 
         return (
-            <div className='select-container' tabIndex='0' onBlur={this.closeOptions} disabled={this.props.disabled}>
+            <div className='select-container' tabIndex='0' disabled={this.props.disabled}>
                 <input type='hidden' value={this.props.value || this.state.value} form={this.props.form} disabled={this.props.disabled} />
                 <VelocityTransitionGroup enter={{ animation: "slideDown" }} leave={{ animation: "slideUp" }} duration={300}>
                 {
