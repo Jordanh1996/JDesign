@@ -42,6 +42,10 @@ import {
     Modal
 } from './components/modal';
 
+import {
+    DateInput
+} from './components/timePickers';
+
 export {
     // Buttons
     Button,
@@ -70,5 +74,7 @@ export {
     FloatingSelect,
     Option,
     // Modal
-    Modal
+    Modal,
+    // Time Pickers
+    DateInput
 };

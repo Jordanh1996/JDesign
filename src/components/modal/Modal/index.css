@@ -26,7 +26,7 @@
     min-height: 25%;
     min-width: 25%;
     max-height: 90%;
-    border-radius: 8px;
+    border-radius: 4px;
     box-shadow: 0 0 4px 0px #303030;
     transition: 250ms ease-in-out;
     animation: scaleUp 250ms ease-in-out;

@@ -1,0 +1,16 @@
+.dateInput-header-container {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 8px;
+}
+
+.dateInput-header-year {
+    display: flex;
+    flex: 1;
+}
+
+.dateInput-header-date {
+    display: flex;
+    flex: 1;
+}

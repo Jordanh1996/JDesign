@@ -12,14 +12,14 @@ class Options extends React.Component {
     };
     
     componentWillMount() {
-        this.pickedOptionY = this.props.getPickedOptionDimensions().y;
+        this.pickedOptionsDimensions = this.props.getPickedOptionDimensions();
     };
 
     componentDidMount() {
         this.bottom = 'auto';
         const height = this.options.getBoundingClientRect().height;
-        if (window.innerHeight - this.pickedOptionY < height) {
-            this.bottom = -window.pageYOffset;
+        if (window.innerHeight - this.pickedOptionsDimensions.y < height) {
+            this.bottom = -window.pageYOffset + window.innerHeight - this.pickedOptionsDimensions.y - this.pickedOptionsDimensions.height;
         }
         window.addEventListener('keydown', this.arrowKey);
         window.addEventListener('keydown', this.search);

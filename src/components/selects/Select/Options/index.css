@@ -18,6 +18,10 @@
     max-height: 300px;
 }
 
+.options-open:focus {
+    outline: 0;
+}
+
 
 .options-open::-webkit-scrollbar-thumb {
     background: #707070 !important;

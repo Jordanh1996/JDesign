@@ -28,7 +28,13 @@ class Modal extends React.Component {
         if (this.props.open) {
 
             return (
-                <div className={`modal-overlay ${this.props.overlayClassName}`} style={this.props.overlayStyle} onClick={this.props.closeOnClickOutside && this.closeOnClickOutside} name='overlay'>
+                <div 
+                    className={`modal-overlay ${this.props.overlayClassName}`} 
+                    style={this.props.overlayStyle} 
+                    onClick={this.props.closeOnClickOutside && this.closeOnClickOutside} 
+                    name='overlay'
+                    ref={this.props.ref}
+                >
                     <div className={`modal ${this.props.className}`} style={this.props.style}>
                         {this.props.children}
                     </div>
