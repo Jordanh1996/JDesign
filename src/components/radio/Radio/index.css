@@ -4,7 +4,6 @@
     height: 30px;
     border-radius: 50%;
     display: flex;
-    color: #0096EF;
 }
 
 .radio {
@@ -38,7 +37,6 @@
     width: 12px;
     margin: 3px;
     border-radius: 50%;
-    background: #0096EF;
     transform: scale(0);
     pointer-events: none;
     transition: 0.25s ease-out;
@@ -63,7 +61,6 @@
     transform: scale(0);
     border-radius: inherit;
     opacity: 0.75;
-    background-color: #0096EF;
     animation: ripple 0.35s cubic-bezier(0.5, 0.7, 0.85, 1);
 }
 

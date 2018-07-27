@@ -13,7 +13,6 @@
     margin: 25%;
     border-radius: 2px;
     box-shadow: 0 0 2px 2px gray;
-    color: #0096EF;
     pointer-events: none;
 }
 
@@ -21,7 +20,6 @@
     border-radius: 2px;
     width: 15px;
     height: 15px;
-    background: #0096EF;
     transform: scale(0);
     box-shadow: 0 0 0 0;
     transition: 0.2s ease-in-out;
@@ -55,7 +53,6 @@
     width: 15px;
     height: 15px;
     clip: rect(0, 15px, 15px, 0);
-    background: #0096EF;
     z-index: 1;
     transition: 0s;
 }

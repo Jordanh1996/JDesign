@@ -1,4 +1,5 @@
 import React from 'react';
+import withTheme from '../../../theme/withTheme';
 import './index.css';
 
 class FloatingTextArea extends React.Component {
@@ -18,14 +19,14 @@ class FloatingTextArea extends React.Component {
                     className={`floatingTextArea-label 
                     ${this.props.error && 'floatingTextArea-label_error'} 
                     ${this.state.focused || this.state.content ? `${this.props.floatingLabelClassName} floatingTextArea-label_focused` : this.props.placeholderClassName}`} 
-                    style={this.state.focused ? this.props.floatingLabelStyle : this.props.placeholderStyle}
+                    style={this.state.focused ? Object.assign({}, { color: this.props.theme.primary }, this.props.floatingLabelStyle) : this.props.placeholderStyle}
                 >
                     {this.props.placeholder}
                 </div>
                 <textarea
                     type={this.props.type}
                     className={`floatingTextArea floatingTextArea ${this.props.inputClassName} ${this.props.error && 'floatingTextArea_error'}`}
-                    style={this.props.inputStyle}
+                    style={Object.assign({ color: this.props.theme.third }, this.props.inputStyle)}
                     onFocus={!this.props.disabled ? () => this.setState({ focused: true }) : undefined}
                     onBlur={(input) => this.setState({ focused: false, content: input.target.value })}
                     autoFocus={this.state.focused}
@@ -36,7 +37,7 @@ class FloatingTextArea extends React.Component {
                 />
                 <div 
                     className={`floatingTextArea-border ${this.props.underlineClassName}`} 
-                    style={Object.assign({}, this.props.underlineStyle, { borderBottomColor: this.props.underlineColor })} 
+                    style={Object.assign({}, this.props.underlineStyle, { borderBottomColor: this.props.underlineColor || this.props.theme.primary })} 
                 />
                 <div className='floatingTextArea-error'>{this.props.error && this.props.errorMessage}</div>
             </div>
@@ -44,4 +45,4 @@ class FloatingTextArea extends React.Component {
     };
 };
 
-export default FloatingTextArea;
+export default withTheme(FloatingTextArea);

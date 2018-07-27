@@ -1,4 +1,5 @@
 import React from 'react';
+import withTheme from '../../../theme/withTheme';
 import './index.css';
 
 class Radio extends React.Component {
@@ -6,7 +7,8 @@ class Radio extends React.Component {
     onCheck() {
         const rippler = document.createElement('div');
         rippler.className = 'ripple';
-        this.props.color ? rippler.setAttribute('style', `background-color: ${this.props.color}`) : null;
+        const color = this.props.color || this.props.theme.primary;
+        rippler.style.backgroundColor = color;
         this.container.insertBefore(rippler, this.input);
         setTimeout(() => {
             this.container.removeChild(this.container.firstChild);
@@ -20,7 +22,7 @@ class Radio extends React.Component {
                 key={this.props.key}
                 ref={(container) => this.container = container}
                 onClick={this.onCheck.bind(this)}
-                style={Object.assign({ color: this.props.color }, this.props.style)}
+                style={Object.assign({ color: this.props.color || this.props.theme.primary }, this.props.style)}
             >
                 <input
                     type='radio'
@@ -39,7 +41,7 @@ class Radio extends React.Component {
                     onChange={this.props.onChange}
                 />
                 <div className='radio-outer'>
-                    <div className='radio-inner' style={{ background: this.props.color }} />
+                    <div className='radio-inner' style={{ background: this.props.color || this.props.theme.primary }} />
                 </div>
             </div>
         );
@@ -47,4 +49,4 @@ class Radio extends React.Component {
 };
 
 
-export default Radio;
+export default withTheme(Radio);

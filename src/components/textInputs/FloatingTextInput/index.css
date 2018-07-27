@@ -25,7 +25,6 @@
 }
 
 .floatingTextInput-label_focused {
-    color: #00b0ff !important;
     transform: translateY(-100%);
     font-size: 12px;
 }

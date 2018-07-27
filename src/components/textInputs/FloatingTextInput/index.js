@@ -1,4 +1,5 @@
 import React from 'react';
+import withTheme from '../../../theme/withTheme';
 import './index.css'
 
 class FloatingTextInput extends React.Component {
@@ -18,7 +19,7 @@ class FloatingTextInput extends React.Component {
                     className={`floatingTextInput-label 
                     ${this.props.error && 'floatingTextInput-label_error'} 
                     ${this.state.focused || this.state.content ? `${this.props.floatingLabelClassName} floatingTextInput-label_focused` : this.props.placeholderClassName}`} 
-                    style={this.state.focused ? this.props.floatingLabelStyle : this.props.placeholderStyle}
+                    style={this.state.focused ? Object.assign({}, { color: this.props.theme.primary }, this.props.floatingLabelStyle) : this.props.placeholderStyle}
                 >
                     {this.props.placeholder}
                 </div>
@@ -26,7 +27,7 @@ class FloatingTextInput extends React.Component {
                     rows={this.props.rows}
                     type={this.props.type}
                     className={`floatingTextInput ${this.props.inputClassName} ${this.props.error && 'floatingTextInput_error'}`}
-                    style={this.props.inputStyle}
+                    style={Object.assign({ color: this.props.theme.third}, this.props.inputStyle)}
                     onFocus={!this.props.disabled ? () => this.setState({ focused: true }) : undefined}
                     onBlur={(input) => this.setState({ focused: false, content: input.target.value })}
                     autoFocus={this.state.focused}
@@ -36,7 +37,7 @@ class FloatingTextInput extends React.Component {
                 />
                 <div 
                     className={`floatingTextInput-border ${this.props.underlineClassName}`} 
-                    style={Object.assign({}, this.props.underlineStyle, { borderBottomColor: this.props.underlineColor })} 
+                    style={Object.assign({}, this.props.underlineStyle, { borderBottomColor: this.props.underlineColor || this.props.theme.primary })} 
                 />
                 <div className='floatingTextInput-error'>{this.props.error && this.props.errorMessage}</div>
             </div>
@@ -44,4 +45,4 @@ class FloatingTextInput extends React.Component {
     };
 };
 
-export default FloatingTextInput;
+export default withTheme(FloatingTextInput);

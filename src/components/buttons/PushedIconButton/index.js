@@ -1,4 +1,5 @@
 import React from 'react';
+import withTheme from '../../../theme/withTheme';
 import './index.css';
 import Ink from 'react-ink';
 
@@ -7,6 +8,7 @@ const PushedIconButton = (props) => (
         <button
             {...props}
             className={`pushedIconButton-outer ${props.rounded ? 'rounded-button' : ''} ${props.className}`}
+            style={Object.assign({ background: props.theme.primary, color: props.theme.secondary }, props.style)}
         >
         <div className={`pushedIconButton-inner ${props.rounded ? 'rounded-button' : ''} ${props.innerButtonClassName}`} style={props.innerButtonStyle}>
             {props.children}
@@ -22,11 +24,11 @@ const PushedIconButton = (props) => (
             {
                 props.ripple === false ?
                 null :
-                <Ink style={{ color: props.rippleColor }} />
+                <Ink style={{ color: props.rippleColor || props.theme.secondary }} />
             }
         </div>
         </button>
     </div>
 );
 
-export default PushedIconButton;
+export default withTheme(PushedIconButton);

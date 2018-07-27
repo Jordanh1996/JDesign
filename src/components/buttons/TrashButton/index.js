@@ -2,7 +2,7 @@ import React from 'react';
 import IconButton from '../IconButton';
 
 const TrashButton = (props) => (
-    <IconButton {...props} rounded style={Object.assign({ background: 'radial-gradient(#EF5350, #F44336)' }, props.style)}>
+    <IconButton {...props} rounded style={Object.assign({ background: 'radial-gradient(#EF5350, #F44336)' }, props.style)} rippleColor='white'>
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" 
             style={Object.assign({ width: '1.4rem', height: '1.4rem', fill: 'white' }, props.svgStyle || {})}
             className={props.svgClassName}

@@ -1,4 +1,5 @@
 import React from 'react';
+import withTheme from '../../../theme/withTheme';
 import './index.css';
 
 class Modal extends React.Component {
@@ -35,7 +36,7 @@ class Modal extends React.Component {
                     name='overlay'
                     ref={this.props.ref}
                 >
-                    <div className={`modal ${this.props.className}`} style={this.props.style}>
+                    <div className={`modal ${this.props.className}`} style={Object.assign({ background: this.props.theme.secondary, color: this.props.theme.third }, this.props.style)}>
                         {this.props.children}
                     </div>
                 </div>
@@ -47,7 +48,7 @@ class Modal extends React.Component {
             }, 250);
             return (
                 <div className={`modal-overlay modal-overlay_closing ${this.props.overlayClassName}`} style={this.props.overlayStyle}>
-                    <div className={`modal modal_closing ${this.props.className}`} style={this.props.style}>
+                    <div className={`modal modal_closing ${this.props.className}`} style={Object.assign({ background: this.props.theme.secondary, color: this.props.theme.third }, this.props.style)}>
                         {this.props.children}
                     </div>
                 </div>
@@ -57,4 +58,4 @@ class Modal extends React.Component {
     };
 };
 
-export default Modal;
+export default withTheme(Modal);

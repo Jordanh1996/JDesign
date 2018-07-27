@@ -12,8 +12,10 @@ const GooglePushedButton = (props) => (
             textShadow: '0 0 2px #e8e8e8',
             letterSpacing: '1px',
             fontFamily: 'Roboto, sans-serif',
-            fontWeight: 600
+            fontWeight: 600,
+            color: 'white'
         }}
+        rippleColor='white'
     >
         <svg viewBox="0 0 400 400" style={Object.assign({ width: '1.8rem', height: '1.8rem', marginLeft: '12px' }, props.svgStyle)} className={props.svgClassName}>
             <g id="svgg">

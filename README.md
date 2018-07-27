@@ -30,6 +30,31 @@ Usage
 
 All of the usage examples are at the components descriptions below, there is an example for each component.
 
+Customizing Colors (optional)
+=============================
+
+Jdesign can have a theme that works with react context to pass colors to the children of your app.
+After you use a theme the colors of ALL of Jdesign components will change accordingly.
+Context is used under the hood by react-redux, when you wrap a component with the connect function, and pass the correct arguments you could access the props you passed.
+In Jdesign you will not need to use the connect function on your components. you will only need to wrap your app with the Provider of the context, just like the provider with react-redux.
+
+```javascript
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+    import App from './App';
+    import { createTheme, Theme } from 'jdesign';
+
+    const theme = createTheme(color1, color2, color3) 
+
+    const app = (
+        <Theme value={theme}> // its ok if you are using react-redux and/or react-router
+            <App /> // the wrapping order between react-redux and Theme does not matter
+        </Theme>
+    );
+
+    ReactDOM.render(app, document.getElementById('root'));
+```
+
 Available Components
 ======
 

@@ -1,4 +1,12 @@
 import {
+    theme,
+    createTheme,
+    Theme,
+    Consumer,
+    withTheme
+} from './theme';
+
+import {
     Button,
     TrashButton,
     AddButton,
@@ -47,6 +55,12 @@ import {
 } from './components/timePickers';
 
 export {
+    // Theme
+    theme,
+    createTheme,
+    Theme,
+    Consumer,
+    withTheme,
     // Buttons
     Button,
     TrashButton,

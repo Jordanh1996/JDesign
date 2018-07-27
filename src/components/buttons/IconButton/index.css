@@ -12,7 +12,7 @@
     color: white;
     box-shadow: 0 0 4px 0 #404040;
     letter-spacing: 0.8px;
-    transition: 0.3s;
+    transition: opacity 0.3s;
     user-select: none;
 }
 
@@ -31,7 +31,8 @@
 }
 
 .icon-button:active {
-    animation: buttonClick 0.05s linear;
+    box-shadow: 0 0 2px 0 #404040;
+    transform: translateY(1px);
 }
 
 .icon-button-text {

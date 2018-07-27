@@ -1,4 +1,5 @@
 import React from 'react';
+import { theme } from '../../../index';
 import './index.css';
 import Options from '../Select/Options';
 import { VelocityTransitionGroup } from 'velocity-react';
@@ -106,7 +107,7 @@ class Select extends React.Component {
                 </VelocityTransitionGroup>
                 <div 
                     className={`floatingSelect-label ${(this.state.opened || this.state.value !== '') && `floatingSelect-label_focused ${this.props.floatingFocusedLabelClassName}`} ${this.props.floatingLabelClassName}`}
-                    style={Object.assign({}, this.props.floatingLabelStyle, (this.state.opened || this.state.value !== '') ? this.props.floatingFocusedLabelStyle : {})}
+                    style={Object.assign({}, this.props.floatingLabelStyle, (this.state.opened || this.state.value !== '') ? Object.assign({ color: theme.primary }, this.props.floatingFocusedLabelStyle) : {})}
                 >
                     {this.props.floatingLabel}
                 </div>

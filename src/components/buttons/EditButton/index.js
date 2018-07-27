@@ -2,7 +2,7 @@ import React from 'react';
 import IconButton from '../IconButton';
 
 const EditButton = (props) => (
-    <IconButton style={{ boxShadow: '0 0 3px 0px #303030', background: 'radial-gradient(#4CAF50, #A5D6A7)'}} {...props} rounded>    
+    <IconButton style={{ boxShadow: '0 0 3px 0px #303030', background: 'radial-gradient(#4CAF50, #A5D6A7)'}} {...props} rounded rippleColor='white'>    
         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
             style={Object.assign({ width: '1.4rem', height: '1.4rem', fill: 'white' }, props.svgStyle || {})}
             className={props.svgClassName}

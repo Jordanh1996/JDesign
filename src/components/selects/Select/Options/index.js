@@ -1,4 +1,5 @@
 import React from 'react';
+import withTheme from '../../../../theme/withTheme';
 import './index.css';
 
 class Options extends React.Component {
@@ -80,11 +81,11 @@ class Options extends React.Component {
 
     render() {
         return (
-            <div className={`options-open ${this.props.className}`} style={Object.assign({}, this.props.style ,{ bottom: this.bottom })} ref={(options) => this.options = options} tabIndex="0">
+            <div className={`options-open ${this.props.className}`} style={Object.assign({}, { background: this.props.theme.secondary, color: this.props.theme.third }, this.props.style ,{ bottom: this.bottom })} ref={(options) => this.options = options} tabIndex="0">
                 {this.props.children}
             </div>
         );
     };
 };
 
-export default Options;
+export default withTheme(Options);
