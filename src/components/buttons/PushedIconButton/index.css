@@ -35,8 +35,9 @@
 }
 
 .pushedIconButton-outer:active > .pushedIconButton-inner {
-    transform: translateY(1);
-    box-shadow: 0 0 3px 0 #404040;
+    /* transform: translateY(1); */
+    /* box-shadow: 0 0 3px 0 #404040; */
+    transform: scale(0.99);
 }
 
 .pushedIconButton-text {

@@ -1,4 +1,5 @@
 import Button from './Button';
+import FlatButton from './FlatButton';
 import TrashButton from './TrashButton';
 import AddButton from './AddButton';
 import EditButton from './EditButton';
@@ -11,6 +12,7 @@ import './index.css';
 
 export {
     Button,
+    FlatButton,
     TrashButton,
     AddButton,
     EditButton,

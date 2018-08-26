@@ -8,6 +8,7 @@ import {
 
 import {
     Button,
+    FlatButton,
     TrashButton,
     AddButton,
     EditButton,
@@ -63,6 +64,7 @@ export {
     withTheme,
     // Buttons
     Button,
+    FlatButton,
     TrashButton,
     AddButton,
     EditButton,

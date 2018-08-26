@@ -39,7 +39,8 @@
 }
 
 .pushed-button-container:active > .pushed-button {
-    box-shadow: inset 0 0 2px 0 #404040, 0 0 2px 0 #404040;
+    /* box-shadow: inset 0 0 2px 0 #404040, 0 0 2px 0 #404040; */
+    transform: scale(0.985);
 }
 
 .rounded-button {

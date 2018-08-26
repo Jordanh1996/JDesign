@@ -43,6 +43,7 @@ class Checkbox extends React.Component {
                     required={this.props.required}
                     value={this.props.value}
                     onClick={this.props.onClick}
+                    checked={this.props.checked}
                 />
                 <div className='checkbox-outer' style={{ color: this.props.color || this.props.theme.primary }}>
                     <div className='checkbox-inner' style={{ background: this.props.color || this.props.theme.primary }}>

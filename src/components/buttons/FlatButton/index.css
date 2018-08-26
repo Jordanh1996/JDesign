@@ -1,0 +1,29 @@
+.button-flat {
+    position: relative;
+    background: transparent;
+    font-family: 'Roboto', 'sans-serif';
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 7px 11px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    letter-spacing: 0.8px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.button-flat[disabled] {
+    pointer-events: none;
+    opacity: 0.65;
+}
+
+.button-flat:hover {
+    background: rgba(153, 153, 153, 0.2);
+    cursor: pointer;
+}
+
+.button-flat:focus {
+    outline: 0;
+}
