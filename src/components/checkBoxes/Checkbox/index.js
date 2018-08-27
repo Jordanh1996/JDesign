@@ -23,8 +23,8 @@ class Checkbox extends React.Component {
 
     render() {
         const isChecked = this.props.value || this.props.checked;
-        const checkboxHide = {};
-        const checkboxInner = {}
+        let checkboxHide = {};
+        let checkboxInner = {}
         if (isChecked) {
             checkboxHide = {
                 clip: 'rect(0, 15px, 15px, 15px)',
