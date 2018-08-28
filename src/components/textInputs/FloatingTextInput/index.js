@@ -18,7 +18,7 @@ class FloatingTextInput extends React.Component {
                 <div 
                     className={`floatingTextInput-label 
                     ${this.props.error && 'floatingTextInput-label_error'} 
-                    ${this.state.focused || this.state.content ? `${this.props.floatingLabelClassName} floatingTextInput-label_focused` : this.props.placeholderClassName}`} 
+                    ${this.state.focused || this.state.content || this.props.value ? `${this.props.floatingLabelClassName} floatingTextInput-label_focused` : this.props.placeholderClassName}`} 
                     style={this.state.focused ? Object.assign({}, { color: this.props.theme.primary }, this.props.floatingLabelStyle) : this.props.placeholderStyle}
                 >
                     {this.props.placeholder}
