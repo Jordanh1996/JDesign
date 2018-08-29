@@ -40,8 +40,8 @@ class Radio extends React.Component {
                     onClick={this.props.onClick}
                     onChange={this.props.onChange}
                 />
-                <div className='radio-outer'>
-                    <div className='radio-inner' style={{ background: this.props.color || this.props.theme.primary }} />
+                <div className='radio-outer' style={this.props.checked ? { boxShadow: '0 0 2px 2px'} : {}}>
+                    <div className='radio-inner' style={Object.assign({ background: this.props.color || this.props.theme.primary }, this.props.checked ? { transform: 'scale(1)'} : {})} />
                 </div>
             </div>
         );
