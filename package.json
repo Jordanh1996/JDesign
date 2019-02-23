@@ -1,6 +1,6 @@
 {
   "name": "jdesign",
-  "version": "1.51.26",
+  "version": "1.6.0",
   "description": "React Styled Components",
   "main": "build/index.js",
   "peerDependencies": {
