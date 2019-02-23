@@ -39,7 +39,9 @@ class FloatingTextInput extends React.Component {
                     className={`floatingTextInput-border ${this.props.underlineClassName}`} 
                     style={Object.assign({}, this.props.underlineStyle, { borderBottomColor: this.props.underlineColor || this.props.theme.primary })} 
                 />
-                <div className='floatingTextInput-error'>{this.props.error && this.props.errorMessage}</div>
+                <div>
+                    <div className='floatingTextInput-error'>{this.props.error && this.props.errorMessage}</div>
+                </div>
             </div>
         );
     };

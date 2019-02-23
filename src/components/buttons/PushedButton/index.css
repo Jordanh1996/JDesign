@@ -1,7 +1,7 @@
 .pushed-button-container {
     position: relative;
     display: flex;
-    font-family: 'roboto, sans-serif';
+    font-family: 'Roboto', Arial;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 200;

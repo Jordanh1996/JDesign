@@ -1,4 +1,7 @@
 const path = require('path');
+
+const isProduction = !(process.env.NODE_ENV === 'dev');
+
 module.exports = {
   entry: './src/index.js',
   output: {
@@ -14,18 +17,24 @@ module.exports = {
         exclude: /(node_modules|bower_components|build)/,
         use: {
           loader: 'babel-loader',
-          options: {
-            presets: ['env']
-          }
+          // options: {
+          //   presets: ['env']
+          // }
         }
       },
       {
-        test: /\.css$/,
-        loader: 'style-loader!css-loader'
+        test: /\.s?css$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader"
+        ]
       }
     ]
   },
   externals: {
     'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
-  }
+  },
+  mode: isProduction ? 'development' : 'production',
+  // devtool: isProduction ? 'source-map' : 'inline-source-map',
 };

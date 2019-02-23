@@ -1,7 +1,7 @@
 .button-flat {
     position: relative;
     background: transparent;
-    font-family: 'Roboto', 'sans-serif';
+    font-family: 'Roboto', Arial;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 600;

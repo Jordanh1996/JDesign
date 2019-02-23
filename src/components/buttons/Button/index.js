@@ -1,24 +1,37 @@
 import React from 'react';
 import withTheme from '../../../theme/withTheme';
-import './index.css';
+import './index.scss';
 import Ink from 'react-ink';
 
-const Button = (props) => (
-    <div style={props.containerStyle} className={props.containerClassName}>
+const Button = (props) => {
+    const {
+        containerStyle,
+        containerClassName,
+        className,
+        rounded,
+        style,
+        theme,
+        children,
+        label,
+        ripple,
+        rippleColor,
+        ...other
+    } = props;
+    return (
         <button
-            {...props}
-            className={`button ${props.rounded ? 'rounded-button' : ''} ${props.className}`}
-            style={Object.assign({}, props.style, { background: props.theme.primary, color: props.theme.secondary })}
+            {...other}
+            className={`button ${rounded ? 'rounded-button' : ''} ${className}`}
+            style={Object.assign({}, style, { background: theme.primary, color: theme.secondary })}
         >
-            {props.children}
-            {props.label}
+            {children}
+            {label}
             {
-                props.ripple === false ?
-                null :
-                <Ink style={{ color: props.rippleColor || props.theme.secondary }} />
+                ripple === false ?
+                    null :
+                    <Ink style={{ color: rippleColor || theme.secondary }} />
             }
         </button>
-    </div>
-);
+    )
+};
 
 export default withTheme(Button);

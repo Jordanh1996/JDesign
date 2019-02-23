@@ -1,6 +1,7 @@
 .select-container {
     cursor: pointer;
-    align-self: flex-start;
+    /* align-self: flex-start; */
+    display: inline-flex;
 }
 
 .select-icon {

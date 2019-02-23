@@ -1,17 +1,19 @@
 .button {
     position: relative;
-    font-family: 'roboto, sans-serif';
+    font-family: 'Roboto', Arial;
     font-size: 14px;
     text-transform: uppercase;
     font-weight: 200;
     padding: 7px 11px;
-    border: none;
-    border-radius: 4px;
+    border: 0;
+    border-radius: 2px;
     color: white;
-    box-shadow: 0 0 4px 0 #404040;
+    box-shadow: 1px 1px 4px 0 #404040;
     letter-spacing: 0.8px;
-    transition: opacity 0.3s;
+    transition: opacity 0.3s, box-shadow 0.3s;
     user-select: none;
+    text-align: center;
+    margin: 8px;
 }
 
 .button[disabled] {
@@ -21,6 +23,7 @@
 
 .button:hover {
     opacity: 0.86;
+    box-shadow: 1px 2px 4px 0 #404040;
     cursor: pointer;
 }
 
@@ -29,8 +32,8 @@
 }
 
 .button:active {
-    box-shadow: 0 0 2px 0 #404040;
-    transform: translateY(1px);
+    /* box-shadow: 0 0 2px 0 #404040; */
+    /* transform: translateY(1px); */
 }
 
 .rounded-button {

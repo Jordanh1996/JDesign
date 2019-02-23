@@ -17,8 +17,9 @@
 }
 
 .floatingTextArea-container {
-    align-self: flex-start;
     padding: 24px 0 0 0;
+    display: inline-flex;
+    flex-direction: column;
 }
 
 .floatingTextArea-label_focused {
@@ -37,13 +38,14 @@
 }
 
 .floatingTextArea-border {
-    transform: scaleX(0) translateY(-6px);
+    transform: scaleX(0) translateY(-2px);
     border-bottom: 2px solid #00b0ff;
     transition: transform 0.3s ease-in-out;
+    width: 100%;
 }
 
 .floatingTextArea:focus + .floatingTextArea-border {
-    transform: scaleX(1) translateY(-6px);
+    transform: scaleX(1) translateY(-2px);
 }
 
 .floatingTextArea-error {

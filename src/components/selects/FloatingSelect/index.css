@@ -1,6 +1,7 @@
 .floatingSelect-container {
     cursor: pointer;
-    align-self: flex-start;
+    /* align-self: flex-start; */
+    display: inline-flex;
 }
 
 .floatingSelect-icon {
@@ -8,6 +9,8 @@
     height: 16px;
     align-self: center;
     margin-left: auto;
+    padding-left: 10px;
+    fill: #555555;
 }
 
 .floatingSelect-picked {

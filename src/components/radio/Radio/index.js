@@ -5,48 +5,53 @@ import './index.css';
 class Radio extends React.Component {
 
     onCheck() {
-        const rippler = document.createElement('div');
-        rippler.className = 'ripple';
-        const color = this.props.color || this.props.theme.primary;
-        rippler.style.backgroundColor = color;
-        this.container.insertBefore(rippler, this.input);
-        setTimeout(() => {
-            this.container.removeChild(this.container.firstChild);
-        }, 350);
+        if (this.props.ripple) {
+            const rippler = document.createElement('div');
+            rippler.className = 'ripple';
+            const color = this.props.color || this.props.theme.primary;
+            rippler.style.backgroundColor = color;
+            this.container.insertBefore(rippler, this.input);
+            setTimeout(() => {
+                this.container.removeChild(this.container.firstChild);
+            }, 350);
+        }
     };
 
     render() {
+        const { 
+            key,
+            color,
+            theme,
+            style,
+            checked,
+            ripple,
+            ...other
+        } = this.props;
         return (
             <div 
                 className='radio-container'
-                key={this.props.key}
+                key={key}
                 ref={(container) => this.container = container}
                 onClick={this.onCheck.bind(this)}
-                style={Object.assign({ color: this.props.color || this.props.theme.primary }, this.props.style)}
+                style={Object.assign({ color: color || theme.primary }, style)}
             >
                 <input
                     type='radio'
                     className='radio'
                     ref={(input) => this.input = input}
-                    autoFocus={this.props.autoFocus}
-                    checked={this.props.checked}
-                    defaultChecked={this.props.defaultChecked}
-                    defaultValue={this.props.defaultValue}
-                    disabled={this.props.disabled}
-                    form={this.props.form}
-                    name={this.props.name}
-                    required={this.props.required}
-                    value={this.props.value}
-                    onClick={this.props.onClick}
-                    onChange={this.props.onChange}
+                    checked={checked}
+                    {...other}
                 />
-                <div className='radio-outer' style={this.props.checked ? { boxShadow: '0 0 2px 2px'} : {}}>
-                    <div className='radio-inner' style={Object.assign({ background: this.props.color || this.props.theme.primary }, this.props.checked ? { transform: 'scale(1)'} : {})} />
+                <div className='radio-outer' style={checked ? { boxShadow: '0 0 2px 2px'} : {}}>
+                    <div className='radio-inner' style={Object.assign({ background: color || theme.primary }, checked ? { transform: 'scale(1)'} : {})} />
                 </div>
             </div>
         );
     };
 };
 
+Radio.defaultProps = {
+    ripple: true
+}
 
 export default withTheme(Radio);

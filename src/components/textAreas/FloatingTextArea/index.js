@@ -39,7 +39,9 @@ class FloatingTextArea extends React.Component {
                     className={`floatingTextArea-border ${this.props.underlineClassName}`} 
                     style={Object.assign({}, this.props.underlineStyle, { borderBottomColor: this.props.underlineColor || this.props.theme.primary })} 
                 />
-                <div className='floatingTextArea-error'>{this.props.error && this.props.errorMessage}</div>
+                <div>
+                    <div className='floatingTextArea-error'>{this.props.error && this.props.errorMessage}</div>
+                </div>
             </div>
         );
     };
