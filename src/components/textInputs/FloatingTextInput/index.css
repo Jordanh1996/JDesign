@@ -11,6 +11,7 @@
 }
 
 .floatingTextInput-container {
+    position: relative;
     align-self: flex-start;
     padding: 24px 0 0 0;
     display: inline-flex;

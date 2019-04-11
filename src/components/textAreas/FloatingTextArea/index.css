@@ -17,6 +17,7 @@
 }
 
 .floatingTextArea-container {
+    position: relative;
     padding: 24px 0 0 0;
     display: inline-flex;
     flex-direction: column;
