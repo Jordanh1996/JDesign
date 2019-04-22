@@ -1,0 +1,97 @@
+.dateInput-header-container {
+    user-select: none;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.dateInput-header-year {
+    user-select: none;
+    font-size: 16px;
+    margin: 16px;
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+}
+
+.dateInput-header-date {
+    user-select: none;
+    font-size: 26px;
+    letter-spacing: 0.6px;
+    width: 100%;
+    margin: 0 16px 16px 16px;
+    display: flex;
+}
+
+.dateInput-viewedMonth-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    margin: 16px 0;
+}
+
+.dateInput-viewedMonth-day-container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.dateInput-viewedMonth-day-row {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    &:last-child {
+        margin-bottom: 8px;
+    }
+}
+
+.dateInput-viewedMonth-day {
+    user-select: none;
+    cursor: pointer;
+    border-radius: 50%;
+    text-align: center;
+    width: 36px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 12px;
+}
+
+.dateInput-viewedMonth-day_hover {
+    position: absolute;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    opacity: 0;
+    transform: scale(0.55);
+    transition: 0.2s;
+}
+
+.dateInput-viewedMonth-day:not(.dateInput-viewedMonth-day_selected):hover > .dateInput-viewedMonth-day_hover {
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+
+.dateInput-viewedMonth-arrow {
+    height: 16px;
+    width: 16px;
+    user-select: none;
+    cursor: pointer;
+}
+
+.dateInput-actions {
+    margin-bottom: 12px;
+}
+
+// @keyframes dateInput_pick {
+//     from {
+//         transform: scale(0.55);
+//         opacity: 0;
+//     }
+//     to {
+//         transform: scale(0.9);
+//         opacity: 1;
+//     }
+// }

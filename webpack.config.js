@@ -1,6 +1,6 @@
 const path = require('path');
 
-const isProduction = !(process.env.NODE_ENV === 'dev');
+const isProduction = /pro?d/gi.test(process.env.NODE_ENV);
 
 module.exports = {
   entry: './src/index.js',
@@ -29,12 +29,18 @@ module.exports = {
           "css-loader",
           "sass-loader"
         ]
+      },
+      {
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          'file-loader'
+        ]
       }
     ]
   },
   externals: {
     'react': 'commonjs react' // this line is just to use the React dependency of our parent-testing-project instead of using our own React.
   },
-  mode: isProduction ? 'development' : 'production',
-  // devtool: isProduction ? 'source-map' : 'inline-source-map',
+  mode: isProduction ? 'production' : 'development',
+  devtool: isProduction ? undefined : 'inline-source-map',
 };

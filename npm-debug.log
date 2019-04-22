@@ -1,29 +1,35 @@
 0 info it worked if it ends with ok
-1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'link' ]
-2 info using npm@3.10.10
-3 info using node@v6.16.0
-4 verbose linkPkg /Users/jordan-hury/Desktop/projects/JDesign
-5 silly gentlyRm /usr/local/lib/node_modules/jdesign is being purged
-6 verbose gentlyRm don't care about contents; nuking /usr/local/lib/node_modules/jdesign
-7 silly vacuum-fs purging /usr/local/lib/node_modules/jdesign
-8 verbose stack Error: EACCES: permission denied, unlink '/usr/local/lib/node_modules/jdesign'
-8 verbose stack     at Error (native)
-9 verbose cwd /Users/jordan-hury/Desktop/projects/JDesign
-10 error Darwin 17.7.0
-11 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "link"
-12 error node v6.16.0
-13 error npm  v3.10.10
-14 error path /usr/local/lib/node_modules/jdesign
-15 error code EACCES
-16 error errno -13
-17 error syscall unlink
-18 error Error: EACCES: permission denied, unlink '/usr/local/lib/node_modules/jdesign'
-18 error     at Error (native)
-18 error  { Error: EACCES: permission denied, unlink '/usr/local/lib/node_modules/jdesign'
-18 error     at Error (native)
-18 error   errno: -13,
-18 error   code: 'EACCES',
-18 error   syscall: 'unlink',
-18 error   path: '/usr/local/lib/node_modules/jdesign' }
-19 error Please try running this command again as root/Administrator.
-20 verbose exit [ -13, true ]
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'start' ]
+2 info using npm@2.5.1
+3 info using node@v0.12.0
+4 verbose run-script [ 'prestart', 'start', 'poststart' ]
+5 info prestart jdesign@1.6.1
+6 info start jdesign@1.6.1
+7 verbose unsafe-perm in lifecycle true
+8 info jdesign@1.6.1 Failed to exec start script
+9 verbose stack Error: jdesign@1.6.1 start: `NODE_ENV=dev webpack --watch`
+9 verbose stack Exit status 1
+9 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/lifecycle.js:213:16)
+9 verbose stack     at EventEmitter.emit (events.js:110:17)
+9 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/lib/utils/spawn.js:14:12)
+9 verbose stack     at ChildProcess.emit (events.js:110:17)
+9 verbose stack     at maybeClose (child_process.js:1008:16)
+9 verbose stack     at Process.ChildProcess._handle.onexit (child_process.js:1080:5)
+10 verbose pkgid jdesign@1.6.1
+11 verbose cwd /Users/jordan-hury/Desktop/projects/JDesign/JDesign
+12 error Darwin 17.7.0
+13 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "start"
+14 error node v0.12.0
+15 error npm  v2.5.1
+16 error code ELIFECYCLE
+17 error jdesign@1.6.1 start: `NODE_ENV=dev webpack --watch`
+17 error Exit status 1
+18 error Failed at the jdesign@1.6.1 start script 'NODE_ENV=dev webpack --watch'.
+18 error This is most likely a problem with the jdesign package,
+18 error not with npm itself.
+18 error Tell the author that this fails on your system:
+18 error     NODE_ENV=dev webpack --watch
+18 error You can get their info via:
+18 error     npm owner ls jdesign
+18 error There is likely additional logging output above.
+19 verbose exit [ 1, true ]

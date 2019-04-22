@@ -1,6 +1,6 @@
 {
   "name": "jdesign",
-  "version": "1.6.1",
+  "version": "1.61.0",
   "description": "React Styled Components",
   "main": "build/index.js",
   "peerDependencies": {
@@ -16,26 +16,26 @@
   },
   "scripts": {
     "start": "NODE_ENV=dev webpack --watch",
-    "build": "webpack"
+    "build": "NODE_ENV=prd webpack"
   },
   "author": {
     "name": "Jordan Hury",
     "email": "jordanhuri96@gmail.com"
   },
   "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-loader": "^7.1.5",
-    "babel-plugin-transform-class-properties": "^6.24.1",
-    "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^1.0.0",
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.4.3",
+    "@babel/preset-env": "^7.4.3",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.1",
     "node-sass": "^4.11.0",
     "sass-loader": "^7.1.0",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3"
+    "style-loader": "^0.23.1",
+    "webpack": "^4.30.0",
+    "webpack-cli": "^3.3.0"
   },
   "keywords": [
     "design",
